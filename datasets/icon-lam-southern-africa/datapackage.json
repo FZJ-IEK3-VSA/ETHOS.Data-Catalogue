@@ -1,0 +1,966 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "icon-lam-southern-africa",
+  "title": "ICON-LAM convection-permitting simulation, southern Africa 2017-2019, 0.033 deg, 15 min, zoom-7 tiles for RESKit",
+  "description": "Kilometre-scale (3.3 km) ICON-LAM regional climate simulation over southern Africa for 2017-2019, prepared as RESKit weather input: conservatively remapped to a regular 0.033 deg lon/lat grid at 15-minute resolution, with absolute wind speeds at 10 m and 100 m, surface pressure, 2 m temperature and dew point, global and direct horizontal irradiance, roughness length and boundary-layer height. Split into 143 Web Mercator zoom-7 tiles (2.8125 deg wide, 2.16-2.71 deg tall, each padded by 0.1 deg) in RESKit's <zoom>/<x>/<y>/<year>/ layout, one file per variable per tile per year. Used by RESKit's onshore_wind_iconlam_2023 and openfield_pv_iconlam workflows (source_type=\"ICON-LAM\").",
+  "homepage": "https://datapub.fz-juelich.de/slts/iconlam_southern_africa/index.html",
+  "ethos:shard_depth": 3,
+  "ethos:remote_prefix": "icon-lam-southern-africa",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:tiling": {
+    "scheme": "web-mercator-xyz",
+    "zoom": 7,
+    "tile_width_deg": 2.8125,
+    "tile_height_deg": [
+      2.1573,
+      2.7128
+    ],
+    "padding_deg": 0.1,
+    "grid_resolution_deg": 0.033,
+    "max_cells_per_tile": {
+      "lon": 92,
+      "lat": 87
+    },
+    "x_range": [
+      66,
+      78
+    ],
+    "y_range": [
+      69,
+      79
+    ],
+    "tile_count": 143,
+    "data_extent_deg": {
+      "lon": [
+        8.0,
+        39.977
+      ],
+      "lat": [
+        -38.991,
+        -15.0
+      ]
+    },
+    "path_pattern": "7/{x}/{y}/{year}/ICON-LAM_lonlat-0.033degree.z7.x{x}.y{y}.y{year}.{variable}.nc"
+  },
+  "ethos:upstream": {
+    "status": "no-upstream",
+    "checked": "2026-09-10",
+    "note": "These tiles were produced at FZJ and are served nowhere else. The simulation they come from is published as doi:10.26165/JUELICH-DATA/JYGQ65, but only on the native ICON grid (R3B09) and for a subset of variables -- t_2m, solar_down, ws_10m, ws60m, ws100m and precipitation. Four of the nine variables here (t2m, ssrd, ws10, ws100) can be rebuilt from that release by following ethos:derivation. The other five (blh, d2m, fdir, fsr, sp) come from the same model run but are not in the published release, so for those this mirror is the only public copy."
+  },
+  "ethos:coverage_note": "2017, 2018 and 2019, 15-minute instantaneous values (35040 steps per year, time in \"days since 2017-1-1\"), nine variables: blh, d2m, fdir, fsr, sp, ssrd, t2m, ws10, ws100. Not held: precipitation and 60 m wind speed, which the upstream release has; the native-grid files; and the untiled 0.033 deg yearly files the tiles were cut from. Tiles are cut from a rectangle, but the model domain is not one, so cells outside it are fill values. Fill values differ between variables: NaN for ws100 and blh, -9e33 for the others. ws10, ssrd and fdir carry no units attribute (m s-1, W m-2 and W m-2 by construction).",
+  "ethos:origin": "derived",
+  "ethos:derivation": "ICON-NWP v2.6.4 in limited-area mode (ICON-LAM), ICON-D2 configuration, 3.3 km native grid over the SASSCAL southern Africa domain, driven by DWD's 13 km global ICON analysis, reinitialised every 6 days. Run on JSC JUWELS (project cjibg36), 15-minute output. All steps below with CDO 2.0.5, as recorded in each file's history attribute.\n1. Per-day variables from the model-level output: t_2m, td_2m, gz0 and pres_sfc taken as they are. Absolute wind speed at 10 m computed from the components, ws_10m = sqrt(u_10m^2 + v_10m^2). Wind speed at 100 m calculated on the model levels and interpolated to 100 m with a power law (the magnitude is interpolated, not the u and v components). Global horizontal irradiance solar_down = sob_s + sou_s; direct horizontal irradiance solar_direct = sob_s + sou_s - sodifd_s. Boundary-layer height by the bulk Richardson number method from 3D u, v, theta_v and model-level heights.\n2. mergetime from days to months to years to 2017-2019.\n3. remapcon (first-order conservative) from the native R3B9 triangular grid to a regular 0.033 deg lon/lat grid. Renamed to RESKit's ERA5 short names: t_2m -> t2m, td_2m -> d2m, gz0 -> fsr, pres_sfc -> sp, ws_10m -> ws10, ws_100m_pl -> ws100, solar_down -> ssrd, solar_direct -> fdir, pbl_h -> blh. t2m and d2m in kelvin.\n4. selyear, one file per year.\n5. sellonlatbox per tile: the Web Mercator zoom-7 tile bounds of each z/x/y, padded by 0.1 deg on every side (see ethos:tiling). Tiles written 2023-09-18 to 2023-09-20.",
+  "ethos:additional_variables": {
+    "blh": "Planetary boundary-layer height [m], diagnosed offline by the bulk Richardson number method from 3D u, v, virtual potential temperature and model-level heights.",
+    "d2m": "2 m dew-point temperature [K], ICON td_2m.",
+    "fdir": "Direct horizontal irradiance [W m-2]: downward minus diffuse downward shortwave, sob_s + sou_s - sodifd_s.",
+    "fsr": "Surface roughness length [m], ICON gz0.",
+    "sp": "Surface pressure [Pa], ICON pres_sfc."
+  },
+  "contributors": [
+    {
+      "title": "Shuying Chen",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich, IBG-3 and ICE-2 (formerly IEK-3)",
+      "path": "https://orcid.org/0000-0002-0986-0950"
+    },
+    {
+      "title": "ICE-2 RESKit maintainers",
+      "roles": [
+        "maintainer"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Chen, S., Poll, S., Hendricks Franssen, H.-J., Heinrichs, H., Vereecken, H., Goergen, K. (2024): Convection-permitting ICON-LAM Simulations for Renewable Energy Potential Estimates over Southern Africa [dataset]. Julich DATA, V1",
+      "path": "https://doi.org/10.26165/JUELICH-DATA/JYGQ65"
+    },
+    {
+      "title": "Chen, S., Poll, S., Hendricks Franssen, H.-J., Heinrichs, H., Vereecken, H., Goergen, K. (2024): Convection-permitting ICON-LAM simulations for renewable energy potential estimates over southern Africa. JGR Atmospheres",
+      "path": "https://doi.org/10.1029/2023JD039569"
+    },
+    {
+      "title": "Chen, S., Goergen, K., Hendricks Franssen, H.-J., Winkler, C., Poll, S., Houssoukri Zounogo Wahabou, Y., ... Heinrichs, H. (2024): Higher onshore wind energy potentials revealed by kilometer-scale atmospheric modeling. GRL 51(19), e2024GL110122 -- the study the 100 m wind speed was produced for",
+      "path": "https://doi.org/10.1029/2024GL110122"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    }
+  ],
+  "ethos:attribution": "Contains modified data from Chen, S., Poll, S., Hendricks Franssen, H.-J., Heinrichs, H., Vereecken, H., Goergen, K. (2024): Convection-permitting ICON-LAM simulations for renewable energy potential estimates over southern Africa, Journal of Geophysical Research: Atmospheres, https://doi.org/10.1029/2023JD039569, dataset https://doi.org/10.26165/JUELICH-DATA/JYGQ65, licensed under CC BY 4.0. Regridded to 0.033 deg, wind speed magnitudes derived, and split into zoom-7 tiles at Forschungszentrum Julich.",
+  "ethos:license_status": "resolved",
+  "ethos:retrieved": "2023-09-20",
+  "ethos:contact": "s-chen",
+  "ethos:shards": [
+    {
+      "prefix": "7/66/69",
+      "path": "manifests/7/66/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 3471205422
+    },
+    {
+      "prefix": "7/66/70",
+      "path": "manifests/7/66/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 5658542334
+    },
+    {
+      "prefix": "7/66/71",
+      "path": "manifests/7/66/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 5594208942
+    },
+    {
+      "prefix": "7/66/72",
+      "path": "manifests/7/66/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 5465542062
+    },
+    {
+      "prefix": "7/66/73",
+      "path": "manifests/7/66/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 5401208526
+    },
+    {
+      "prefix": "7/66/74",
+      "path": "manifests/7/66/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 5272541742
+    },
+    {
+      "prefix": "7/66/75",
+      "path": "manifests/7/66/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 5143874862
+    },
+    {
+      "prefix": "7/66/76",
+      "path": "manifests/7/66/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 5079541422
+    },
+    {
+      "prefix": "7/66/77",
+      "path": "manifests/7/66/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 4886541054
+    },
+    {
+      "prefix": "7/66/78",
+      "path": "manifests/7/66/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 4757874174
+    },
+    {
+      "prefix": "7/66/79",
+      "path": "manifests/7/66/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 640484442
+    },
+    {
+      "prefix": "7/67/69",
+      "path": "manifests/7/67/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 18313308462
+    },
+    {
+      "prefix": "7/67/70",
+      "path": "manifests/7/67/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30021994494
+    },
+    {
+      "prefix": "7/67/71",
+      "path": "manifests/7/67/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 29677621422
+    },
+    {
+      "prefix": "7/67/72",
+      "path": "manifests/7/67/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28988875182
+    },
+    {
+      "prefix": "7/67/73",
+      "path": "manifests/7/67/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28644501966
+    },
+    {
+      "prefix": "7/67/74",
+      "path": "manifests/7/67/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27955755822
+    },
+    {
+      "prefix": "7/67/75",
+      "path": "manifests/7/67/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27267009582
+    },
+    {
+      "prefix": "7/67/76",
+      "path": "manifests/7/67/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 26922636462
+    },
+    {
+      "prefix": "7/67/77",
+      "path": "manifests/7/67/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25889517054
+    },
+    {
+      "prefix": "7/67/78",
+      "path": "manifests/7/67/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25200770814
+    },
+    {
+      "prefix": "7/67/79",
+      "path": "manifests/7/67/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 3160891134
+    },
+    {
+      "prefix": "7/68/69",
+      "path": "manifests/7/68/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 18313309038
+    },
+    {
+      "prefix": "7/68/70",
+      "path": "manifests/7/68/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30021995070
+    },
+    {
+      "prefix": "7/68/71",
+      "path": "manifests/7/68/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 29677621998
+    },
+    {
+      "prefix": "7/68/72",
+      "path": "manifests/7/68/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28988875758
+    },
+    {
+      "prefix": "7/68/73",
+      "path": "manifests/7/68/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28644502542
+    },
+    {
+      "prefix": "7/68/74",
+      "path": "manifests/7/68/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27955756398
+    },
+    {
+      "prefix": "7/68/75",
+      "path": "manifests/7/68/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27267010158
+    },
+    {
+      "prefix": "7/68/76",
+      "path": "manifests/7/68/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 26922637038
+    },
+    {
+      "prefix": "7/68/77",
+      "path": "manifests/7/68/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25889517630
+    },
+    {
+      "prefix": "7/68/78",
+      "path": "manifests/7/68/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25200771390
+    },
+    {
+      "prefix": "7/68/79",
+      "path": "manifests/7/68/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 3160891710
+    },
+    {
+      "prefix": "7/69/69",
+      "path": "manifests/7/69/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 18313309086
+    },
+    {
+      "prefix": "7/69/70",
+      "path": "manifests/7/69/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30021995118
+    },
+    {
+      "prefix": "7/69/71",
+      "path": "manifests/7/69/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 29677622046
+    },
+    {
+      "prefix": "7/69/72",
+      "path": "manifests/7/69/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28988875806
+    },
+    {
+      "prefix": "7/69/73",
+      "path": "manifests/7/69/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28644502590
+    },
+    {
+      "prefix": "7/69/74",
+      "path": "manifests/7/69/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27955756446
+    },
+    {
+      "prefix": "7/69/75",
+      "path": "manifests/7/69/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27267010206
+    },
+    {
+      "prefix": "7/69/76",
+      "path": "manifests/7/69/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 26922637086
+    },
+    {
+      "prefix": "7/69/77",
+      "path": "manifests/7/69/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25889517678
+    },
+    {
+      "prefix": "7/69/78",
+      "path": "manifests/7/69/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25200771438
+    },
+    {
+      "prefix": "7/69/79",
+      "path": "manifests/7/69/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 3160891758
+    },
+    {
+      "prefix": "7/70/69",
+      "path": "manifests/7/70/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 18513878046
+    },
+    {
+      "prefix": "7/70/70",
+      "path": "manifests/7/70/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30351230958
+    },
+    {
+      "prefix": "7/70/71",
+      "path": "manifests/7/70/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30003073566
+    },
+    {
+      "prefix": "7/70/72",
+      "path": "manifests/7/70/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 29306758686
+    },
+    {
+      "prefix": "7/70/73",
+      "path": "manifests/7/70/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28958601150
+    },
+    {
+      "prefix": "7/70/74",
+      "path": "manifests/7/70/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28262286366
+    },
+    {
+      "prefix": "7/70/75",
+      "path": "manifests/7/70/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27565971486
+    },
+    {
+      "prefix": "7/70/76",
+      "path": "manifests/7/70/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27217814046
+    },
+    {
+      "prefix": "7/70/77",
+      "path": "manifests/7/70/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 26173341678
+    },
+    {
+      "prefix": "7/70/78",
+      "path": "manifests/7/70/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25477026798
+    },
+    {
+      "prefix": "7/70/79",
+      "path": "manifests/7/70/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 3194950638
+    },
+    {
+      "prefix": "7/71/69",
+      "path": "manifests/7/71/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 18313308990
+    },
+    {
+      "prefix": "7/71/70",
+      "path": "manifests/7/71/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30021995022
+    },
+    {
+      "prefix": "7/71/71",
+      "path": "manifests/7/71/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 29677621950
+    },
+    {
+      "prefix": "7/71/72",
+      "path": "manifests/7/71/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28988875710
+    },
+    {
+      "prefix": "7/71/73",
+      "path": "manifests/7/71/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28644502494
+    },
+    {
+      "prefix": "7/71/74",
+      "path": "manifests/7/71/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27955756350
+    },
+    {
+      "prefix": "7/71/75",
+      "path": "manifests/7/71/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27267010110
+    },
+    {
+      "prefix": "7/71/76",
+      "path": "manifests/7/71/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 26922636990
+    },
+    {
+      "prefix": "7/71/77",
+      "path": "manifests/7/71/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25889517582
+    },
+    {
+      "prefix": "7/71/78",
+      "path": "manifests/7/71/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25200771342
+    },
+    {
+      "prefix": "7/71/79",
+      "path": "manifests/7/71/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 3160891662
+    },
+    {
+      "prefix": "7/72/69",
+      "path": "manifests/7/72/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 18313308462
+    },
+    {
+      "prefix": "7/72/70",
+      "path": "manifests/7/72/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30021994494
+    },
+    {
+      "prefix": "7/72/71",
+      "path": "manifests/7/72/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 29677621422
+    },
+    {
+      "prefix": "7/72/72",
+      "path": "manifests/7/72/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28988875182
+    },
+    {
+      "prefix": "7/72/73",
+      "path": "manifests/7/72/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28644501966
+    },
+    {
+      "prefix": "7/72/74",
+      "path": "manifests/7/72/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27955755822
+    },
+    {
+      "prefix": "7/72/75",
+      "path": "manifests/7/72/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27267009582
+    },
+    {
+      "prefix": "7/72/76",
+      "path": "manifests/7/72/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 26922636462
+    },
+    {
+      "prefix": "7/72/77",
+      "path": "manifests/7/72/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25889517054
+    },
+    {
+      "prefix": "7/72/78",
+      "path": "manifests/7/72/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25200770814
+    },
+    {
+      "prefix": "7/72/79",
+      "path": "manifests/7/72/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 3160891134
+    },
+    {
+      "prefix": "7/73/69",
+      "path": "manifests/7/73/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 18313309134
+    },
+    {
+      "prefix": "7/73/70",
+      "path": "manifests/7/73/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30021995166
+    },
+    {
+      "prefix": "7/73/71",
+      "path": "manifests/7/73/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 29677622094
+    },
+    {
+      "prefix": "7/73/72",
+      "path": "manifests/7/73/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28988875854
+    },
+    {
+      "prefix": "7/73/73",
+      "path": "manifests/7/73/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28644502638
+    },
+    {
+      "prefix": "7/73/74",
+      "path": "manifests/7/73/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27955756494
+    },
+    {
+      "prefix": "7/73/75",
+      "path": "manifests/7/73/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27267010254
+    },
+    {
+      "prefix": "7/73/76",
+      "path": "manifests/7/73/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 26922637134
+    },
+    {
+      "prefix": "7/73/77",
+      "path": "manifests/7/73/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25889517726
+    },
+    {
+      "prefix": "7/73/78",
+      "path": "manifests/7/73/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25200771486
+    },
+    {
+      "prefix": "7/73/79",
+      "path": "manifests/7/73/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 3160891806
+    },
+    {
+      "prefix": "7/74/69",
+      "path": "manifests/7/74/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 18513878622
+    },
+    {
+      "prefix": "7/74/70",
+      "path": "manifests/7/74/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30351231534
+    },
+    {
+      "prefix": "7/74/71",
+      "path": "manifests/7/74/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30003074142
+    },
+    {
+      "prefix": "7/74/72",
+      "path": "manifests/7/74/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 29306759262
+    },
+    {
+      "prefix": "7/74/73",
+      "path": "manifests/7/74/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28958601726
+    },
+    {
+      "prefix": "7/74/74",
+      "path": "manifests/7/74/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28262286942
+    },
+    {
+      "prefix": "7/74/75",
+      "path": "manifests/7/74/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27565972062
+    },
+    {
+      "prefix": "7/74/76",
+      "path": "manifests/7/74/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27217814622
+    },
+    {
+      "prefix": "7/74/77",
+      "path": "manifests/7/74/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 26173342254
+    },
+    {
+      "prefix": "7/74/78",
+      "path": "manifests/7/74/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25477027374
+    },
+    {
+      "prefix": "7/74/79",
+      "path": "manifests/7/74/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 3194951214
+    },
+    {
+      "prefix": "7/75/69",
+      "path": "manifests/7/75/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 18313309038
+    },
+    {
+      "prefix": "7/75/70",
+      "path": "manifests/7/75/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30021995070
+    },
+    {
+      "prefix": "7/75/71",
+      "path": "manifests/7/75/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 29677621998
+    },
+    {
+      "prefix": "7/75/72",
+      "path": "manifests/7/75/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28988875758
+    },
+    {
+      "prefix": "7/75/73",
+      "path": "manifests/7/75/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28644502542
+    },
+    {
+      "prefix": "7/75/74",
+      "path": "manifests/7/75/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27955756398
+    },
+    {
+      "prefix": "7/75/75",
+      "path": "manifests/7/75/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27267010158
+    },
+    {
+      "prefix": "7/75/76",
+      "path": "manifests/7/75/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 26922637038
+    },
+    {
+      "prefix": "7/75/77",
+      "path": "manifests/7/75/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25889517630
+    },
+    {
+      "prefix": "7/75/78",
+      "path": "manifests/7/75/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25200771390
+    },
+    {
+      "prefix": "7/75/79",
+      "path": "manifests/7/75/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 3160891710
+    },
+    {
+      "prefix": "7/76/69",
+      "path": "manifests/7/76/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 18313308510
+    },
+    {
+      "prefix": "7/76/70",
+      "path": "manifests/7/76/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30021994542
+    },
+    {
+      "prefix": "7/76/71",
+      "path": "manifests/7/76/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 29677621470
+    },
+    {
+      "prefix": "7/76/72",
+      "path": "manifests/7/76/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28988875230
+    },
+    {
+      "prefix": "7/76/73",
+      "path": "manifests/7/76/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28644502014
+    },
+    {
+      "prefix": "7/76/74",
+      "path": "manifests/7/76/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27955755870
+    },
+    {
+      "prefix": "7/76/75",
+      "path": "manifests/7/76/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27267009630
+    },
+    {
+      "prefix": "7/76/76",
+      "path": "manifests/7/76/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 26922636510
+    },
+    {
+      "prefix": "7/76/77",
+      "path": "manifests/7/76/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25889517102
+    },
+    {
+      "prefix": "7/76/78",
+      "path": "manifests/7/76/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25200770862
+    },
+    {
+      "prefix": "7/76/79",
+      "path": "manifests/7/76/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 3160891182
+    },
+    {
+      "prefix": "7/77/69",
+      "path": "manifests/7/77/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 18313309134
+    },
+    {
+      "prefix": "7/77/70",
+      "path": "manifests/7/77/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 30021995166
+    },
+    {
+      "prefix": "7/77/71",
+      "path": "manifests/7/77/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 29677622094
+    },
+    {
+      "prefix": "7/77/72",
+      "path": "manifests/7/77/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28988875854
+    },
+    {
+      "prefix": "7/77/73",
+      "path": "manifests/7/77/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 28644502638
+    },
+    {
+      "prefix": "7/77/74",
+      "path": "manifests/7/77/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27955756494
+    },
+    {
+      "prefix": "7/77/75",
+      "path": "manifests/7/77/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 27267010254
+    },
+    {
+      "prefix": "7/77/76",
+      "path": "manifests/7/77/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 26922637134
+    },
+    {
+      "prefix": "7/77/77",
+      "path": "manifests/7/77/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25889517726
+    },
+    {
+      "prefix": "7/77/78",
+      "path": "manifests/7/77/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 25200771486
+    },
+    {
+      "prefix": "7/77/79",
+      "path": "manifests/7/77/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 3160891806
+    },
+    {
+      "prefix": "7/78/69",
+      "path": "manifests/7/78/69.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 4474050846
+    },
+    {
+      "prefix": "7/78/70",
+      "path": "manifests/7/78/70.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 7304722158
+    },
+    {
+      "prefix": "7/78/71",
+      "path": "manifests/7/78/71.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 7221467166
+    },
+    {
+      "prefix": "7/78/72",
+      "path": "manifests/7/78/72.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 7054957086
+    },
+    {
+      "prefix": "7/78/73",
+      "path": "manifests/7/78/73.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 6971701950
+    },
+    {
+      "prefix": "7/78/74",
+      "path": "manifests/7/78/74.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 6805191966
+    },
+    {
+      "prefix": "7/78/75",
+      "path": "manifests/7/78/75.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 6638681886
+    },
+    {
+      "prefix": "7/78/76",
+      "path": "manifests/7/78/76.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 6555426846
+    },
+    {
+      "prefix": "7/78/77",
+      "path": "manifests/7/78/77.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 6305661678
+    },
+    {
+      "prefix": "7/78/78",
+      "path": "manifests/7/78/78.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 6139151598
+    },
+    {
+      "prefix": "7/78/79",
+      "path": "manifests/7/78/79.json",
+      "ethos:file_count": 27,
+      "ethos:total_bytes": 810786270
+    }
+  ],
+  "ethos:total_bytes": 3116089219806,
+  "ethos:file_count": 3861
+}

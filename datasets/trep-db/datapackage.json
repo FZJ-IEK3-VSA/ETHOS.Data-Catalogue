@@ -1,0 +1,963 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "trep-db",
+  "title": "Tool for Renewable Energy Potentials (TREP) Database",
+  "id": "https://doi.org/10.5281/zenodo.10404955",
+  "version": "1.1.0",
+  "homepage": "https://zenodo.org/records/10404955",
+  "description": "Renewable-energy potential scenarios for Germany, published by Risch et al. Includes onshore and offshore wind, rooftop and open-field photovoltaics, agrivoltaics, floating photovoltaics and parking photovoltaics. The 120 original CSV files contain capacity placements and plant parameters, orientation-specific rooftop capacities, and area/capacity summaries. Aggregation levels include municipalities, NUTS3 regions, federal states, Germany and exclusive economic zones; coverage varies by technology. The original technology/scenario/aggregation directory structure is retained.",
+  "ethos:include": [
+    "AgriPV/**/*.csv",
+    "FloatingPV/**/*.csv",
+    "OpenfieldPV/**/*.csv",
+    "ParkingPV/**/*.csv",
+    "RooftopPV/**/*.csv",
+    "WindOffshore/**/*.csv",
+    "WindOnshore/**/*.csv"
+  ],
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:remote_prefix": "trep-db/1.1.0",
+  "ethos:origin": "downloaded",
+  "contributors": [
+    {
+      "title": "Stanley Risch",
+      "roles": [
+        "author"
+      ],
+      "path": "https://orcid.org/0000-0002-7188-155X"
+    },
+    {
+      "title": "Rachel Maier",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "Junsong Du",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "Noah Pflugradt",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "Peter Stenzel",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "Leander Kotzur",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "Luna Lütz",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "Felix Kullmann",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "Jann Weinand",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "Detlef Stolten",
+      "roles": [
+        "author"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Risch et al. (2024), Tool for Renewable Energy Potentials - Database, version 1.1.0, Zenodo",
+      "path": "https://doi.org/10.5281/zenodo.10404955"
+    },
+    {
+      "title": "Risch et al. (2022), Potentials of Renewable Energy Sources in Germany and the Influence of Land Use Datasets",
+      "path": "https://doi.org/10.3390/en15155536"
+    },
+    {
+      "title": "Original trep-db.zip delivery for Zenodo record 10404955",
+      "path": "https://zenodo.org/records/10404955/files/trep-db.zip?download=1"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International for the published TREP results",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "title": "BKG terms for incorporated spatial base data, as cited by the TREP deposit",
+      "path": "https://sg.geodatenzentrum.de/web_public/nutzungsbedingungen.pdf",
+      "ethos:document": "licenses/bkg-geoapplications-terms.pdf",
+      "ethos:document_sha256": "f91412540d38a44c1fad0c172b422a0ea011e820791f3bd01be3307c8453a509"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:attribution": "Risch, Stanley; Maier, Rachel; Du, Junsong; Pflugradt, Noah; Stenzel, Peter; Kotzur, Leander; Lütz, Luna; Kullmann, Felix; Weinand, Jann; Stolten, Detlef (2024): Tool for Renewable Energy Potentials - Database (version 1.1.0). Zenodo. https://doi.org/10.5281/zenodo.10404955. CC BY 4.0, https://creativecommons.org/licenses/by/4.0/. Original CSV files unchanged. Also cite Risch et al. (2022), Potentials of Renewable Energy Sources in Germany and the Influence of Land Use Datasets, https://doi.org/10.3390/en15155536, as requested by the deposit. Geobasisdaten: © GeoBasis-DE / BKG (2021): Digitales Basis-Landschaftsmodell (Ebenen) (Basis-DLM), Amtliche Hausumringe Deutschland (HU-DE), and 3D-Gebäudemodelle LoD2 Deutschland (LoD2-DE). Nutzungsbedingungen: https://sg.geodatenzentrum.de/web_public/nutzungsbedingungen.pdf. Retain these terms for applicable incorporated geodata, including the conditions on onward provision and separation of components. The deposit also credits UNEP-WCMC and IUCN, The World Database on Protected Areas (2016), accessed 2021-10-22, https://www.protectedplanet.net/.",
+  "ethos:provenance": "Existing local trep-db download verified on 2026-09-10 against the original trep-db.zip archive (stored locally as T126GM~L). Its size, 67,227,692 bytes, and MD5, 881ee127019a0899c5aedf9fee801d14, match the live Zenodo record for version 1.1.0, published 2024-01-08. All 120 extracted CSV files, totalling 173,941,781 bytes, match the corresponding ZIP members by size and SHA-256. No local conversion, filtering of rows, resampling or recalculation was applied. The original download date was not independently established. The retrieved Zenodo metadata and member verification are retained in the source catalog under provenance/zenodo-10404955.json and provenance/archive-verification.json.",
+  "ethos:verified": "2026-09-10",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "resources": [
+    {
+      "name": "agripv-horizontalconservative-federalstates-capacities.csv",
+      "path": "AgriPV/HorizontalConservative/FederalStates/Capacities.csv",
+      "bytes": 7591005,
+      "hash": "sha256:49eff73ab5563b787c481b0d5bae6cf81f714c1ceceb8b6e77ccb4868abc2dab",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "agripv-horizontalconservative-federalstates-overview.csv",
+      "path": "AgriPV/HorizontalConservative/FederalStates/Overview.csv",
+      "bytes": 711,
+      "hash": "sha256:594ef394fed50278c7729c5f87ea10b3b16195ce81341aa7865928d92b7675c6",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "agripv-horizontalinnovative-federalstates-capacities.csv",
+      "path": "AgriPV/HorizontalInnovative/FederalStates/Capacities.csv",
+      "bytes": 19406598,
+      "hash": "sha256:6037d06605c012039f4ed43fa84eca51d046709520ee6e2759bf11fe7ab3aa84",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "agripv-horizontalinnovative-federalstates-overview.csv",
+      "path": "AgriPV/HorizontalInnovative/FederalStates/Overview.csv",
+      "bytes": 751,
+      "hash": "sha256:50daf1d312936bf3a4b344e0cfe7fe57a78a1bd5228d0f9a921df38939b987a5",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "agripv-verticalgrain-federalstates-capacities.csv",
+      "path": "AgriPV/VerticalGrain/FederalStates/Capacities.csv",
+      "bytes": 12292373,
+      "hash": "sha256:c53878d4192237710e8da12bcce331871c8001a13b00680f6a71327e5ce882f7",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "agripv-verticalgrain-federalstates-overview.csv",
+      "path": "AgriPV/VerticalGrain/FederalStates/Overview.csv",
+      "bytes": 742,
+      "hash": "sha256:8b1778738f54513c99948df8e8a7b316924b623e923ad5f7f11abb6d4d425236",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "agripv-verticalgrassland-federalstates-capacities.csv",
+      "path": "AgriPV/VerticalGrassland/FederalStates/Capacities.csv",
+      "bytes": 12586232,
+      "hash": "sha256:58f3c10dd8a7435b190c68d81cebbd9a690beb702e5ed4deb49516d75211450e",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "agripv-verticalgrassland-federalstates-overview.csv",
+      "path": "AgriPV/VerticalGrassland/FederalStates/Overview.csv",
+      "bytes": 738,
+      "hash": "sha256:8bc2421a31a4f0191f9a46799a2e5cdce37186eb0ce7730249be355743c292fc",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "floatingpv-floatinglegislation-federalstates-capacities.csv",
+      "path": "FloatingPV/FloatingLegislation/FederalStates/Capacities.csv",
+      "bytes": 43775,
+      "hash": "sha256:4018542a69fb650ebd86f56d78e9f6e4f38229d15fd6f174dbe9c6fe54f72a0d",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "floatingpv-floatinglegislation-federalstates-overview.csv",
+      "path": "FloatingPV/FloatingLegislation/FederalStates/Overview.csv",
+      "bytes": 630,
+      "hash": "sha256:d4325d0a08705fdc52616fcb86b3876557e2fa4cf4e137c2e937b8b2cb44791e",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s1_sidestrips-federalstates-capacities.csv",
+      "path": "OpenfieldPV/S1_SideStrips/FederalStates/Capacities.csv",
+      "bytes": 3195933,
+      "hash": "sha256:38c14ced184aef942cc5a7d56ead5bdd5cfd6ed1f7b6c429fb60f189e54bf4ce",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s1_sidestrips-federalstates-overview.csv",
+      "path": "OpenfieldPV/S1_SideStrips/FederalStates/Overview.csv",
+      "bytes": 786,
+      "hash": "sha256:03034b7d1ee328bbe68dfc3658bda6b6323b2b9f14f197ba5588b858aef73bd0",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s1_sidestrips-municipalities-capacities.csv",
+      "path": "OpenfieldPV/S1_SideStrips/Municipalities/Capacities.csv",
+      "bytes": 4061154,
+      "hash": "sha256:b442f01c7855db643882d6b8eb7e0d601a28c805868adcf5e7d24f98455df95d",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s1_sidestrips-municipalities-overview.csv",
+      "path": "OpenfieldPV/S1_SideStrips/Municipalities/Overview.csv",
+      "bytes": 475952,
+      "hash": "sha256:59becc108f9cb054fc2069af676ae7b25ffb8c970c2b76163403c0ba2169f41b",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s1_sidestrips-national-capacities.csv",
+      "path": "OpenfieldPV/S1_SideStrips/National/Capacities.csv",
+      "bytes": 3104045,
+      "hash": "sha256:a41c45b06d07680c6ae2f877dd5a29f220ea5d5ef03667f2b43662fbe1f9cd47",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s1_sidestrips-national-overview.csv",
+      "path": "OpenfieldPV/S1_SideStrips/National/Overview.csv",
+      "bytes": 127,
+      "hash": "sha256:ed52e7ff9df24808d8c692490fd68ce9d97640f316f364dd01c1e74a93876899",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s1_sidestrips-nuts3-capacities.csv",
+      "path": "OpenfieldPV/S1_SideStrips/Nuts3/Capacities.csv",
+      "bytes": 3396711,
+      "hash": "sha256:e535e068a144b3eafdeb25d7e9f608b3d925bb33e1399d793af9fb2f8d403778",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s1_sidestrips-nuts3-overview.csv",
+      "path": "OpenfieldPV/S1_SideStrips/Nuts3/Overview.csv",
+      "bytes": 17876,
+      "hash": "sha256:1d86baad3c13425441381e259c7fa2c340c3ffa576ace0512b0aaa21319cd20a",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s2_poorsoil-federalstates-capacities.csv",
+      "path": "OpenfieldPV/S2_PoorSoil/FederalStates/Capacities.csv",
+      "bytes": 844946,
+      "hash": "sha256:40869539cac567b9aac46f356e7531152361163fac42de37fae397d5a3458896",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s2_poorsoil-federalstates-overview.csv",
+      "path": "OpenfieldPV/S2_PoorSoil/FederalStates/Overview.csv",
+      "bytes": 739,
+      "hash": "sha256:b423155edb86bd958cc84d2a762624508bb03405d4b537711adab6cb1d80faa6",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s2_poorsoil-municipalities-capacities.csv",
+      "path": "OpenfieldPV/S2_PoorSoil/Municipalities/Capacities.csv",
+      "bytes": 1023591,
+      "hash": "sha256:3b63e480e44329dfe08f0dd4d4c2e7ff071d745833f0c3ecdbac32414d5d8541",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s2_poorsoil-municipalities-overview.csv",
+      "path": "OpenfieldPV/S2_PoorSoil/Municipalities/Overview.csv",
+      "bytes": 450868,
+      "hash": "sha256:06c89514f959ac0f5fd69d91cd4c6fa20c98fccf9bc7eb8a93d7e1ae83f9bda5",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s2_poorsoil-national-capacities.csv",
+      "path": "OpenfieldPV/S2_PoorSoil/National/Capacities.csv",
+      "bytes": 820393,
+      "hash": "sha256:f3a12c354e3421cfbb150d8b7c3a07eb80d69690eb412c04d9606c8653a31c45",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s2_poorsoil-national-overview.csv",
+      "path": "OpenfieldPV/S2_PoorSoil/National/Overview.csv",
+      "bytes": 127,
+      "hash": "sha256:1c813f92505dd9f248953e8132446afaaa8dcba0acac2974737707c6dd0d9a75",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s2_poorsoil-nuts3-capacities.csv",
+      "path": "OpenfieldPV/S2_PoorSoil/Nuts3/Capacities.csv",
+      "bytes": 884681,
+      "hash": "sha256:77bb590292a59a512fead5aff80c2be50a3ca5ebe949599e95c9d89705efa570",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s2_poorsoil-nuts3-overview.csv",
+      "path": "OpenfieldPV/S2_PoorSoil/Nuts3/Overview.csv",
+      "bytes": 15914,
+      "hash": "sha256:c02d2c55fb86ba1e9412deab0eb710876f9b69f9f56a5b8df9ad434bb43d3ed7",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s3_combination-federalstates-capacities.csv",
+      "path": "OpenfieldPV/S3_Combination/FederalStates/Capacities.csv",
+      "bytes": 3649372,
+      "hash": "sha256:ccc9eff711cfb9c551a0038108fa15d22ffce7a7ead75bfa51eeefbbfbe9961c",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s3_combination-federalstates-overview.csv",
+      "path": "OpenfieldPV/S3_Combination/FederalStates/Overview.csv",
+      "bytes": 856,
+      "hash": "sha256:23503a9dba11df54ae064077760524b576eb371e32507fb645f6063376fb85f7",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s3_combination-municipalities-capacities.csv",
+      "path": "OpenfieldPV/S3_Combination/Municipalities/Capacities.csv",
+      "bytes": 4487717,
+      "hash": "sha256:9fdc14911e0ca16333c243335ca3420b649c976cfcdd1d8976665809fc60263c",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s3_combination-municipalities-overview.csv",
+      "path": "OpenfieldPV/S3_Combination/Municipalities/Overview.csv",
+      "bytes": 490751,
+      "hash": "sha256:07d895e6c9463b0d653250d0f7fee24ac9a2f9a1699ba096db19fa80570c1c3b",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s3_combination-national-capacities.csv",
+      "path": "OpenfieldPV/S3_Combination/National/Capacities.csv",
+      "bytes": 3543999,
+      "hash": "sha256:93b778893fd332f233b637436871143ca065426e99914d0dcc32f016b5629006",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s3_combination-national-overview.csv",
+      "path": "OpenfieldPV/S3_Combination/National/Overview.csv",
+      "bytes": 127,
+      "hash": "sha256:a42676296eba651229133363c4da73d30c77c53ed5dc6c9c164b2b88be7d1664",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s3_combination-nuts3-capacities.csv",
+      "path": "OpenfieldPV/S3_Combination/Nuts3/Capacities.csv",
+      "bytes": 3842911,
+      "hash": "sha256:ef3d348b5ba4392094aa1e3bf54189c416015285ba808c3c2082f4dfd3fced13",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "openfieldpv-s3_combination-nuts3-overview.csv",
+      "path": "OpenfieldPV/S3_Combination/Nuts3/Overview.csv",
+      "bytes": 18984,
+      "hash": "sha256:96ab9b2b5b9c9d4e3179d095e39d0b47905dd59df10673f4b8b8bfabf4d5016d",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "parkingpv-parking_min100parkingspaces-federalstates-capacities.csv",
+      "path": "ParkingPV/Parking_Min100ParkingSpaces/FederalStates/Capacities.csv",
+      "bytes": 834707,
+      "hash": "sha256:38d2dd818a86906dd2fabeb55c479d5687d4d9238224676a0c7ebb54c21b9791",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "parkingpv-parking_min100parkingspaces-federalstates-overview.csv",
+      "path": "ParkingPV/Parking_Min100ParkingSpaces/FederalStates/Overview.csv",
+      "bytes": 677,
+      "hash": "sha256:f078219c1e1718edcc527f0d29a87b188b7fe99352a6c834c1ed049a92053f28",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "parkingpv-parking_min35parkingspaces-federalstates-capacities.csv",
+      "path": "ParkingPV/Parking_Min35ParkingSpaces/FederalStates/Capacities.csv",
+      "bytes": 1578306,
+      "hash": "sha256:401c3266c6263dc4e9b7fe3eb9822261652c4c598ab5e027890c592fb535e106",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "parkingpv-parking_min35parkingspaces-federalstates-overview.csv",
+      "path": "ParkingPV/Parking_Min35ParkingSpaces/FederalStates/Overview.csv",
+      "bytes": 683,
+      "hash": "sha256:160d2da5533db7e0b015731fdfbd3ce3fb6b3f7cc514e73939b878d0bf8306d4",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "parkingpv-parking_min50parkingspaces-federalstates-capacities.csv",
+      "path": "ParkingPV/Parking_Min50ParkingSpaces/FederalStates/Capacities.csv",
+      "bytes": 1324742,
+      "hash": "sha256:0dad01594d4f241a14617d7b502c324a8e902692bcba2368f9def6deaf0fcbc3",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "parkingpv-parking_min50parkingspaces-federalstates-overview.csv",
+      "path": "ParkingPV/Parking_Min50ParkingSpaces/FederalStates/Overview.csv",
+      "bytes": 686,
+      "hash": "sha256:4d47d3e3e5107ff939f7f0946f23d19a36d9ce03b4b406bbf16d8adc79ef5024",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-allroofs-federalstates-capacities.csv",
+      "path": "RooftopPV/AllRoofs/FederalStates/Capacities.csv",
+      "bytes": 2721,
+      "hash": "sha256:5f3a70f0e210ab15eda92b4f508f03f9fcc1b6d69769a38cd89b4e6c4cc3b936",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-allroofs-federalstates-overview.csv",
+      "path": "RooftopPV/AllRoofs/FederalStates/Overview.csv",
+      "bytes": 451,
+      "hash": "sha256:e99338eab011870b8a81df4de6f5b9f176aec465bbdd75066bda8abb8e10aa09",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-allroofs-municipalities-capacities.csv",
+      "path": "RooftopPV/AllRoofs/Municipalities/Capacities.csv",
+      "bytes": 1947474,
+      "hash": "sha256:6aaafb323012552113fe2e48cb2d4115abdf013fe4766d58726e6a20ca041f9f",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-allroofs-municipalities-overview.csv",
+      "path": "RooftopPV/AllRoofs/Municipalities/Overview.csv",
+      "bytes": 352494,
+      "hash": "sha256:b5fb79e897e03a64e99a1f8be90a53defee45005878d2aea0abcd6f3abb0f7fe",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-allroofs-national-capacities.csv",
+      "path": "RooftopPV/AllRoofs/National/Capacities.csv",
+      "bytes": 203,
+      "hash": "sha256:8ec1ef4ea2095536147241d5bc29dd15334bca1832030bbbad51fe7f73d85884",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-allroofs-national-overview.csv",
+      "path": "RooftopPV/AllRoofs/National/Overview.csv",
+      "bytes": 67,
+      "hash": "sha256:a553ac1404ddc128ddb8af9abfc31e05f882ec2d5e369dd5b8f687c7a5f49937",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-allroofs-nuts3-capacities.csv",
+      "path": "RooftopPV/AllRoofs/Nuts3/Capacities.csv",
+      "bytes": 68780,
+      "hash": "sha256:1cb140214ada2144f9acec680cb7f9b7536c509a67c240f069c0e9faa00c761f",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-allroofs-nuts3-overview.csv",
+      "path": "RooftopPV/AllRoofs/Nuts3/Overview.csv",
+      "bytes": 11317,
+      "hash": "sha256:39c760ae2738a1ecba299d91941ecd7c724374bc2e90dd5a6a60ba95c8000bd4",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-nonorthernroofs-federalstates-capacities.csv",
+      "path": "RooftopPV/NoNorthernRoofs/FederalStates/Capacities.csv",
+      "bytes": 1817,
+      "hash": "sha256:deda099ca5bb4b4551efb36f7c52bcd151909500998ec0cfacbeda40b455c52e",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-nonorthernroofs-federalstates-overview.csv",
+      "path": "RooftopPV/NoNorthernRoofs/FederalStates/Overview.csv",
+      "bytes": 451,
+      "hash": "sha256:48be4ff4a1529f3c537c0306aec3eeff3c4af9b7bd475f4082f666242e0ece43",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-nonorthernroofs-municipalities-capacities.csv",
+      "path": "RooftopPV/NoNorthernRoofs/Municipalities/Capacities.csv",
+      "bytes": 1345643,
+      "hash": "sha256:5ce6574f293522085d9b5de9692d73c67ea6158a34d19a46b77370552b75c8bc",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-nonorthernroofs-municipalities-overview.csv",
+      "path": "RooftopPV/NoNorthernRoofs/Municipalities/Overview.csv",
+      "bytes": 351313,
+      "hash": "sha256:8720cb841ec40ac2cede6b3a3b7a7011233d194cef21c980055a6b4b59cc5e36",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-nonorthernroofs-national-capacities.csv",
+      "path": "RooftopPV/NoNorthernRoofs/National/Capacities.csv",
+      "bytes": 140,
+      "hash": "sha256:592dc4bbe0dee338351a6cd2567d9bf03f150e546942f5e1ea7c1822239536b8",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-nonorthernroofs-national-overview.csv",
+      "path": "RooftopPV/NoNorthernRoofs/National/Overview.csv",
+      "bytes": 67,
+      "hash": "sha256:2a58c6f719db9c51e4965a3312745c93bae82cd4ac634146648496cd87f2b6c9",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-nonorthernroofs-nuts3-capacities.csv",
+      "path": "RooftopPV/NoNorthernRoofs/Nuts3/Capacities.csv",
+      "bytes": 46680,
+      "hash": "sha256:c9cccf5425ca6634070c73b5a8a6150f06def0aa3c15da3c0d14edcc6a9f844e",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "rooftoppv-nonorthernroofs-nuts3-overview.csv",
+      "path": "RooftopPV/NoNorthernRoofs/Nuts3/Overview.csv",
+      "bytes": 11253,
+      "hash": "sha256:8fbe582e167344c7a101902da0ecc0704158bb84ce334d10dff3d3ea1fddcc11",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s1_expansive-eez-capacities.csv",
+      "path": "WindOffshore/S1_Expansive/EEZ/Capacities.csv",
+      "bytes": 627901,
+      "hash": "sha256:0a0bb085b0fe728478622bed17ed090852a1ed8896752d6b1f8d293cfbff59e6",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s1_expansive-eez-overview.csv",
+      "path": "WindOffshore/S1_Expansive/EEZ/Overview.csv",
+      "bytes": 145,
+      "hash": "sha256:c062075eb7a336a7bf4c9cb5eb4be37080a75ff8ae966eb65bdb392dedde4c34",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s1_expansive-federalstates-capacities.csv",
+      "path": "WindOffshore/S1_Expansive/FederalStates/Capacities.csv",
+      "bytes": 31322,
+      "hash": "sha256:99db5b744ff45deb8292a9ca7cee61be46081445f07299415b06173f5e57c273",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s1_expansive-federalstates-overview.csv",
+      "path": "WindOffshore/S1_Expansive/FederalStates/Overview.csv",
+      "bytes": 235,
+      "hash": "sha256:2eeed19a2196a6cc6be0bc5aedfdc47287ce11b1861fd4b8b193ec542599a42c",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s1_expansive-national-capacities.csv",
+      "path": "WindOffshore/S1_Expansive/National/Capacities.csv",
+      "bytes": 659839,
+      "hash": "sha256:512a16863a161e3616d1f2a142f5b24ec2d0c23f489d86c1427ecf6c95adfadd",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s1_expansive-national-overview.csv",
+      "path": "WindOffshore/S1_Expansive/National/Overview.csv",
+      "bytes": 122,
+      "hash": "sha256:ed84694a8c7f894c3a88ce477e1db02692de52685c8e752d0ce88f270c6466b5",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s1a_expansivemilitary-eez-capacities.csv",
+      "path": "WindOffshore/S1a_ExpansiveMilitary/EEZ/Capacities.csv",
+      "bytes": 765443,
+      "hash": "sha256:4f35ffdb24906cf0020ab804537318a380292a0af2ba7266d1162e7d07546ede",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s1a_expansivemilitary-eez-overview.csv",
+      "path": "WindOffshore/S1a_ExpansiveMilitary/EEZ/Overview.csv",
+      "bytes": 144,
+      "hash": "sha256:71801d3211f062121cbb59eab73a14957d32211a9d963054d3e405e1c4eea97d",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s1a_expansivemilitary-federalstates-capacities.csv",
+      "path": "WindOffshore/S1a_ExpansiveMilitary/FederalStates/Capacities.csv",
+      "bytes": 62529,
+      "hash": "sha256:ea619f72b9f1773b886900ded1682c486b0fa4cf8167df31c7b74d69fd79c6c9",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s1a_expansivemilitary-federalstates-overview.csv",
+      "path": "WindOffshore/S1a_ExpansiveMilitary/FederalStates/Overview.csv",
+      "bytes": 237,
+      "hash": "sha256:1a3f64f43b543f9caf8ac35b1717765b5435f9adf75d1c5d7f972a01480c60f6",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s1a_expansivemilitary-national-capacities.csv",
+      "path": "WindOffshore/S1a_ExpansiveMilitary/National/Capacities.csv",
+      "bytes": 830136,
+      "hash": "sha256:3323d0d72f992f09462b938637c5274d32142ea60bfded753314679fcdef2436",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s1a_expansivemilitary-national-overview.csv",
+      "path": "WindOffshore/S1a_ExpansiveMilitary/National/Overview.csv",
+      "bytes": 121,
+      "hash": "sha256:80aa40b6ebef2263d4576a8347c7972075859c172c984a13218169b0c224e298",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s2_legislation-eez-capacities.csv",
+      "path": "WindOffshore/S2_Legislation/EEZ/Capacities.csv",
+      "bytes": 451928,
+      "hash": "sha256:a26d70d6bf683f2311fb76854923394d3851c570b947e8244ff1209172e27a58",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s2_legislation-eez-overview.csv",
+      "path": "WindOffshore/S2_Legislation/EEZ/Overview.csv",
+      "bytes": 145,
+      "hash": "sha256:4e052a12dfb3564d51974c0d81e430713badd5c0e130f5334d402a7b33f3df06",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s2_legislation-federalstates-capacities.csv",
+      "path": "WindOffshore/S2_Legislation/FederalStates/Capacities.csv",
+      "bytes": 14797,
+      "hash": "sha256:a7cd77893dc55921750a619aab0d8b9eb0ea3753a9495a56561f818bec29f85f",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s2_legislation-federalstates-overview.csv",
+      "path": "WindOffshore/S2_Legislation/FederalStates/Overview.csv",
+      "bytes": 228,
+      "hash": "sha256:e797b8997f0eb8efd7b359e9cc216d5c6748051c775ad231174c9425db63739a",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s2_legislation-national-capacities.csv",
+      "path": "WindOffshore/S2_Legislation/National/Capacities.csv",
+      "bytes": 467049,
+      "hash": "sha256:e1198a534e0e078fd3e94fbc104359ba5a1cbf49e889f806419cced8bfe24f29",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s2_legislation-national-overview.csv",
+      "path": "WindOffshore/S2_Legislation/National/Overview.csv",
+      "bytes": 122,
+      "hash": "sha256:bd2ec3d009f1fc8b3a1e545507f2dd6d0cdcd8569ec6ca130a53f80239f0a891",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s3_restrictivelegislation-eez-capacities.csv",
+      "path": "WindOffshore/S3_RestrictiveLegislation/EEZ/Capacities.csv",
+      "bytes": 270398,
+      "hash": "sha256:274e633da6f1c7c29273b68a4c4d991b6529f88e6abdab908e56207445c7c84a",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s3_restrictivelegislation-eez-overview.csv",
+      "path": "WindOffshore/S3_RestrictiveLegislation/EEZ/Overview.csv",
+      "bytes": 145,
+      "hash": "sha256:d9c6daa08ae3b3006d92e93f05d1f80937c9c36e54118c6685206f7a867cb672",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s3_restrictivelegislation-federalstates-capacities.csv",
+      "path": "WindOffshore/S3_RestrictiveLegislation/FederalStates/Capacities.csv",
+      "bytes": 13425,
+      "hash": "sha256:d0e42988a3378904d5a65def9bcbb8b2f746438187db28b2b2d3c199ace5fd5b",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s3_restrictivelegislation-federalstates-overview.csv",
+      "path": "WindOffshore/S3_RestrictiveLegislation/FederalStates/Overview.csv",
+      "bytes": 229,
+      "hash": "sha256:d7aaf0e4009ff3caad3b7e1092b5d71261c68e1d81522b07f5f9bccc75ba465c",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s3_restrictivelegislation-national-capacities.csv",
+      "path": "WindOffshore/S3_RestrictiveLegislation/National/Capacities.csv",
+      "bytes": 284123,
+      "hash": "sha256:d92a69c6b401c3a92b59651b650cb1a8cad24af792f7cf0d221b1d9b93536c54",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windoffshore-s3_restrictivelegislation-national-overview.csv",
+      "path": "WindOffshore/S3_RestrictiveLegislation/National/Overview.csv",
+      "bytes": 122,
+      "hash": "sha256:17c9999e6de9cb5ef890c0f131e97e2e2861fabf8de5e854b293c3e632f985db",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s1_legislation-federalstates-capacities.csv",
+      "path": "WindOnshore/S1_Legislation/FederalStates/Capacities.csv",
+      "bytes": 4788558,
+      "hash": "sha256:b543c4609ff15595f7fa3f2f49e5472be0be22a60674757a387d0393459e2a26",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s1_legislation-federalstates-overview.csv",
+      "path": "WindOnshore/S1_Legislation/FederalStates/Overview.csv",
+      "bytes": 741,
+      "hash": "sha256:cd33799454e00fc48838500ff4752445e4147ef35f66dfed33223aee6cad02b9",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s1_legislation-municipalities-capacities.csv",
+      "path": "WindOnshore/S1_Legislation/Municipalities/Capacities.csv",
+      "bytes": 5607308,
+      "hash": "sha256:777ec27fd8c89a0657d75a5231e44841effb3a0f537b15259345c992f43a94a0",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s1_legislation-municipalities-overview.csv",
+      "path": "WindOnshore/S1_Legislation/Municipalities/Overview.csv",
+      "bytes": 457069,
+      "hash": "sha256:469ee6dbcf167fe9468f83bcdef6685ae2ccf7c00cd5b32aff0c6e024f4abdff",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s1_legislation-national-capacities.csv",
+      "path": "WindOnshore/S1_Legislation/National/Capacities.csv",
+      "bytes": 4542884,
+      "hash": "sha256:fa423e9761c10dd9fe621a91c9604026499ba202f9b3f080500ab2aa79148d72",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s1_legislation-national-overview.csv",
+      "path": "WindOnshore/S1_Legislation/National/Overview.csv",
+      "bytes": 125,
+      "hash": "sha256:2dd09c844b40d721af08ed893bad709bd09690729bf11b058da7804615d93c16",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s1_legislation-nuts3-capacities.csv",
+      "path": "WindOnshore/S1_Legislation/Nuts3/Capacities.csv",
+      "bytes": 5034225,
+      "hash": "sha256:e7239d55d6112808e6599d5895a4f576a3deb6cba800c980f93f7f5647200e09",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s1_legislation-nuts3-overview.csv",
+      "path": "WindOnshore/S1_Legislation/Nuts3/Overview.csv",
+      "bytes": 16102,
+      "hash": "sha256:6e43fe4ee598fb17704c50eb936bc6648ef74ae9650188905f2124213e3876c1",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2_expansive-federalstates-capacities.csv",
+      "path": "WindOnshore/S2_Expansive/FederalStates/Capacities.csv",
+      "bytes": 5026286,
+      "hash": "sha256:2e7d3ecd8a114f56395b9e1c9dbc03077f99f7c501f75acb1008b66444bf3919",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2_expansive-federalstates-overview.csv",
+      "path": "WindOnshore/S2_Expansive/FederalStates/Overview.csv",
+      "bytes": 742,
+      "hash": "sha256:53b09eae9dadf0331cf0e7fb20d8b6c345c28f78c9ef6422399813c40248e5c9",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2_expansive-municipalities-capacities.csv",
+      "path": "WindOnshore/S2_Expansive/Municipalities/Capacities.csv",
+      "bytes": 5884156,
+      "hash": "sha256:acb5580fd509818d7f83eb5d911abdf5efc1f11ce3461bdba72164d1eda9dbc8",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2_expansive-municipalities-overview.csv",
+      "path": "WindOnshore/S2_Expansive/Municipalities/Overview.csv",
+      "bytes": 465165,
+      "hash": "sha256:45435f2bcdd10ec52c79fec595e03526c4bbf2fb320718964c97198d859bd03f",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2_expansive-national-capacities.csv",
+      "path": "WindOnshore/S2_Expansive/National/Capacities.csv",
+      "bytes": 4768918,
+      "hash": "sha256:5d06e2f80f0665d7312aab231feddabd82ad8de7d77bc6892183f9a6cb1a5f04",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2_expansive-national-overview.csv",
+      "path": "WindOnshore/S2_Expansive/National/Overview.csv",
+      "bytes": 125,
+      "hash": "sha256:c1520674243b9ab4a5fc735e960c6aa82374df5b2d5fbaa489a1753b08d1f68d",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2_expansive-nuts3-capacities.csv",
+      "path": "WindOnshore/S2_Expansive/Nuts3/Capacities.csv",
+      "bytes": 5283647,
+      "hash": "sha256:5a99ec85ea94280cbe7b9e4e56e51336a02d3866a2a121e667f151e53f13338a",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2_expansive-nuts3-overview.csv",
+      "path": "WindOnshore/S2_Expansive/Nuts3/Overview.csv",
+      "bytes": 16499,
+      "hash": "sha256:83af260adc1e0e1d67b3f8df1e60e3ee8615208addea86ca65aed7c90472f27d",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2a_noprotectedlandscapes-federalstates-capacities.csv",
+      "path": "WindOnshore/S2a_NoProtectedLandscapes/FederalStates/Capacities.csv",
+      "bytes": 3574559,
+      "hash": "sha256:4e236bafd7afe2d7d7d0762ea89829a9389f75b77e4724c9d2b3b558cb6dc5f7",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2a_noprotectedlandscapes-federalstates-overview.csv",
+      "path": "WindOnshore/S2a_NoProtectedLandscapes/FederalStates/Overview.csv",
+      "bytes": 738,
+      "hash": "sha256:bdac83274bb2a2600c179f98f9e4cbbf58d6599ea4e95f2dea4ae15e47eba9e0",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2a_noprotectedlandscapes-municipalities-capacities.csv",
+      "path": "WindOnshore/S2a_NoProtectedLandscapes/Municipalities/Capacities.csv",
+      "bytes": 4185399,
+      "hash": "sha256:66cd956c026981359c3f69372a31639f0d34abddca2718b252dbdf597e776b37",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2a_noprotectedlandscapes-municipalities-overview.csv",
+      "path": "WindOnshore/S2a_NoProtectedLandscapes/Municipalities/Overview.csv",
+      "bytes": 457442,
+      "hash": "sha256:3e4b4bb8af9eb3703cd1bedc14276c789511074f21a83ec58a3b5786e2645d6b",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2a_noprotectedlandscapes-national-capacities.csv",
+      "path": "WindOnshore/S2a_NoProtectedLandscapes/National/Capacities.csv",
+      "bytes": 3391300,
+      "hash": "sha256:0ea228a5c06594e8afc333e1a3e1996d1b4284a84389252c2866707c60b23a87",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2a_noprotectedlandscapes-national-overview.csv",
+      "path": "WindOnshore/S2a_NoProtectedLandscapes/National/Overview.csv",
+      "bytes": 125,
+      "hash": "sha256:ed76824a7fbbe151990e5add7447a7e7ba8db031c205f8d9770e38731f1be1dc",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2a_noprotectedlandscapes-nuts3-capacities.csv",
+      "path": "WindOnshore/S2a_NoProtectedLandscapes/Nuts3/Capacities.csv",
+      "bytes": 3757811,
+      "hash": "sha256:765e638005e036ecf40fa7cdc6d9355bdb4522f7cfe85170c3c9f5c3e9c5f0ab",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2a_noprotectedlandscapes-nuts3-overview.csv",
+      "path": "WindOnshore/S2a_NoProtectedLandscapes/Nuts3/Overview.csv",
+      "bytes": 16245,
+      "hash": "sha256:528380cdcf4bcf0e30dcde19820afceb68bf61f3840755f9f85f0dffb200a981",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2b_noforests-federalstates-capacities.csv",
+      "path": "WindOnshore/S2b_NoForests/FederalStates/Capacities.csv",
+      "bytes": 2996435,
+      "hash": "sha256:87bc8dbe2b7bac0aa52eed95ed1024e3b61bc3cd5cb5130f25aad1caecb89aa5",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2b_noforests-federalstates-overview.csv",
+      "path": "WindOnshore/S2b_NoForests/FederalStates/Overview.csv",
+      "bytes": 734,
+      "hash": "sha256:052796ff57661b494613528c5dcc1825cdc350c0ba79a54a6de53effb5c48224",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2b_noforests-municipalities-capacities.csv",
+      "path": "WindOnshore/S2b_NoForests/Municipalities/Capacities.csv",
+      "bytes": 3508505,
+      "hash": "sha256:fbbfa3fcac872033a2990925868b392504bba8e3dd4eaa9d14cb0b0717de96d8",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2b_noforests-municipalities-overview.csv",
+      "path": "WindOnshore/S2b_NoForests/Municipalities/Overview.csv",
+      "bytes": 456430,
+      "hash": "sha256:3d4de641bb5ff81c9f57a890428a55fd9fa46ee35234c26a0cb10bef717d3f54",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2b_noforests-national-capacities.csv",
+      "path": "WindOnshore/S2b_NoForests/National/Capacities.csv",
+      "bytes": 2842807,
+      "hash": "sha256:e5f6b7192b2f203296f34f377e62978aacfd14be3e286222b0b2948c0dcb2a4f",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2b_noforests-national-overview.csv",
+      "path": "WindOnshore/S2b_NoForests/National/Overview.csv",
+      "bytes": 123,
+      "hash": "sha256:9bce4dc5a5265afacf0eaf14dafce4f324b2bd5b320ea2023993a9b9b80c7f3b",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2b_noforests-nuts3-capacities.csv",
+      "path": "WindOnshore/S2b_NoForests/Nuts3/Capacities.csv",
+      "bytes": 3150056,
+      "hash": "sha256:3b8a3bd54f1042166ee79a65044d7a6292f3929ea987819f258db228f0a60c94",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s2b_noforests-nuts3-overview.csv",
+      "path": "WindOnshore/S2b_NoForests/Nuts3/Overview.csv",
+      "bytes": 16156,
+      "hash": "sha256:8c643c351cde88b672d74a6889ff6c6ccfdd8fa28e53356231c682d0506a286d",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s3_restrictive-federalstates-capacities.csv",
+      "path": "WindOnshore/S3_Restrictive/FederalStates/Capacities.csv",
+      "bytes": 1109303,
+      "hash": "sha256:1b5fbfefaecac1f4326fb88250a7da1ba59682fb70af33ce84dd7aea1405576d",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s3_restrictive-federalstates-overview.csv",
+      "path": "WindOnshore/S3_Restrictive/FederalStates/Overview.csv",
+      "bytes": 710,
+      "hash": "sha256:5203c9f94611662028c491e84e1762219dde659569d71c4c7b43bbebee804560",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s3_restrictive-municipalities-capacities.csv",
+      "path": "WindOnshore/S3_Restrictive/Municipalities/Capacities.csv",
+      "bytes": 1299793,
+      "hash": "sha256:42129040b5585d02992132c97f5343b9ed9491dd42d99182f8da6684c83d39e8",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s3_restrictive-municipalities-overview.csv",
+      "path": "WindOnshore/S3_Restrictive/Municipalities/Overview.csv",
+      "bytes": 436718,
+      "hash": "sha256:2ef7736ea92d7de2359e8a30bd3c02a1bd7d60dca026e9ac43cbcc15914a965e",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s3_restrictive-national-capacities.csv",
+      "path": "WindOnshore/S3_Restrictive/National/Capacities.csv",
+      "bytes": 1052149,
+      "hash": "sha256:d3fa41834a17ff7300638e387532cf3d9a093eb2dd147a3f9126f1110b7b033a",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s3_restrictive-national-overview.csv",
+      "path": "WindOnshore/S3_Restrictive/National/Overview.csv",
+      "bytes": 123,
+      "hash": "sha256:fa616d9752307ff5e9b4cfc78522311414e3001b4903945edab63f5570e46462",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s3_restrictive-nuts3-capacities.csv",
+      "path": "WindOnshore/S3_Restrictive/Nuts3/Capacities.csv",
+      "bytes": 1166450,
+      "hash": "sha256:b2e88d1d15b05b928e32b6a3d6bc63993a7889904eb52d3a854d14fd69c5437d",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "windonshore-s3_restrictive-nuts3-overview.csv",
+      "path": "WindOnshore/S3_Restrictive/Nuts3/Overview.csv",
+      "bytes": 15448,
+      "hash": "sha256:7deadcfebeb72e80e0f1c346bf4ae42c0e8ca1b29b891148870e2daf4c6ff04e",
+      "mediatype": "text/csv"
+    }
+  ],
+  "ethos:total_bytes": 173941781,
+  "ethos:file_count": 120
+}

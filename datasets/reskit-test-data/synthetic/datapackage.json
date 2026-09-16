@@ -1,0 +1,135 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "title": "RESKit synthetic test fixtures",
+  "description": "Fixtures invented here, with no upstream at all: a rectangle that is exactly one MERRA-2 grid cell, 100 randomly placed turbines, and two turbine cost baselines.",
+  "ethos:remote_prefix": "reskit-test-data/synthetic",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:origin": "created",
+  "contributors": [
+    {
+      "title": "Severin Ryberg",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich, ICE-2"
+    },
+    {
+      "title": "Christoph Winkler",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich, ICE-2"
+    },
+    {
+      "title": "ICE-2 RESKit maintainers",
+      "roles": [
+        "maintainer"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "RESKit - Renewable Energy Simulation toolkit for Python",
+      "path": "https://github.com/FZJ-IEK3-VSA/RESKit"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    }
+  ],
+  "ethos:retrieved": "2026-09-09",
+  "name": "reskit-test-data/synthetic",
+  "homepage": "https://github.com/FZJ-IEK3-VSA/RESKit",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "ethos:attribution": "ALL FILES IN THIS DATASET HAVE BEEN MODIFIED: every one is a spatial and/or temporal subset of the product named in its member descriptor, and several have been resampled. None is suitable for any purpose other than exercising RESKit's code paths.\nContains modified Copernicus Climate Change Service information (ERA5 and ERA5-Land, 2015); neither the European Commission nor ECMWF is responsible for any use of this data. EUMETSAT CM SAF: copyright 2017 EUMETSAT; Pfeifroth, U., Kothe, S., Mueller, R., Trentmann, J., Hollmann, R., Fuchs, P., Werscheck, M. (2017), doi:10.5676/EUM_SAF_CM/SARAH/V002. Contains MERRA-2 data provided by the NASA Global Modeling and Assimilation Office, and SRTM data provided by NASA/USGS. Data obtained from the Global Wind Atlas 3.0, developed, owned and operated by the Technical University of Denmark in partnership with the World Bank Group, utilizing data provided by Vortex, with funding from ESMAP. Solar resource data (c) 2023 Solargis; (c) The World Bank, Source: Global Solar Atlas 2.0. (c) European Union, Copernicus Land Monitoring Service 2018, European Environment Agency. Contains ESA Climate Change Initiative Land Cover data; users must acknowledge the ESA Climate Change Initiative and its Land Cover project together with the individual data providers, and cite ESA Land Cover CCI project team; Defourny, P. (2019): ESA Land Cover Climate Change Initiative (Land_Cover_cci): Global Land Cover Maps, Version 2.0.7, Centre for Environmental Data Analysis, https://catalogue.ceda.ac.uk/uuid/b382ebe6679d44b8b0e68ea4ef4b701c. GEBCO Bathymetric Compilation Group: The GEBCO Grid. Distance-to-coast data from the NASA Ocean Biology Processing Group. Administrative boundaries: (c) GeoBasis-DE / BKG, dl-de/by-2-0, and OCHA/ZIMSTAT under CC BY 3.0 IGO. ICON-LAM: contains modified data from Chen, S., Poll, S., Hendricks Franssen, H.-J., Heinrichs, H., Vereecken, H., Goergen, K. (2024): Convection-permitting ICON-LAM simulations for renewable energy potential estimates over southern Africa, Journal of Geophysical Research: Atmospheres, https://doi.org/10.1029/2023JD039569, dataset https://doi.org/10.26165/JUELICH-DATA/JYGQ65, licensed under CC BY 4.0.",
+  "resources": [
+    {
+      "name": "baseline_turbine_test.json",
+      "path": "baseline_turbine_test.json",
+      "bytes": 81,
+      "hash": "sha256:565613b233a4cbdbd632bde35d3471a9d7a28e66a889458e8ee22b0dbe593816",
+      "mediatype": "application/json"
+    },
+    {
+      "name": "baseline_turbine_testdummy.csv",
+      "path": "baseline_turbine_testdummy.csv",
+      "bytes": 567,
+      "hash": "sha256:ddfae48c8a6d88414690a4f8dd0401798a53f8f6562874ffbee3c3099cc58f9b",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "merra_point_context.dbf",
+      "path": "merra_point_context.dbf",
+      "bytes": 77,
+      "hash": "sha256:21c7d45ce651b9379a7f77efc0bbb0a5f3bd8a04cb5bf4395d6b7f885a29efb1",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "merra_point_context.prj",
+      "path": "merra_point_context.prj",
+      "bytes": 143,
+      "hash": "sha256:98aaf3d1c0ecadf1a424a4536de261c3daf4e373697cb86c40c43b989daf52eb",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "merra_point_context.shp",
+      "path": "merra_point_context.shp",
+      "bytes": 236,
+      "hash": "sha256:fc4983836e9888352272020a6b3b0589b594aaa6c3599c26e0000416378a4b02",
+      "mediatype": "application/octet-stream",
+      "ethos:sidecars": [
+        "merra_point_context.shx",
+        "merra_point_context.dbf",
+        "merra_point_context.prj"
+      ]
+    },
+    {
+      "name": "merra_point_context.shx",
+      "path": "merra_point_context.shx",
+      "bytes": 108,
+      "hash": "sha256:7f5d1b99c142e054b879265f088087111ae9c6e3cafa723fb03df7c8f410c732",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "random_turbines.dbf",
+      "path": "random_turbines.dbf",
+      "bytes": 2930,
+      "hash": "sha256:0dac4116909728c30d3293c7661c016713b2c52c1478f8063f22f65a68171b36",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "random_turbines.prj",
+      "path": "random_turbines.prj",
+      "bytes": 143,
+      "hash": "sha256:98aaf3d1c0ecadf1a424a4536de261c3daf4e373697cb86c40c43b989daf52eb",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "random_turbines.shp",
+      "path": "random_turbines.shp",
+      "bytes": 2900,
+      "hash": "sha256:c871a7b7aa0ed25876f51d73753eb84b0aa26baa0608900186f739e0a695d00a",
+      "mediatype": "application/octet-stream",
+      "ethos:sidecars": [
+        "random_turbines.shx",
+        "random_turbines.dbf",
+        "random_turbines.prj"
+      ]
+    },
+    {
+      "name": "random_turbines.shx",
+      "path": "random_turbines.shx",
+      "bytes": 900,
+      "hash": "sha256:08ee0a4209e4fd601e75287a0248e2a0869eb80821dfa76ed9c824bb59ee174a",
+      "mediatype": "application/octet-stream"
+    }
+  ],
+  "ethos:total_bytes": 8085,
+  "ethos:file_count": 10
+}

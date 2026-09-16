@@ -1,0 +1,117 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "title": "RESKit turbine and module placement tables",
+  "description": "Turbine and PV module positions for the Aachen region and for Bulawayo, as a shapefile and as CSV tables. What the workflow tests simulate at.",
+  "ethos:remote_prefix": "reskit-test-data/placements",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:origin": "created",
+  "ethos:derivation": "turbinePlacements.shp is 560 points; turbine_placements.csv and module_placements.csv carry the identical coordinates with turbine and module attributes attached. The two _cityBulawayoInZimbabwa tables are 44 turbines and 483 modules around Bulawayo.\nThe coordinates are ICE-2's; what they were sampled inside is the question this member had to answer -- see ethos:license_note.",
+  "contributors": [
+    {
+      "title": "Severin Ryberg",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich, ICE-2"
+    },
+    {
+      "title": "Philipp Dunkel",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich, ICE-2"
+    },
+    {
+      "title": "ICE-2 RESKit maintainers",
+      "roles": [
+        "maintainer"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "RESKit - Renewable Energy Simulation toolkit for Python",
+      "path": "https://github.com/FZJ-IEK3-VSA/RESKit"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    }
+  ],
+  "ethos:retrieved": "2026-09-09",
+  "name": "reskit-test-data/placements",
+  "homepage": "https://github.com/FZJ-IEK3-VSA/RESKit",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "ethos:attribution": "ALL FILES IN THIS DATASET HAVE BEEN MODIFIED: every one is a spatial and/or temporal subset of the product named in its member descriptor, and several have been resampled. None is suitable for any purpose other than exercising RESKit's code paths.\nContains modified Copernicus Climate Change Service information (ERA5 and ERA5-Land, 2015); neither the European Commission nor ECMWF is responsible for any use of this data. EUMETSAT CM SAF: copyright 2017 EUMETSAT; Pfeifroth, U., Kothe, S., Mueller, R., Trentmann, J., Hollmann, R., Fuchs, P., Werscheck, M. (2017), doi:10.5676/EUM_SAF_CM/SARAH/V002. Contains MERRA-2 data provided by the NASA Global Modeling and Assimilation Office, and SRTM data provided by NASA/USGS. Data obtained from the Global Wind Atlas 3.0, developed, owned and operated by the Technical University of Denmark in partnership with the World Bank Group, utilizing data provided by Vortex, with funding from ESMAP. Solar resource data (c) 2023 Solargis; (c) The World Bank, Source: Global Solar Atlas 2.0. (c) European Union, Copernicus Land Monitoring Service 2018, European Environment Agency. Contains ESA Climate Change Initiative Land Cover data; users must acknowledge the ESA Climate Change Initiative and its Land Cover project together with the individual data providers, and cite ESA Land Cover CCI project team; Defourny, P. (2019): ESA Land Cover Climate Change Initiative (Land_Cover_cci): Global Land Cover Maps, Version 2.0.7, Centre for Environmental Data Analysis, https://catalogue.ceda.ac.uk/uuid/b382ebe6679d44b8b0e68ea4ef4b701c. GEBCO Bathymetric Compilation Group: The GEBCO Grid. Distance-to-coast data from the NASA Ocean Biology Processing Group. Administrative boundaries: (c) GeoBasis-DE / BKG, dl-de/by-2-0, and OCHA/ZIMSTAT under CC BY 3.0 IGO. ICON-LAM: contains modified data from Chen, S., Poll, S., Hendricks Franssen, H.-J., Heinrichs, H., Vereecken, H., Goergen, K. (2024): Convection-permitting ICON-LAM simulations for renewable energy potential estimates over southern Africa, Journal of Geophysical Research: Atmospheres, https://doi.org/10.1029/2023JD039569, dataset https://doi.org/10.26165/JUELICH-DATA/JYGQ65, licensed under CC BY 4.0.",
+  "resources": [
+    {
+      "name": "module_placements.csv",
+      "path": "module_placements.csv",
+      "bytes": 37842,
+      "hash": "sha256:e6381c0d16d22a8300cbb6ef78b54da946869783f2f13dbf36d37e5b2dbfb86c",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "module_placements_citybulawayoinzimbabwa.csv",
+      "path": "module_placements_cityBulawayoInZimbabwa.csv",
+      "bytes": 32475,
+      "hash": "sha256:120e6bf4d2fb61155164860c014ce692dec94595e160cb258f35521070fc64ec",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "turbineplacements.dbf",
+      "path": "turbinePlacements.dbf",
+      "bytes": 6785,
+      "hash": "sha256:ba82065e0a78681ffd6b8d10e85b9276a9e7aad84b18ca1cc916ea1327785234",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "turbineplacements.prj",
+      "path": "turbinePlacements.prj",
+      "bytes": 143,
+      "hash": "sha256:98aaf3d1c0ecadf1a424a4536de261c3daf4e373697cb86c40c43b989daf52eb",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "turbineplacements.shp",
+      "path": "turbinePlacements.shp",
+      "bytes": 15780,
+      "hash": "sha256:4e2fbd2ef70575ebf5c812197f5dec0e472c11ad9124985fd3e11eeff81b094c",
+      "mediatype": "application/octet-stream",
+      "ethos:sidecars": [
+        "turbinePlacements.shx",
+        "turbinePlacements.dbf",
+        "turbinePlacements.prj"
+      ]
+    },
+    {
+      "name": "turbineplacements.shx",
+      "path": "turbinePlacements.shx",
+      "bytes": 4580,
+      "hash": "sha256:1dbd48d0a65724aa5fb94741a595d0691646750f707fb040589aa38a29ac7406",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "turbine_placements.csv",
+      "path": "turbine_placements.csv",
+      "bytes": 27652,
+      "hash": "sha256:9c312e4e6a0e24faa565fd290dd0a933584e135f81a6d3ddb6666515cf782543",
+      "mediatype": "text/csv"
+    },
+    {
+      "name": "turbine_placements_citybulawayoinzimbabwa.csv",
+      "path": "turbine_placements_cityBulawayoInZimbabwa.csv",
+      "bytes": 2402,
+      "hash": "sha256:8a1182ab0c30d6646867f4beb8ed6bbaff3dd0559fc91c2136b1e47b45505461",
+      "mediatype": "text/csv"
+    }
+  ],
+  "ethos:total_bytes": 127659,
+  "ethos:file_count": 8
+}

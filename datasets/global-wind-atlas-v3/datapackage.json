@@ -1,0 +1,148 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "global-wind-atlas-v3",
+  "title": "Global Wind Atlas 3.0, wind speed, Weibull parameters and RIX (250 m, global)",
+  "description": "The GWA 3 release: long-term mean wind speed at 10, 50, 100, 150 and 200 m, combined Weibull scale (A) and shape (K) parameters at 50, 100, 150 and 200 m, and the ruggedness index (RIX), as global GeoTIFFs on a 250 m grid. Superseded by global-wind-atlas (4.0) for wind speed, but the only vintage on the cluster that carries the Weibull and RIX layers -- GWA 4 was downloaded for wind speed only.",
+  "homepage": "https://globalwindatlas.info/",
+  "ethos:exclude": [
+    "=3.4.2",
+    "3.4.2",
+    "files.txt",
+    "wget-log",
+    "sample_8_7_4",
+    "gwa3_250_wind-speed_100m.NRW.tif"
+  ],
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:upstream": {
+    "status": "superseded",
+    "checked": "2026-09-07",
+    "note": "No route to this release was found. globalwindatlas.info serves its rasters from a single version-less API endpoint (/api/gis/global/<layer>/<height>) that always redirects to whatever the current release is -- today that is GWA 4.0. The endpoint 302s to figshare behind a private_link token, and figshare's public file endpoint (api.figshare.com/v2/file/<id>) returns 404 for those ids, so the versioned item they belong to cannot be resolved either. energydata.info lists Global Wind Atlas only as a link to the website, with no data resources. DTU may hold an archive; that has not been asked."
+  },
+  "sources": [
+    {
+      "title": "Global Wind Atlas -- GIS file downloads (global wind speed)",
+      "path": "https://globalwindatlas.info/en/download/gis-files"
+    },
+    {
+      "title": "Davis et al. (2023): The Global Wind Atlas -- A High-Resolution Dataset of Climatologies and Associated Web-Based Application. BAMS 104(8), E1507-E1525",
+      "path": "https://doi.org/10.1175/BAMS-D-21-0075.1"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    }
+  ],
+  "ethos:attribution": "Data obtained from the Global Wind Atlas 3.0, a free, web-based application developed, owned and operated by the Technical University of Denmark (DTU). The Global Wind Atlas 3.0 is released in partnership with the World Bank Group, utilizing data provided by Vortex, using funding provided by the Energy Sector Management Assistance Program (ESMAP). For additional information: https://globalwindatlas.info",
+  "ethos:license_status": "resolved",
+  "ethos:retrieved": "2019-11-11",
+  "ethos:contact": "p-dunkel",
+  "ethos:origin": "downloaded",
+  "resources": [
+    {
+      "name": "gwa3_250_rix.tif",
+      "path": "gwa3_250_RIX.tif",
+      "bytes": 2178586814,
+      "hash": "sha256:48aaf9460b0b136c545ce6496ed91e9a05bd8cb6f2669df5110504affe074105",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_combined-weibull-a_100m.tif",
+      "path": "gwa3_250_combined-Weibull-A_100m.tif",
+      "bytes": 13924150284,
+      "hash": "sha256:965d629efb3f3e6bfc23b969c36d5f24993ed8d118bda82abacbc1cd23bdc7a7",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_combined-weibull-a_150m.tif",
+      "path": "gwa3_250_combined-Weibull-A_150m.tif",
+      "bytes": 13822621093,
+      "hash": "sha256:a9611518ef2701af363d97bd522c7b553259eb32fe807f8dee9659ecc0b272be",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_combined-weibull-a_200m.tif",
+      "path": "gwa3_250_combined-Weibull-A_200m.tif",
+      "bytes": 13762349428,
+      "hash": "sha256:1478e6c71f788b1713c547ff53cbd1f31a7c8a51d023e9b941a4c361f214d63a",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_combined-weibull-a_50m.tif",
+      "path": "gwa3_250_combined-Weibull-A_50m.tif",
+      "bytes": 14027417619,
+      "hash": "sha256:3e05822effcdfa08f1b2bfc2752e38a387defc78293218b2352ddddc9da251c8",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_combined-weibull-k_100m.tif",
+      "path": "gwa3_250_combined-Weibull-K_100m.tif",
+      "bytes": 4395273490,
+      "hash": "sha256:385b674fb4f632c16e8b92ac26edd95d4c0596d91282de30cccbeeed89e2903b",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_combined-weibull-k_150m.tif",
+      "path": "gwa3_250_combined-Weibull-K_150m.tif",
+      "bytes": 4174642314,
+      "hash": "sha256:e122bcca840bcdead1f3d0add7bd5f96314c452f9e1c2d9babbe5137b86e0883",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_combined-weibull-k_200m.tif",
+      "path": "gwa3_250_combined-Weibull-K_200m.tif",
+      "bytes": 3941381401,
+      "hash": "sha256:140b44ce3987f8559c7deaf1710c9d7321d19c2baa7b34e9051fe0a9ad11ea56",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_combined-weibull-k_50m.tif",
+      "path": "gwa3_250_combined-Weibull-K_50m.tif",
+      "bytes": 4336744828,
+      "hash": "sha256:a31ebd973ee5eaff83f6a8669664aaca5a5e0a30ce2d77dc758a083b1f63eb40",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_wind-speed_100m.tif",
+      "path": "gwa3_250_wind-speed_100m.tif",
+      "bytes": 13931274720,
+      "hash": "sha256:75bdbddffaaec4719175a749ddb669f74b330652f8b43fc45ead30984bbc8b0a",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_wind-speed_10m.tif",
+      "path": "gwa3_250_wind-speed_10m.tif",
+      "bytes": 14182460033,
+      "hash": "sha256:539debb85dc399ff09c9f089e08719f98d50e4e2b58653642b9e50136acf3c0a",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_wind-speed_150m.tif",
+      "path": "gwa3_250_wind-speed_150m.tif",
+      "bytes": 13837920332,
+      "hash": "sha256:947e4a25ce457f16cd5c96c7b4327eeac7b86bf1ee2e2249ce961d9324daa0d1",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_wind-speed_200m.tif",
+      "path": "gwa3_250_wind-speed_200m.tif",
+      "bytes": 13762796475,
+      "hash": "sha256:1d585de4600518f21a45be97ec687ac18140195293fc03f239871bb27691866a",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa3_250_wind-speed_50m.tif",
+      "path": "gwa3_250_wind-speed_50m.tif",
+      "bytes": 13998792285,
+      "hash": "sha256:7a0580af17c2094ca9239bdf7e450edf4c8f8d6b2e008832db6ead9f2bbc0b20",
+      "mediatype": "image/tiff"
+    }
+  ],
+  "ethos:total_bytes": 144276411116,
+  "ethos:file_count": 14
+}

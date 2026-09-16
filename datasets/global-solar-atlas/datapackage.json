@@ -1,0 +1,66 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "global-solar-atlas",
+  "title": "Global Solar Atlas, long-term average solar resource and air temperature",
+  "description": "Long-term yearly averages of global horizontal irradiation (GHI), direct normal irradiation (DNI) and air temperature at 2 m (TEMP), plus the accompanying diffuse, tilted, elevation and PV-output layers, as global GeoTIFFs at roughly 250 m to 1 km. Produced by Solargis for the World Bank / ESMAP Global Solar Atlas. RESKit's PV workflows use GHI and DNI to bias-correct ERA5 irradiance; the CSP workflows use DNI and TEMP to pick the optimal heat transfer fluid per placement. Holds three GSA vintages, one per sub-directory -- see ethos:shard_depth.",
+  "homepage": "https://globalsolaratlas.info/",
+  "ethos:shard_depth": 1,
+  "ethos:exclude": [
+    "**/*.zip",
+    "global_solar_atlas/World_DNI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/gsa-dni-like.tif",
+    "global_solar_atlas/sample_8_7_4"
+  ],
+  "ethos:remote_prefix": "global-solar-atlas",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:upstream": {
+    "status": "available",
+    "checked": "2026-09-07",
+    "note": "Checked 2026-09-07. The v2 layers are served from api.globalsolaratlas.info/download/World/ and were re-downloaded successfully. The URLs are not discoverable on the GSA site itself -- they are listed in the CKAN catalogue at energydata.info (ESMAP/World Bank) -- and the host answers 404 to HEAD while serving GET, which makes them look dead when probed casually. The 2017 v1 rasters under global_solar_atlas/ are a different matter: that vintage is no longer offered and was not re-checked."
+  },
+  "sources": [
+    {
+      "title": "Global Solar Atlas -- world download (GIS data)",
+      "path": "https://globalsolaratlas.info/download/world"
+    },
+    {
+      "title": "Global Solar Atlas 2.0 Technical Report (ESMAP / World Bank, 2019)",
+      "path": "https://documents.worldbank.org/curated/en/529431592893043403"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International, with the mandatory and binding dispute-resolution addition stated in the Global Solar Atlas terms of use",
+      "path": "https://globalsolaratlas.info/support/terms-of-use",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "855bcbd0626a0091b2bb1bf1b29a2412bf2acc9b6c1eca4a63b884cefb3dd9ec"
+    }
+  ],
+  "ethos:attribution": "Solar resource data (c) 2023 Solargis. (c) The World Bank, Source: Global Solar Atlas 2.0. Data obtained from the Global Solar Atlas, a free, web-based application developed and operated by Solargis s.r.o. on behalf of the World Bank Group, utilizing Solargis data, with funding provided by the Energy Sector Management Assistance Program (ESMAP).",
+  "ethos:license_status": "resolved",
+  "ethos:retrieved": "2023-09-11",
+  "ethos:origin": "downloaded",
+  "ethos:shards": [
+    {
+      "prefix": "global_solar_atlas",
+      "path": "manifests/global_solar_atlas.json",
+      "ethos:file_count": 32,
+      "ethos:total_bytes": 3990542331
+    },
+    {
+      "prefix": "global_solar_atlas_v2.5",
+      "path": "manifests/global_solar_atlas_v2.5.json",
+      "ethos:file_count": 76,
+      "ethos:total_bytes": 16504327020
+    },
+    {
+      "prefix": "global_solar_atlas_v2.9",
+      "path": "manifests/global_solar_atlas_v2.9.json",
+      "ethos:file_count": 9,
+      "ethos:total_bytes": 7528543661
+    }
+  ],
+  "ethos:total_bytes": 28023413012,
+  "ethos:file_count": 117
+}

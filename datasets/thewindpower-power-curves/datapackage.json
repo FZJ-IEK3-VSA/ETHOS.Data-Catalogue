@@ -1,0 +1,40 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "thewindpower-power-curves",
+  "title": "Wind turbine power curves (thewindpower.net, licensed)",
+  "description": "Manufacturer power curves for commercial wind turbines, from The Wind Power's subscription wind-energy database (release 2025-07-08). Used to build RESKit's turbine library and to convolute power curves for onshore and offshore wind simulation. Licensed per site; it may not be redistributed and is never copied into a shared cache.",
+  "homepage": "https://www.thewindpower.net/",
+  "ethos:access": "restricted",
+  "ethos:visibility": "public",
+  "ethos:upstream": {
+    "status": "on-request",
+    "checked": "2026-09-07",
+    "note": "thewindpower.net is live and still sells this data (checked 2026-09-07), so it is obtainable -- by buying a subscription, which is per-location and is why this dataset is restricted and never mirrored. \"on-request\" here means commercially, not by asking a helpdesk."
+  },
+  "ethos:restriction": "Licensed from The Wind Power (thewindpower.net) under an ICE-2 database subscription. Redistribution is prohibited: the products must not be communicated outside the licensed location, though studies based on them may be published as long as they contain no raw data from the products. ICE-2 members on the institute HPC only; contact the RESKit maintainers for access.",
+  "sources": [
+    {
+      "title": "The Wind Power -- wind energy market intelligence database",
+      "path": "https://www.thewindpower.net/about_en.php"
+    },
+    {
+      "title": "The Wind Power -- general terms and conditions of sale",
+      "path": "https://www.thewindpower.net/general_terms_conditions_of_sale_2_en.php"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:retrieved": "2025-07-08",
+  "ethos:contact": "c-winkler",
+  "ethos:origin": "downloaded",
+  "resources": [
+    {
+      "name": "power_curves_20250708.xls",
+      "path": "Power_curves_20250708.xls",
+      "bytes": 870912,
+      "hash": "sha256:767c9f86f73df2d14f741238501c51382058c57b75e934274547e447813b3828",
+      "mediatype": "application/vnd.ms-excel"
+    }
+  ],
+  "ethos:total_bytes": 870912,
+  "ethos:file_count": 1
+}

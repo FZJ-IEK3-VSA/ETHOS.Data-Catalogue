@@ -1,0 +1,72 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "global-wind-atlas-era5-expanded",
+  "title": "GWA 4.0 100 m wind speed, expanded to full global coverage with the ERA5 long-run average",
+  "description": "The Global Wind Atlas 100 m mean wind speed raster at its native 250 m resolution, extended to complete global coverage using the ERA5 2008-2017 long-run average 100 m wind speed. GWA covers land and near-shore only; this derivative keeps GWA's resolution where GWA has data and interpolates from the coarse ERA5 climatology everywhere else, so that a workflow can sample any point on Earth from one raster instead of branching on coverage. 67 GB, one file.",
+  "ethos:include": [
+    "wind_speed_cog_100m_expanded_by_ERA5_100m_wind_speed.processed_2008_2017_mean_global.tif"
+  ],
+  "ethos:remote_prefix": "global-wind-atlas-era5-expanded",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:upstream": {
+    "status": "no-upstream",
+    "checked": "2026-09-07",
+    "note": "Not an upstream product at all: this raster was produced inside ICE-2 by blending GWA 4.0 with an ERA5 long-run average. It exists nowhere else, and the code that made it has not been recovered (see TODO-datasets.md). Its GWA input is separately catalogued as global-wind-atlas-v4. Checked 2026-09-07."
+  },
+  "ethos:origin": "derived",
+  "contributors": [
+    {
+      "title": "Christoph Winkler",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2)"
+    },
+    {
+      "title": "ICE-2 RESKit maintainers",
+      "roles": [
+        "maintainer"
+      ]
+    }
+  ],
+  "ethos:derivation": "ESTABLISHED: the raster is the GWA 4.0 100 m mean wind speed (GWA_4.0/wind_speed_cog_100m.tif) on its native 250 m grid, extended to complete global coverage using the ERA5 2008-2017 long-run average 100 m wind speed (/shared_data/2026_reskit_long_run_avg/output/global/ERA5_100m_wind_speed.processed_2008_2017_mean_global.tiff, itself produced by that folder's three-step pipeline from RESKit-processed ERA5 and pole-expanded by reskit.util.create_LRA). GWA values are kept where GWA has coverage; ERA5 supplies everything else. Both inputs are named in the filename and both are listed under sources.\nNOT ESTABLISHED, and required before this can be called reproducible: how the two were combined at the coverage boundary -- the resampling from ERA5's coarse grid to 250 m, whether there is feathering or a hard edge, and how the seam was treated. No script that produces this file exists in /shared_data/2026_reskit_long_run_avg or in the RESKit tree. reskit.util.create_LRA.expand_to_global_coverage is NOT it: it only fills polar rows and explicitly refuses anything but latitudinal expansion. Ask c-winkler.",
+  "sources": [
+    {
+      "title": "Global Wind Atlas -- GIS file downloads (global wind speed)",
+      "path": "https://globalwindatlas.info/en/download/gis-files"
+    },
+    {
+      "title": "ERA5 hourly data on single levels from 1940 to present (Copernicus Climate Data Store)",
+      "path": "https://doi.org/10.24381/cds.adbb2d47"
+    },
+    {
+      "title": "Hersbach et al. (2020): The ERA5 global reanalysis. QJRMS 146(730), 1999-2049",
+      "path": "https://doi.org/10.1002/qj.3803"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    }
+  ],
+  "ethos:attribution": "Derived work produced by Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2). Contains modified Global Wind Atlas data: data obtained from the Global Wind Atlas 4.0, a free, web-based application developed, owned and operated by the Technical University of Denmark (DTU), released in partnership with the World Bank Group, utilizing data provided by Vortex, using funding provided by ESMAP (https://globalwindatlas.info). Contains modified Copernicus Climate Change Service information (ERA5, 2008-2017); neither the European Commission nor ECMWF is responsible for any use of this data. The values outside the Global Wind Atlas coverage are ICE-2 interpolations, not DTU data.",
+  "ethos:license_status": "resolved",
+  "ethos:retrieved": "2026-07-30",
+  "ethos:contact": "c-winkler",
+  "resources": [
+    {
+      "name": "wind_speed_cog_100m_expanded_by_era5_100m_wind_speed.processed_2008_2017_mean_global.tif",
+      "path": "wind_speed_cog_100m_expanded_by_ERA5_100m_wind_speed.processed_2008_2017_mean_global.tif",
+      "bytes": 67808302476,
+      "hash": "sha256:111dafa00eac435555683d7cd7eacf1cf540432c5c60567d81424793f981ee9a",
+      "mediatype": "image/tiff"
+    }
+  ],
+  "ethos:total_bytes": 67808302476,
+  "ethos:file_count": 1
+}

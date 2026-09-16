@@ -1,0 +1,195 @@
+{
+  "name": "icon-lam-southern-africa-7-73-77",
+  "ethos:shard": "7/73/77",
+  "resources": [
+    {
+      "name": "7-73-77-2017-icon-lam_lonlat-0.033degree.z7.x73.y77.y2017.blh.nc",
+      "path": "7/73/77/2017/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2017.blh.nc",
+      "bytes": 958869259,
+      "hash": "sha256:cf89d36ce8605387e6af9ff0dea89d7b0d6f85c9c7f2c15813b8749d5a11e368",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2017-icon-lam_lonlat-0.033degree.z7.x73.y77.y2017.d2m.nc",
+      "path": "7/73/77/2017/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2017.d2m.nc",
+      "bytes": 958872444,
+      "hash": "sha256:dd831ac922276db2588640d03f3bc1a2edf418bcf534d251b4bdc4c9752a60de",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2017-icon-lam_lonlat-0.033degree.z7.x73.y77.y2017.fdir.nc",
+      "path": "7/73/77/2017/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2017.fdir.nc",
+      "bytes": 958871206,
+      "hash": "sha256:048a3475f1eab25b893897acdbb8965108329b453507fcd91a56792e0a3427b1",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2017-icon-lam_lonlat-0.033degree.z7.x73.y77.y2017.fsr.nc",
+      "path": "7/73/77/2017/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2017.fsr.nc",
+      "bytes": 958872220,
+      "hash": "sha256:161175aca2a76295a8d158536f76eafce6f8167a5f7281e46dc32f7cdf578522",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2017-icon-lam_lonlat-0.033degree.z7.x73.y77.y2017.sp.nc",
+      "path": "7/73/77/2017/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2017.sp.nc",
+      "bytes": 958872676,
+      "hash": "sha256:a311645f367075c8464d0f2971e8407ca249c4c1559260a1c970ff34f1018406",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2017-icon-lam_lonlat-0.033degree.z7.x73.y77.y2017.ssrd.nc",
+      "path": "7/73/77/2017/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2017.ssrd.nc",
+      "bytes": 958870796,
+      "hash": "sha256:16e2116dca9cc313bd5196e5c3ff880b31907aa3756b48d7254f9917ddb37a9e",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2017-icon-lam_lonlat-0.033degree.z7.x73.y77.y2017.t2m.nc",
+      "path": "7/73/77/2017/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2017.t2m.nc",
+      "bytes": 958872240,
+      "hash": "sha256:9ef2fdb2bdcae02beab5a188e894d81b13346f4e2cdc46abca567a3678910d94",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2017-icon-lam_lonlat-0.033degree.z7.x73.y77.y2017.ws10.nc",
+      "path": "7/73/77/2017/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2017.ws10.nc",
+      "bytes": 958870074,
+      "hash": "sha256:7666c42f2061b32ea9e4af34e6f059e00803d613f6fb4740a287d152a65bdf47",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2017-icon-lam_lonlat-0.033degree.z7.x73.y77.y2017.ws100.nc",
+      "path": "7/73/77/2017/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2017.ws100.nc",
+      "bytes": 958868327,
+      "hash": "sha256:a56ef0dc06da619ea051c7902d97727c3746224ec585aae99ff44c8064d039a2",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2018-icon-lam_lonlat-0.033degree.z7.x73.y77.y2018.blh.nc",
+      "path": "7/73/77/2018/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2018.blh.nc",
+      "bytes": 958869259,
+      "hash": "sha256:0c02c374158a8e4bff8704f6eb94783925ae5df42cd3ec093562f4759d84300e",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2018-icon-lam_lonlat-0.033degree.z7.x73.y77.y2018.d2m.nc",
+      "path": "7/73/77/2018/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2018.d2m.nc",
+      "bytes": 958872444,
+      "hash": "sha256:6c17d1697d71d459fda2cf4d22b377260abcb862830847488447b739c6cabc2f",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2018-icon-lam_lonlat-0.033degree.z7.x73.y77.y2018.fdir.nc",
+      "path": "7/73/77/2018/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2018.fdir.nc",
+      "bytes": 958871206,
+      "hash": "sha256:f6cd390838aef466c20479c584d968fe10ff785d5f89e63a5d65ad3a77ba315a",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2018-icon-lam_lonlat-0.033degree.z7.x73.y77.y2018.fsr.nc",
+      "path": "7/73/77/2018/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2018.fsr.nc",
+      "bytes": 958872220,
+      "hash": "sha256:5301bbb2c93fd285e43b94f535a81cdfbda070f3b6a5aec410e9e632d0dcbd30",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2018-icon-lam_lonlat-0.033degree.z7.x73.y77.y2018.sp.nc",
+      "path": "7/73/77/2018/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2018.sp.nc",
+      "bytes": 958872676,
+      "hash": "sha256:110e258d3ba20c93f6995ce6d9c329b6e43f731a81549e14e4709b75f89cb20a",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2018-icon-lam_lonlat-0.033degree.z7.x73.y77.y2018.ssrd.nc",
+      "path": "7/73/77/2018/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2018.ssrd.nc",
+      "bytes": 958870796,
+      "hash": "sha256:225241800b0e55de8ddd55cd4e62b0405ccfc940e0787eccc24542171f043f74",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2018-icon-lam_lonlat-0.033degree.z7.x73.y77.y2018.t2m.nc",
+      "path": "7/73/77/2018/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2018.t2m.nc",
+      "bytes": 958872240,
+      "hash": "sha256:40e73e0f99f64ff3fbd20322cd8cc2438dec2827f23280feb24fbdc13ecf723a",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2018-icon-lam_lonlat-0.033degree.z7.x73.y77.y2018.ws10.nc",
+      "path": "7/73/77/2018/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2018.ws10.nc",
+      "bytes": 958870074,
+      "hash": "sha256:2401e6768cb9da756453d43b8557b20d379fdab4b7f489eabaf6f9b0e8e1ec3c",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2018-icon-lam_lonlat-0.033degree.z7.x73.y77.y2018.ws100.nc",
+      "path": "7/73/77/2018/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2018.ws100.nc",
+      "bytes": 958868327,
+      "hash": "sha256:6d8dc37921edf72d52d451941d037f2d3e6aadc97c0a457774045531b5c08b54",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2019-icon-lam_lonlat-0.033degree.z7.x73.y77.y2019.blh.nc",
+      "path": "7/73/77/2019/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2019.blh.nc",
+      "bytes": 958869259,
+      "hash": "sha256:2efe581c1096142d03b4b40c1df0c8a56a08d8f3d7be0e93462b22004896147d",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2019-icon-lam_lonlat-0.033degree.z7.x73.y77.y2019.d2m.nc",
+      "path": "7/73/77/2019/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2019.d2m.nc",
+      "bytes": 958872444,
+      "hash": "sha256:0a218fbca89e39b5db76561895dc924a9f3e5a7f148985e879f5ce8b20ae9604",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2019-icon-lam_lonlat-0.033degree.z7.x73.y77.y2019.fdir.nc",
+      "path": "7/73/77/2019/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2019.fdir.nc",
+      "bytes": 958871206,
+      "hash": "sha256:26573262fe35a147bac7c325b9c676d29cf95e0bdca1260b9a2036ad82e8ae90",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2019-icon-lam_lonlat-0.033degree.z7.x73.y77.y2019.fsr.nc",
+      "path": "7/73/77/2019/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2019.fsr.nc",
+      "bytes": 958872220,
+      "hash": "sha256:3912828cfd9bd31830d437e6e64c039af4770814c1f4e300f754a1351a593b75",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2019-icon-lam_lonlat-0.033degree.z7.x73.y77.y2019.sp.nc",
+      "path": "7/73/77/2019/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2019.sp.nc",
+      "bytes": 958872676,
+      "hash": "sha256:0a1d2d49ecf0a0ff9041905514a073b4ce57799be9c3878b7b5ab8813c97d9b7",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2019-icon-lam_lonlat-0.033degree.z7.x73.y77.y2019.ssrd.nc",
+      "path": "7/73/77/2019/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2019.ssrd.nc",
+      "bytes": 958870796,
+      "hash": "sha256:005f4ffa5d1f83d86f59c3b2dc1a969c1766646b443e9fffafa5705277394d58",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2019-icon-lam_lonlat-0.033degree.z7.x73.y77.y2019.t2m.nc",
+      "path": "7/73/77/2019/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2019.t2m.nc",
+      "bytes": 958872240,
+      "hash": "sha256:99a9f9e872693429ec8b111e63420262e5de845a7c12dbb65931ea3a01b352e7",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2019-icon-lam_lonlat-0.033degree.z7.x73.y77.y2019.ws10.nc",
+      "path": "7/73/77/2019/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2019.ws10.nc",
+      "bytes": 958870074,
+      "hash": "sha256:c3e39726fad4826f18d8c5dd41fbdb4fa27b30c362378bc204cd206cb69582f9",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "7-73-77-2019-icon-lam_lonlat-0.033degree.z7.x73.y77.y2019.ws100.nc",
+      "path": "7/73/77/2019/ICON-LAM_lonlat-0.033degree.z7.x73.y77.y2019.ws100.nc",
+      "bytes": 958868327,
+      "hash": "sha256:81b8cc70e747bdf288181935611e2c2765bbb3368280e1cf1cdb6db286e4c1d7",
+      "mediatype": "application/x-netcdf"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "global-wind-atlas-v1",
+  "title": "Global Wind Atlas 1.0, mean wind speed at 50, 100 and 200 m (global and Europe)",
+  "description": "The first GWA release as held by ICE-2: global mean wind speed at 50, 100 and 200 m in WGS 84, plus European clips and a 5 km resample produced inside the institute. Superseded by global-wind-atlas (4.0); the oldest vintage on the cluster and the one behind the earliest RESKit wind results.",
+  "homepage": "https://globalwindatlas.info/",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:upstream": {
+    "status": "superseded",
+    "checked": "2026-09-07",
+    "note": "No route to this release was found. globalwindatlas.info serves its rasters from a single version-less API endpoint (/api/gis/global/<layer>/<height>) that always redirects to whatever the current release is -- today that is GWA 4.0. The endpoint 302s to figshare behind a private_link token, and figshare's public file endpoint (api.figshare.com/v2/file/<id>) returns 404 for those ids, so the versioned item they belong to cannot be resolved either. energydata.info lists Global Wind Atlas only as a link to the website, with no data resources. DTU may hold an archive; that has not been asked. Treat the cluster copy as the only one we have."
+  },
+  "sources": [
+    {
+      "title": "Global Wind Atlas -- GIS file downloads",
+      "path": "https://globalwindatlas.info/en/download/gis-files"
+    },
+    {
+      "title": "Global Wind Atlas -- about and release history (DTU Wind Energy)",
+      "path": "https://globalwindatlas.info/en/about/introduction"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    }
+  ],
+  "ethos:attribution": "Data obtained from the Global Wind Atlas, developed, owned and operated by the Technical University of Denmark (DTU). Where the data has been clipped or resampled, that is an ICE-2 modification and not part of the DTU release. For additional information: https://globalwindatlas.info",
+  "ethos:license_status": "resolved",
+  "ethos:retrieved": "unknown",
+  "ethos:contact": "p-dunkel",
+  "ethos:origin": "downloaded",
+  "resources": [
+    {
+      "name": "ws_050m_global_wgs84_mean_trimmed.tif",
+      "path": "WS_050m_global_wgs84_mean_trimmed.tif",
+      "bytes": 2068819312,
+      "hash": "sha256:e8fdf6f8daa4c13d601bd747029a4d218c60c4b3a3fc2e07bccc564b25abba5b",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "ws_050m_global_wgs84_mean_trimmed.tif.aux.xml",
+      "path": "WS_050m_global_wgs84_mean_trimmed.tif.aux.xml",
+      "bytes": 3880,
+      "hash": "sha256:6f5f36f7a38daff974bf65d743bce7dac1500b9fe5fbf5ed31cded58b2aeab48",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "ws_050m_global_wgs84_mean_trimmed_europe.tif",
+      "path": "WS_050m_global_wgs84_mean_trimmed_europe.tif",
+      "bytes": 62179092,
+      "hash": "sha256:fec79ed2ee10534b368ef87b7fd7005d8d8b76054a236744c5d8a83e68d87126",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "ws_050m_global_wgs84_mean_trimmed_europe.tif.aux.xml",
+      "path": "WS_050m_global_wgs84_mean_trimmed_europe.tif.aux.xml",
+      "bytes": 3915,
+      "hash": "sha256:df129672866d16ef4b9f88206267794024b6eee775527eccc7a3cc22a39c8184",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "ws_100m_global_wgs84_mean_trimmed.tif",
+      "path": "WS_100m_global_wgs84_mean_trimmed.tif",
+      "bytes": 2068819312,
+      "hash": "sha256:cf562ac321a27a27a001a8bd918d05286b901ec125eafffd3d5d4728f106c481",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "ws_100m_global_wgs84_mean_trimmed.tif.aux.xml",
+      "path": "WS_100m_global_wgs84_mean_trimmed.tif.aux.xml",
+      "bytes": 4102,
+      "hash": "sha256:659db232f6384e84cce0683237c1f0e3c7604a8900940a62078e8476756ee14a",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "ws_100m_global_wgs84_mean_trimmed_europe.tif",
+      "path": "WS_100m_global_wgs84_mean_trimmed_europe.tif",
+      "bytes": 62078501,
+      "hash": "sha256:a1a0e2342a3b7f103160c595bf1cd5f5af83cd607df503212f8536715b9ab5d0",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "ws_100m_global_wgs84_mean_trimmed_europe.tif.aux.xml",
+      "path": "WS_100m_global_wgs84_mean_trimmed_europe.tif.aux.xml",
+      "bytes": 8509,
+      "hash": "sha256:0836579d2dbfec671dd5a1b3858ff9e50f61146b7c4f7a39708c3312a8797809",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "ws_100m_global_wgs84_mean_trimmed_europe_5k.tif",
+      "path": "WS_100m_global_wgs84_mean_trimmed_europe_5k.tif",
+      "bytes": 3544735,
+      "hash": "sha256:3d27e189dfb7155aa3d1fa80b44b95a0c8e5a80be0c490927c03479ba5454db2",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "ws_200m_global_wgs84_mean_trimmed.tif",
+      "path": "WS_200m_global_wgs84_mean_trimmed.tif",
+      "bytes": 2068819312,
+      "hash": "sha256:da28868b76f77f230f43df86fbfc15638414455a1c32929873587f40e33a9221",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "ws_200m_global_wgs84_mean_trimmed_europe.tif",
+      "path": "WS_200m_global_wgs84_mean_trimmed_europe.tif",
+      "bytes": 61940865,
+      "hash": "sha256:392299092b5cde9af95b8ffd023ce779bbe4b76238a70d18f1288f5fa26f9d08",
+      "mediatype": "image/tiff"
+    }
+  ],
+  "ethos:total_bytes": 6396221535,
+  "ethos:file_count": 11
+}

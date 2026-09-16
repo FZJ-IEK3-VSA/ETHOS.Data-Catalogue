@@ -1,0 +1,206 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "title": "RESKit ERA5 test fixtures, Aachen",
+  "description": "ERA5 single-level fields over an 11 x 13 cell box around Aachen, 140 hours of December 2015, plus four snow variables. What RESKit's wind and PV workflow tests read as their weather input.",
+  "ethos:exclude": [
+    "**/__init__.py"
+  ],
+  "ethos:remote_prefix": "reskit-test-data/era5",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:origin": "derived",
+  "ethos:derivation": "Downloaded from the Copernicus Climate Data Store with grib_to_netcdf off a MARS adaptor, then `cdo sellonlatbox,5.0,7.5,49,52` and `cdo seltimestep,0/140`.\nTwo vintages, and the date matters for which licence applied at download time: most files were cut on 2020-04-23 from a 2020-01-30 download, under the Licence to Use Copernicus Products; the four raw wind components were re-downloaded 2026-02-05 (grib_to_netcdf 2.42.0) and the four snow variables added 2026-06-25, under CC BY 4.0, which replaced it on 2025-07-02. Both permit redistribution with attribution, so one licence entry covers the directory.",
+  "contributors": [
+    {
+      "title": "Severin Ryberg",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich, ICE-2"
+    },
+    {
+      "title": "Shuying Chen",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich, ICE-2"
+    },
+    {
+      "title": "ICE-2 RESKit maintainers",
+      "roles": [
+        "maintainer"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "ERA5 hourly data on single levels from 1940 to present (Copernicus CDS)",
+      "path": "https://doi.org/10.24381/cds.adbb2d47"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    }
+  ],
+  "ethos:retrieved": "2026-09-09",
+  "name": "reskit-test-data/era5",
+  "homepage": "https://github.com/FZJ-IEK3-VSA/RESKit",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "ethos:attribution": "ALL FILES IN THIS DATASET HAVE BEEN MODIFIED: every one is a spatial and/or temporal subset of the product named in its member descriptor, and several have been resampled. None is suitable for any purpose other than exercising RESKit's code paths.\nContains modified Copernicus Climate Change Service information (ERA5 and ERA5-Land, 2015); neither the European Commission nor ECMWF is responsible for any use of this data. EUMETSAT CM SAF: copyright 2017 EUMETSAT; Pfeifroth, U., Kothe, S., Mueller, R., Trentmann, J., Hollmann, R., Fuchs, P., Werscheck, M. (2017), doi:10.5676/EUM_SAF_CM/SARAH/V002. Contains MERRA-2 data provided by the NASA Global Modeling and Assimilation Office, and SRTM data provided by NASA/USGS. Data obtained from the Global Wind Atlas 3.0, developed, owned and operated by the Technical University of Denmark in partnership with the World Bank Group, utilizing data provided by Vortex, with funding from ESMAP. Solar resource data (c) 2023 Solargis; (c) The World Bank, Source: Global Solar Atlas 2.0. (c) European Union, Copernicus Land Monitoring Service 2018, European Environment Agency. Contains ESA Climate Change Initiative Land Cover data; users must acknowledge the ESA Climate Change Initiative and its Land Cover project together with the individual data providers, and cite ESA Land Cover CCI project team; Defourny, P. (2019): ESA Land Cover Climate Change Initiative (Land_Cover_cci): Global Land Cover Maps, Version 2.0.7, Centre for Environmental Data Analysis, https://catalogue.ceda.ac.uk/uuid/b382ebe6679d44b8b0e68ea4ef4b701c. GEBCO Bathymetric Compilation Group: The GEBCO Grid. Distance-to-coast data from the NASA Ocean Biology Processing Group. Administrative boundaries: (c) GeoBasis-DE / BKG, dl-de/by-2-0, and OCHA/ZIMSTAT under CC BY 3.0 IGO. ICON-LAM: contains modified data from Chen, S., Poll, S., Hendricks Franssen, H.-J., Heinrichs, H., Vereecken, H., Goergen, K. (2024): Convection-permitting ICON-LAM simulations for renewable energy potential estimates over southern Africa, Journal of Geophysical Research: Atmospheres, https://doi.org/10.1029/2023JD039569, dataset https://doi.org/10.26165/JUELICH-DATA/JYGQ65, licensed under CC BY 4.0.",
+  "resources": [
+    {
+      "name": "100m_u_component_of_wind.nc",
+      "path": "100m_u_component_of_wind.nc",
+      "bytes": 42356,
+      "hash": "sha256:75b8a787f9808fcae34a53e5bf231e4ed6d42fb14f806bdbd516aac159998f9e",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "100m_v_component_of_wind.nc",
+      "path": "100m_v_component_of_wind.nc",
+      "bytes": 42356,
+      "hash": "sha256:9b6eb35b92d7b88b0d1b4394930c19e39d75bba2630e2b9cbae3fbce5988f348",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "100m_wind_direction.processed.nc",
+      "path": "100m_wind_direction.processed.nc",
+      "bytes": 70567,
+      "hash": "sha256:d5279d37536fc6c60b47b859fa230e2e6bc3ccd6478605341162abf52a067673",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "100m_wind_speed.processed.nc",
+      "path": "100m_wind_speed.processed.nc",
+      "bytes": 70559,
+      "hash": "sha256:581a0fca216e90a28d933fa57f0e32e0b6645502356cb8ed95a24d2463a14e41",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "10m_u_component_of_wind.nc",
+      "path": "10m_u_component_of_wind.nc",
+      "bytes": 42352,
+      "hash": "sha256:6834acdf1ce048cf2cff0076cde2bc4d3c267579549300d251b188370425ba66",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "10m_v_component_of_wind.nc",
+      "path": "10m_v_component_of_wind.nc",
+      "bytes": 42352,
+      "hash": "sha256:e9aada747068824439c401240091ae7f2827d96eb24bc1da00319f0ad1ea91b2",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "10m_wind_direction.processed.nc",
+      "path": "10m_wind_direction.processed.nc",
+      "bytes": 70565,
+      "hash": "sha256:224ec612ab5bd9ca7cf9e5cbcf7789961657567c5f8342a1ef1af25be8dc47ab",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "10m_wind_speed.processed.nc",
+      "path": "10m_wind_speed.processed.nc",
+      "bytes": 70557,
+      "hash": "sha256:444884046065db81a5d9d3e0deea582b870c5ee8dddf5f2d4451b50b523f3894",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "2m_dewpoint_temperature.nc",
+      "path": "2m_dewpoint_temperature.nc",
+      "bytes": 68216,
+      "hash": "sha256:4bedeee19701863aa609fbe3f373f8dc3d48a5753fd89d834cae9b6c57138ad0",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "2m_temperature.nc",
+      "path": "2m_temperature.nc",
+      "bytes": 68181,
+      "hash": "sha256:eec211128c8881b83ae07e96e2f97d64cc5702383e96a46f607d9aaf02f564d3",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "boundary_layer_height.nc",
+      "path": "boundary_layer_height.nc",
+      "bytes": 68208,
+      "hash": "sha256:db0d0b4b5f2039555605e46aa90eaddeb2e2c9d1ed5bdbefad6627598a22e841",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "forecast_surface_roughness.nc",
+      "path": "forecast_surface_roughness.nc",
+      "bytes": 108042,
+      "hash": "sha256:e62f61d74e43911de273da6ebb032dbcc7919b80e0666e721e62a4c4342b76f1",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "snow_albedo.nc",
+      "path": "snow_albedo.nc",
+      "bytes": 51077,
+      "hash": "sha256:26f8b83d645c1c1b44c41d0e122eaddf17a6841b34da46b018a521625a3e616f",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "snow_density.nc",
+      "path": "snow_density.nc",
+      "bytes": 51079,
+      "hash": "sha256:3a5aef44aec0126e3b8113644bf78ecce2e6fdc128cc93893e68bfa7c9afc76f",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "snow_depth.nc",
+      "path": "snow_depth.nc",
+      "bytes": 50771,
+      "hash": "sha256:470c6fd4a4835fc5137e4a64dfda68d5b394a4586a861c63eb9632e794ae381c",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "snowfall.nc",
+      "path": "snowfall.nc",
+      "bytes": 50765,
+      "hash": "sha256:de8c83060768bb50f0beb08efa12205948a9b32d36fb2f86f6535a326b619b2a",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "surface_pressure.nc",
+      "path": "surface_pressure.nc",
+      "bytes": 70526,
+      "hash": "sha256:03231262099799d38cfbf8efbb5e0bce3f447cffaea9b8d4f0e158fecb8bafce",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "surface_solar_radiation_downwards.processed.nc",
+      "path": "surface_solar_radiation_downwards.processed.nc",
+      "bytes": 68334,
+      "hash": "sha256:64222ea66c74775f95e1f26cf3224493463a973b28f3720d58b94a9d956f2556",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "surface_solar_radiation_downwards.processed.t_adjusted.nc",
+      "path": "surface_solar_radiation_downwards.processed.t_adjusted.nc",
+      "bytes": 67685,
+      "hash": "sha256:ba78e4cd40cc1cecdc34f457c7f0296a0ff8aa7b68913f9f10c11995c73932e0",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "total_sky_direct_solar_radiation_at_surface.processed.nc",
+      "path": "total_sky_direct_solar_radiation_at_surface.processed.nc",
+      "bytes": 68373,
+      "hash": "sha256:4090d95ae85ee5c464736a7b593476ff550c17f577e41cb1629365ccf71bf8b7",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "total_sky_direct_solar_radiation_at_surface.processed.t_adjusted.nc",
+      "path": "total_sky_direct_solar_radiation_at_surface.processed.t_adjusted.nc",
+      "bytes": 67685,
+      "hash": "sha256:a7a0a31062ff78494f19c634416ff5d91884cf4d13e6a08c26ba92f1adfc933f",
+      "mediatype": "application/x-netcdf"
+    }
+  ],
+  "ethos:total_bytes": 1310606,
+  "ethos:file_count": 21
+}

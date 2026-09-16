@@ -1,0 +1,93 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "global-wind-atlas-v4",
+  "title": "Global Wind Atlas 4.0, mean wind speed (250 m, global)",
+  "description": "Long-term mean wind speed at 10, 50, 100, 150 and 200 m above ground level from the Global Wind Atlas (GWA), as global cloud-optimised GeoTIFFs on a 250 m grid. RESKit's wind workflows use the 100 m layer to bias-correct the ERA5 long-run average wind speed, and the surrounding heights for the \"lra\" height-scaling method. This is the current vintage; the superseded ones are catalogued separately as global-wind-atlas-v1, -v2 and -v3.",
+  "homepage": "https://globalwindatlas.info/",
+  "ethos:include": [
+    "wind_speed_cog_10m.tif",
+    "wind_speed_cog_50m.tif",
+    "wind_speed_cog_100m.tif",
+    "wind_speed_cog_150m.tif",
+    "wind_speed_cog_200m.tif",
+    "wind_speed_cog_100m.tif.aux.xml"
+  ],
+  "ethos:remote_prefix": "global-wind-atlas",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:upstream": {
+    "status": "available",
+    "checked": "2026-09-07",
+    "note": "Checked 2026-09-07. globalwindatlas.info still serves wind speed at all five heights from /api/gis/global/wind-speed/<height>, but the endpoint is VERSION-LESS: it 302s to whatever release is current, so what it returns today is not guaranteed to be the May 2025 rasters held here. The figshare file ids behind it have already rotated once (see ethos:license_note). Downloads also return HTTP 202 with zero bytes while figshare stages the file, which wget silently accepts -- poll for 200 first."
+  },
+  "sources": [
+    {
+      "title": "Global Wind Atlas -- GIS file downloads (global wind speed)",
+      "path": "https://globalwindatlas.info/en/download/gis-files"
+    },
+    {
+      "title": "Davis et al. (2023): The Global Wind Atlas -- A High-Resolution Dataset of Climatologies and Associated Web-Based Application. BAMS 104(8), E1507-E1525",
+      "path": "https://doi.org/10.1175/BAMS-D-21-0075.1"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    }
+  ],
+  "ethos:attribution": "Data obtained from the Global Wind Atlas 4.0, a free, web-based application developed, owned and operated by the Technical University of Denmark (DTU). The Global Wind Atlas 4.0 is released in partnership with the World Bank Group, utilizing data provided by Vortex, using funding provided by the Energy Sector Management Assistance Program (ESMAP). For additional information: https://globalwindatlas.info",
+  "ethos:license_status": "resolved",
+  "ethos:retrieved": "2025-05-09",
+  "ethos:contact": "p-dunkel",
+  "ethos:origin": "downloaded",
+  "resources": [
+    {
+      "name": "wind_speed_cog_100m.tif",
+      "path": "wind_speed_cog_100m.tif",
+      "bytes": 14074635333,
+      "hash": "sha256:3ed2c0bce38cd681aa61729027f666e39bd1f356eade42e6b8199a9f7e7f1730",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "wind_speed_cog_100m.tif.aux.xml",
+      "path": "wind_speed_cog_100m.tif.aux.xml",
+      "bytes": 387,
+      "hash": "sha256:ab60361a91d62cd712e6843b82aff921faba0348292b05aedc49887b4d534b9f",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "wind_speed_cog_10m.tif",
+      "path": "wind_speed_cog_10m.tif",
+      "bytes": 15357310694,
+      "hash": "sha256:cb0590e0e141034ceb59393abb4ade2f452ff85237a0edf419c44c93803eb8a8",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "wind_speed_cog_150m.tif",
+      "path": "wind_speed_cog_150m.tif",
+      "bytes": 13820167000,
+      "hash": "sha256:783441e1b6fb708cc873dbda8422a2ce74641156397840b5e7f7331d08916fdf",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "wind_speed_cog_200m.tif",
+      "path": "wind_speed_cog_200m.tif",
+      "bytes": 13634713706,
+      "hash": "sha256:99d670cbf99fcf55b5a21c986be895b771dbe146788b42077ce65c1fdbfedfb3",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "wind_speed_cog_50m.tif",
+      "path": "wind_speed_cog_50m.tif",
+      "bytes": 14478044122,
+      "hash": "sha256:229caf1e234600ac0fe7109d00040d91e07d7cfec5d1b190e8a140982a54b1fd",
+      "mediatype": "image/tiff"
+    }
+  ],
+  "ethos:total_bytes": 71364871242,
+  "ethos:file_count": 6
+}

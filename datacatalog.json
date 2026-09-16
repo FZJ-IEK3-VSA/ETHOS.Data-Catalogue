@@ -1,0 +1,291 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datacatalog.json",
+  "name": "ethos-data-catalog",
+  "ethos:catalog_role": "published",
+  "title": "ETHOS.Data Catalogue",
+  "description": "Tool-independent catalogue of datasets published by Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2). Software projects reference these datasets by name rather than copying the file inventory, so a dataset used by several tools is described -- and downloaded -- exactly once.",
+  "ethos:publication_url": "https://hifis-storage-ht.desy.de:2880/Helmholtz/FZJ-ICE2/ice2-data-files",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "datasets": [
+    {
+      "name": "corine-land-cover",
+      "path": "datasets/corine-land-cover/datapackage.json",
+      "title": "CORINE Land Cover 2018, 100 m raster, version 20 (Europe)",
+      "ethos:access": "public",
+      "ethos:total_bytes": 270215290,
+      "ethos:file_count": 67
+    },
+    {
+      "name": "esa-cci-landcover",
+      "path": "datasets/esa-cci-landcover/datapackage.json",
+      "title": "ESA CCI Land Cover Classification, 300 m, 1992-2015 (v2.0.7)",
+      "ethos:access": "public",
+      "ethos:total_bytes": 10033801057,
+      "ethos:file_count": 28
+    },
+    {
+      "name": "geothermal-conductivity-assumptions",
+      "path": "datasets/geothermal-conductivity-assumptions/datapackage.json",
+      "title": "Franzmann lithology-to-thermal-conductivity assumptions",
+      "ethos:access": "public",
+      "ethos:total_bytes": 12201,
+      "ethos:file_count": 1
+    },
+    {
+      "name": "geothermal-resource",
+      "path": "datasets/geothermal-resource/datapackage.json",
+      "title": "Global subsurface temperature and sustainable heat flow",
+      "ethos:access": "public",
+      "ethos:total_bytes": 6245859,
+      "ethos:file_count": 2
+    },
+    {
+      "name": "global-lithological-map-glim-v1",
+      "path": "datasets/global-lithological-map-glim-v1/datapackage.json",
+      "title": "Global Lithological Map Database (GLiM) v1.0, 0.5-degree grid",
+      "ethos:access": "public",
+      "ethos:total_bytes": 1235491,
+      "ethos:file_count": 2
+    },
+    {
+      "name": "global-solar-atlas",
+      "path": "datasets/global-solar-atlas/datapackage.json",
+      "title": "Global Solar Atlas, long-term average solar resource and air temperature",
+      "ethos:access": "public",
+      "ethos:total_bytes": 28023413012,
+      "ethos:file_count": 117
+    },
+    {
+      "name": "global-wind-atlas-era5-expanded",
+      "path": "datasets/global-wind-atlas-era5-expanded/datapackage.json",
+      "title": "GWA 4.0 100 m wind speed, expanded to full global coverage with the ERA5 long-run average",
+      "ethos:access": "public",
+      "ethos:total_bytes": 67808302476,
+      "ethos:file_count": 1
+    },
+    {
+      "name": "global-wind-atlas-v1",
+      "path": "datasets/global-wind-atlas-v1/datapackage.json",
+      "title": "Global Wind Atlas 1.0, mean wind speed at 50, 100 and 200 m (global and Europe)",
+      "ethos:access": "public",
+      "ethos:total_bytes": 6396221535,
+      "ethos:file_count": 11
+    },
+    {
+      "name": "global-wind-atlas-v2",
+      "path": "datasets/global-wind-atlas-v2/datapackage.json",
+      "title": "Global Wind Atlas 2.0, mean wind speed (global and Europe)",
+      "ethos:access": "public",
+      "ethos:total_bytes": 7255334744,
+      "ethos:file_count": 9
+    },
+    {
+      "name": "global-wind-atlas-v3",
+      "path": "datasets/global-wind-atlas-v3/datapackage.json",
+      "title": "Global Wind Atlas 3.0, wind speed, Weibull parameters and RIX (250 m, global)",
+      "ethos:access": "public",
+      "ethos:total_bytes": 144276411116,
+      "ethos:file_count": 14
+    },
+    {
+      "name": "global-wind-atlas-v4",
+      "path": "datasets/global-wind-atlas-v4/datapackage.json",
+      "title": "Global Wind Atlas 4.0, mean wind speed (250 m, global)",
+      "ethos:access": "public",
+      "ethos:total_bytes": 71364871242,
+      "ethos:file_count": 6
+    },
+    {
+      "name": "goutorbe-global-heat-flow-2011",
+      "path": "datasets/goutorbe-global-heat-flow-2011/datapackage.json",
+      "title": "Goutorbe et al. (2011) global heat flow and geophysical proxies",
+      "ethos:access": "public",
+      "ethos:total_bytes": 9647031,
+      "ethos:file_count": 1
+    },
+    {
+      "name": "icon-lam-southern-africa",
+      "path": "datasets/icon-lam-southern-africa/datapackage.json",
+      "title": "ICON-LAM convection-permitting simulation, southern Africa 2017-2019, 0.033 deg, 15 min, zoom-7 tiles for RESKit",
+      "ethos:access": "public",
+      "ethos:total_bytes": 3116089219806,
+      "ethos:file_count": 3861
+    },
+    {
+      "name": "nasa-power-geothermal-climatology",
+      "path": "datasets/nasa-power-geothermal-climatology/datapackage.json",
+      "title": "NASA POWER Earth Skin Temperature climatology used by Franzmann",
+      "ethos:access": "public",
+      "ethos:total_bytes": 13483532,
+      "ethos:file_count": 1
+    },
+    {
+      "name": "reskit-test-data/boundaries",
+      "path": "datasets/reskit-test-data/boundaries/datapackage.json",
+      "title": "RESKit administrative boundary test fixtures",
+      "ethos:access": "public",
+      "ethos:total_bytes": 31056,
+      "ethos:file_count": 8
+    },
+    {
+      "name": "reskit-test-data/corine",
+      "path": "datasets/reskit-test-data/corine/datapackage.json",
+      "title": "RESKit CORINE Land Cover test fixture, Aachen",
+      "ethos:access": "public",
+      "ethos:total_bytes": 103308,
+      "ethos:file_count": 1
+    },
+    {
+      "name": "reskit-test-data",
+      "path": "datasets/reskit-test-data/datapackage.json",
+      "title": "RESKit test fixtures - real weather and geospatial data, clipped",
+      "ethos:access": "public",
+      "ethos:total_bytes": 7858751,
+      "ethos:file_count": 88
+    },
+    {
+      "name": "reskit-test-data/dist2coast",
+      "path": "datasets/reskit-test-data/dist2coast/datapackage.json",
+      "title": "RESKit distance-to-coast test fixture, German Bight",
+      "ethos:access": "public",
+      "ethos:total_bytes": 617,
+      "ethos:file_count": 1
+    },
+    {
+      "name": "reskit-test-data/era5",
+      "path": "datasets/reskit-test-data/era5/datapackage.json",
+      "title": "RESKit ERA5 test fixtures, Aachen",
+      "ethos:access": "public",
+      "ethos:total_bytes": 1310606,
+      "ethos:file_count": 21
+    },
+    {
+      "name": "reskit-test-data/era5-csp",
+      "path": "datasets/reskit-test-data/era5-csp/datapackage.json",
+      "title": "RESKit ERA5 and ERA5-Land test fixtures, Morocco",
+      "ethos:access": "public",
+      "ethos:total_bytes": 1541015,
+      "ethos:file_count": 4
+    },
+    {
+      "name": "reskit-test-data/esa-cci-landcover",
+      "path": "datasets/reskit-test-data/esa-cci-landcover/datapackage.json",
+      "title": "RESKit ESA CCI land cover test fixtures, Aachen and Bulawayo",
+      "ethos:access": "public",
+      "ethos:total_bytes": 111583,
+      "ethos:file_count": 2
+    },
+    {
+      "name": "reskit-test-data/gebco",
+      "path": "datasets/reskit-test-data/gebco/datapackage.json",
+      "title": "RESKit GEBCO bathymetry test fixture, German Bight",
+      "ethos:access": "public",
+      "ethos:total_bytes": 6467,
+      "ethos:file_count": 1
+    },
+    {
+      "name": "reskit-test-data/global-solar-atlas",
+      "path": "datasets/reskit-test-data/global-solar-atlas/datapackage.json",
+      "title": "RESKit Global Solar Atlas test fixtures",
+      "ethos:access": "public",
+      "ethos:total_bytes": 1151033,
+      "ethos:file_count": 4
+    },
+    {
+      "name": "reskit-test-data/global-wind-atlas",
+      "path": "datasets/reskit-test-data/global-wind-atlas/datapackage.json",
+      "title": "RESKit Global Wind Atlas 3 test fixtures, Aachen",
+      "ethos:access": "public",
+      "ethos:total_bytes": 329256,
+      "ethos:file_count": 4
+    },
+    {
+      "name": "reskit-test-data/icon-lam",
+      "path": "datasets/reskit-test-data/icon-lam/datapackage.json",
+      "title": "RESKit ICON-LAM test fixtures (FZJ ICON-LAM, southern Africa, clipped)",
+      "ethos:access": "public",
+      "ethos:total_bytes": 1059404,
+      "ethos:file_count": 9
+    },
+    {
+      "name": "reskit-test-data/merra2",
+      "path": "datasets/reskit-test-data/merra2/datapackage.json",
+      "title": "RESKit MERRA-2 test fixtures, Aachen",
+      "ethos:access": "public",
+      "ethos:total_bytes": 955041,
+      "ethos:file_count": 12
+    },
+    {
+      "name": "reskit-test-data/placements",
+      "path": "datasets/reskit-test-data/placements/datapackage.json",
+      "title": "RESKit turbine and module placement tables",
+      "ethos:access": "public",
+      "ethos:total_bytes": 127659,
+      "ethos:file_count": 8
+    },
+    {
+      "name": "reskit-test-data/sarah",
+      "path": "datasets/reskit-test-data/sarah/datapackage.json",
+      "title": "RESKit CM SAF SARAH-2 test fixtures, Aachen",
+      "ethos:access": "public",
+      "ethos:total_bytes": 1098279,
+      "ethos:file_count": 2
+    },
+    {
+      "name": "reskit-test-data/srtm",
+      "path": "datasets/reskit-test-data/srtm/datapackage.json",
+      "title": "RESKit SRTM elevation test fixture, Aachen",
+      "ethos:access": "public",
+      "ethos:total_bytes": 25342,
+      "ethos:file_count": 1
+    },
+    {
+      "name": "reskit-test-data/synthetic",
+      "path": "datasets/reskit-test-data/synthetic/datapackage.json",
+      "title": "RESKit synthetic test fixtures",
+      "ethos:access": "public",
+      "ethos:total_bytes": 8085,
+      "ethos:file_count": 10
+    },
+    {
+      "name": "reskit-turbine-library",
+      "path": "datasets/reskit-turbine-library/datapackage.json",
+      "title": "RESKit turbine library, 880 turbines (derived from thewindpower.net, licensed)",
+      "ethos:access": "restricted",
+      "ethos:total_bytes": 670292,
+      "ethos:file_count": 880
+    },
+    {
+      "name": "thewindpower-power-curves",
+      "path": "datasets/thewindpower-power-curves/datapackage.json",
+      "title": "Wind turbine power curves (thewindpower.net, licensed)",
+      "ethos:access": "restricted",
+      "ethos:total_bytes": 870912,
+      "ethos:file_count": 1
+    },
+    {
+      "name": "thewindpower-turbines",
+      "path": "datasets/thewindpower-turbines/datapackage.json",
+      "title": "Wind turbine model table (thewindpower.net, licensed)",
+      "ethos:access": "restricted",
+      "ethos:total_bytes": 1390592,
+      "ethos:file_count": 1
+    },
+    {
+      "name": "thewindpower-windfarms",
+      "path": "datasets/thewindpower-windfarms/datapackage.json",
+      "title": "Global wind farm table (thewindpower.net, licensed)",
+      "ethos:access": "restricted",
+      "ethos:total_bytes": 21150208,
+      "ethos:file_count": 1
+    },
+    {
+      "name": "trep-db",
+      "path": "datasets/trep-db/datapackage.json",
+      "title": "Tool for Renewable Energy Potentials (TREP) Database",
+      "ethos:access": "public",
+      "ethos:total_bytes": 173941781,
+      "ethos:file_count": 120
+    }
+  ]
+}

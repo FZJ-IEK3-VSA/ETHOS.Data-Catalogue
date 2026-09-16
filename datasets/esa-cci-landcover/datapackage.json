@@ -1,0 +1,262 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "esa-cci-landcover",
+  "title": "ESA CCI Land Cover Classification, 300 m, 1992-2015 (v2.0.7)",
+  "description": "Annual global land cover classification maps at 300 m for 1992 to 2015, produced by the ESA Climate Change Initiative Land Cover project and archived by CEDA. 22 LCCS classes, with the class legend as ESACCI-LC-Legend.csv. The historical half of the series that the Copernicus C3S product (`landcover`) continues from 2016; used where a RESKit study needs land cover contemporaneous with a weather year before 2016 rather than the most recent map.",
+  "homepage": "https://www.esa-landcover-cci.org/",
+  "version": "2.0.7",
+  "id": "https://catalogue.ceda.ac.uk/uuid/b382ebe6679d44b8b0e68ea4ef4b701c",
+  "ethos:remote_prefix": "esa-cci-landcover",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:upstream": {
+    "status": "available",
+    "checked": "2026-09-07",
+    "note": "Verified 2026-09-07 by listing and re-downloading from the CEDA archive (data.ceda.ac.uk/neodc/esacci/land_cover/data/land_cover_maps/v2.0.7), which serves all 58 files openly to registered and unregistered users alike. CEDA's own readme now says \"This dataset has been completed\", so the series is closed and this release is not expected to move. Note the licence URL printed inside the delivery readme HAS rotted -- see ethos:license_note."
+  },
+  "ethos:coverage_note": "1992-2015, one GeoTIFF per year (the LCCS class layer, 300 m global grid), plus a netCDF for 2015 labelled v2.0.7b. That netCDF is the same product version 2.0.7 -- the \"b\" is a filename revision, not a product one -- and is a superset of the 2015 GeoTIFF: it adds the processed_flag, current_pixel_state, observation_count and change_count quality layers. Later years are the C3S product, catalogued as `landcover`.\nTHIS MIRROR IS A SUBSET OF THE CEDA ARCHIVE -- 28 files here against 58 upstream, established 2026-09-07 by listing the archive directly. Not held: the annual netCDFs for 1992-2014 (only 2015 was taken, though upstream has all 24, ~2.4 GB each); the 1992_2015 multi-year composite GeoTIFF; its four accompanying qualityflag rasters; and the ESACCI-LCMapsColorLegend style files in .dsr, .lyr and .qml form. Nothing is missing upstream -- it was simply never downloaded. The full 67.2 GiB archive is being pulled to /projects5/ethos_data_validation for inspection; decide there whether any of it is worth adding.",
+  "sources": [
+    {
+      "title": "ESA Land Cover Climate Change Initiative (Land_Cover_cci): Global Land Cover Maps, Version 2.0.7 (CEDA Archive)",
+      "path": "https://catalogue.ceda.ac.uk/uuid/b382ebe6679d44b8b0e68ea4ef4b701c"
+    },
+    {
+      "title": "ESA Climate Change Initiative - Land Cover project",
+      "path": "https://www.esa-landcover-cci.org/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "ESA Land Cover CCI project team",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "Pierre Defourny",
+      "roles": [
+        "author"
+      ],
+      "organization": "Universite catholique de Louvain"
+    },
+    {
+      "title": "Centre for Environmental Data Analysis (CEDA)",
+      "roles": [
+        "publisher"
+      ],
+      "path": "https://catalogue.ceda.ac.uk/uuid/b382ebe6679d44b8b0e68ea4ef4b701c"
+    }
+  ],
+  "licenses": [
+    {
+      "title": "Terms and Conditions for use of Land Cover CCI datasets from the CCI Open Data Portal",
+      "path": "https://artefacts.ceda.ac.uk/licences/specific_licences/esacci_landcover_terms_and_conditions.pdf",
+      "ethos:document": "licenses/esacci_landcover_terms_and_conditions.pdf",
+      "ethos:document_sha256": "a2b89ca5649815e1a0696b3b4220351409159328e4e4dbd4116d066bec5e8377"
+    }
+  ],
+  "ethos:attribution": "Contains ESA Climate Change Initiative Land Cover data, redistributed unmodified. Users must acknowledge the ESA Climate Change Initiative and the Land Cover CCI project together with the individual data providers in any presentation or publication, and cite the dataset as: ESA Land Cover CCI project team; Defourny, P. (2019): ESA Land Cover Climate Change Initiative (Land_Cover_cci): Global Land Cover Maps, Version 2.0.7. Centre for Environmental Data Analysis, date of citation. https://catalogue.ceda.ac.uk/uuid/b382ebe6679d44b8b0e68ea4ef4b701c Intellectual property rights in the data lie with the researchers and organisations that produced it. No warranty is given as to its quality, accuracy or fitness for any purpose.",
+  "ethos:license_status": "resolved",
+  "ethos:retrieved": "2023-05-12",
+  "ethos:origin": "downloaded",
+  "resources": [
+    {
+      "name": "00readme_catalogue_and_licence.txt",
+      "path": "00README_catalogue_and_licence.txt",
+      "bytes": 927,
+      "hash": "sha256:f835800ddc60d2c8d55380f86f0613573b90be0833ba613c5677aa9d1ddacdf8",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-1992-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-1992-v2.0.7.tif",
+      "bytes": 312228935,
+      "hash": "sha256:4c4834d06a0984f183dd580dca915034028014fdb97b675bfa4d7f93b96f0965",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-1993-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-1993-v2.0.7.tif",
+      "bytes": 312330609,
+      "hash": "sha256:846b22bd220f21759b112418ab59a29c03a82d4c6a5f374d205e34129524f44e",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-1994-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-1994-v2.0.7.tif",
+      "bytes": 312335985,
+      "hash": "sha256:2ae71e74d8bfb10c9a59fb6ee0c89b2712f2b11d04947c1b644b0089e1df8d48",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-1995-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-1995-v2.0.7.tif",
+      "bytes": 311960307,
+      "hash": "sha256:a98cf9d31cc1ea3875499f7cbb81fa2916e584514cb11853344674c7e6e17b8b",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-1996-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-1996-v2.0.7.tif",
+      "bytes": 311910615,
+      "hash": "sha256:313984c8751df624e09b0c6b0eeb65019a4ae1eea6b4347d278af7d1687c0395",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-1997-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-1997-v2.0.7.tif",
+      "bytes": 311935413,
+      "hash": "sha256:dbb1e5f161c7eb81d58faf30da7c83346f217b3dc9e12ddd81a89d1f8e562bd0",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-1998-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-1998-v2.0.7.tif",
+      "bytes": 312006817,
+      "hash": "sha256:77303dfac4127aa9c23a444297469170ce514c18692f2b5b26698f67525d27e8",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-1999-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-1999-v2.0.7.tif",
+      "bytes": 312073337,
+      "hash": "sha256:2db6169864bbfdcca27203e05be5625394bc7d86a24afd264dac7407f845a20f",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2000-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2000-v2.0.7.tif",
+      "bytes": 312044891,
+      "hash": "sha256:5faba8929b4576a7496ede09a4d974e68a8da7eac9a74fc308c538a95a2b6ad3",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2001-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2001-v2.0.7.tif",
+      "bytes": 311504207,
+      "hash": "sha256:380c11206b6ef6613f0f4f1a9bd4f5063f72f65f5e7c1d840772138323952526",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2002-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2002-v2.0.7.tif",
+      "bytes": 311309413,
+      "hash": "sha256:176325999f8dd1a94941dde321cf18be5ae1bca7908b7afbb26890d844f195bc",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2003-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2003-v2.0.7.tif",
+      "bytes": 311165557,
+      "hash": "sha256:9124536f81086870236fd460ab04e517b68e49913696d887c41f72ec0d633ed5",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2004-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2004-v2.0.7.tif",
+      "bytes": 311915579,
+      "hash": "sha256:77a20bd17bd4cd0a79c59ead51c563fd44b96e3cb4402018687423d9b1c49541",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2005-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2005-v2.0.7.tif",
+      "bytes": 311766289,
+      "hash": "sha256:6bc7ef8f0a35e1e93904b311f2004fa83f56839b578e881d6fda7ccf370e9f0f",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2006-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2006-v2.0.7.tif",
+      "bytes": 311740179,
+      "hash": "sha256:0dadb8cb347efc88ec386d3d34de5fcd63b7746e3a8d10b533ab6d4f7dd3ac74",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2007-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2007-v2.0.7.tif",
+      "bytes": 311701237,
+      "hash": "sha256:62bc284db72df98f83129a05b2b7c04489564104da13b21784189c7486117ada",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2008-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2008-v2.0.7.tif",
+      "bytes": 311732725,
+      "hash": "sha256:ebb1eafb7053b6493f4e5fb40fddac3b94dc845e3f101390fb4cfb34697bc1a9",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2009-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2009-v2.0.7.tif",
+      "bytes": 311791297,
+      "hash": "sha256:ca06f473204e39e93d33e06c6c6e7cc01ebf7d0ad068c898f15c1cb01b65ba4a",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2010-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2010-v2.0.7.tif",
+      "bytes": 311971087,
+      "hash": "sha256:6993681df4af6fcf397e94861eb3f85cc076d4b17fd0c221e14424948970ccce",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2011-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2011-v2.0.7.tif",
+      "bytes": 312133955,
+      "hash": "sha256:5568fe71bf31d3e5eec047c86f1ce4793c277dd792684b24ab83aabf22416a7a",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2012-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2012-v2.0.7.tif",
+      "bytes": 312298765,
+      "hash": "sha256:dc2d3832630d864293f130eb6b7ba3f537f41a30d46eb2de8dbb1c0c94091a8a",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2013-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2013-v2.0.7.tif",
+      "bytes": 312430197,
+      "hash": "sha256:407103f40603fc3f12eab37f79e431f925ad1e3c548dbc9940e32b4132ece3f5",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2014-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2014-v2.0.7.tif",
+      "bytes": 312571637,
+      "hash": "sha256:b955940148cc5d578a70b9c4ba69dc5b54d2a93fed45eec4394e5e7054e715ee",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2015-v2.0.7.tif",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2015-v2.0.7.tif",
+      "bytes": 312727481,
+      "hash": "sha256:5f0030bb0645acae41f7bbc4787e815d57e8034e6d102a458edbf77f568e98e8",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2015-v2.0.7.tif.aux.xml",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2015-v2.0.7.tif.aux.xml",
+      "bytes": 887,
+      "hash": "sha256:12f54747fdfc61b8669a9b10408ac5665f095091a35fb3c1b04250b8684c35fa",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "esacci-lc-l4-lccs-map-300m-p1y-2015-v2.0.7b.nc",
+      "path": "ESACCI-LC-L4-LCCS-Map-300m-P1Y-2015-v2.0.7b.nc",
+      "bytes": 2546210721,
+      "hash": "sha256:7bffa0d5adff5b117f303f4998808db8511447270959f4303decdc460d363863",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "esacci-lc-legend.csv",
+      "path": "ESACCI-LC-Legend.csv",
+      "bytes": 2008,
+      "hash": "sha256:810218149e3e1dc6eaff8fe53d554c90487851e2ffd98d1db9cb01d09c3ba91a",
+      "mediatype": "text/csv"
+    }
+  ],
+  "ethos:total_bytes": 10033801057,
+  "ethos:file_count": 28
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "geothermal-conductivity-assumptions",
+  "title": "Franzmann lithology-to-thermal-conductivity assumptions",
+  "description": "Original Excel workbook mapping GLiM's 16 rock classes to conductivity in W/(m K). The first worksheet contains the coefficients actually applied; the second preserves the reference table. Water-body conductivity was changed from 0.6 to 2.5 W/(m K) because of interpolation problems. No-data cells also receive 2.5 W/(m K). Preserved without editing the workbook.",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:remote_prefix": "geothermal-conductivity-assumptions",
+  "ethos:origin": "derived",
+  "contributors": [
+    {
+      "title": "David Franzmann",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich"
+    }
+  ],
+  "sources": [
+    {
+      "title": "GLiM class codes and names, Hartmann and Moosdorf (2012), Table A2",
+      "path": "https://doi.org/10.1029/2012GC004370"
+    },
+    {
+      "title": "Coefficient table, Aghahosseini and Breyer (2020), From hot rock to useful energy, Table 1; the second worksheet reproduces all 16 classes and values",
+      "path": "https://doi.org/10.1016/j.apenergy.2020.115769"
+    },
+    {
+      "title": "Method described in Franzmann et al. (2025), section 2.3; its citation of the coefficients as reference [27], a 2018 compressed-air storage paper, appears to mean reference [12], Aghahosseini and Breyer (2020)",
+      "path": "https://doi.org/10.1016/j.renene.2025.123199"
+    }
+  ],
+  "ethos:derivation": "David Franzmann combined GLiM class identifiers with the conductivity coefficients of Aghahosseini and Breyer (2020), Table 1, and changed the water-body coefficient from 0.6 to the default 2.5 W/(m K). Used by map_litho_to_therm_conduct.py and now by reskit.geothermal.preprocessing.create_geothermal_resource. This workbook is a local modeling input, not a thermal-conductivity product from PANGAEA.",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International for Franzmann's mapping",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:attribution": "Franzmann, David (2022): lithology-to-thermal-conductivity assumptions (Mapper_Lithologic_to_heat_conductivity.xlsx). Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2). Released under CC BY 4.0, https://creativecommons.org/licenses/by/4.0/. Workbook reproduced unedited. The conductivity coefficients are from Aghahosseini, Arman and Breyer, Christian (2020): From hot rock to useful energy: A global estimate of enhanced geothermal systems potential. Applied Energy 279, 115769, https://doi.org/10.1016/j.apenergy.2020.115769, Table 1 -- cite that paper for the coefficients themselves. The rock classes they are keyed to are from Hartmann, Jens and Moosdorf, Nils (2012): The new global lithological map database GLiM. https://doi.org/10.1029/2012GC004370, Table A2.",
+  "ethos:provenance": "Copied unchanged from Franzmann's restored dissertation archive on 2026-09-09. The first worksheet's mapping reproduces the archived 0.5-degree conductivity raster exactly. The second worksheet matches Aghahosseini and Breyer (2020), Table 1, value for value; SOURCE-EXCERPTS.md quotes the relevant passages of all three sources. The paper describes the mapping approach but does not specify the water-body override or raster nodata handling.",
+  "ethos:retrieved": "2026-09-09",
+  "ethos:contact": "d-franzmann",
+  "resources": [
+    {
+      "name": "mapper_lithologic_to_heat_conductivity.xlsx",
+      "path": "Mapper_Lithologic_to_heat_conductivity.xlsx",
+      "bytes": 12201,
+      "hash": "sha256:dd2e6c65dd8f1a1e56e86e4006dcf49605e54689aca462dec6c7a5761d6880bc",
+      "mediatype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    }
+  ],
+  "ethos:total_bytes": 12201,
+  "ethos:file_count": 1
+}

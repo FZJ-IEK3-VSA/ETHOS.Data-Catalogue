@@ -1,0 +1,71 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "goutorbe-global-heat-flow-2011",
+  "title": "Goutorbe et al. (2011) global heat flow and geophysical proxies",
+  "description": "Original supplementary table on a global 1-degree grid: observed heat flow, similarity and best-combination estimates with standard deviations, and geological and geophysical proxies. RESKit geothermal preprocessing uses Similarity method: mean HF (mW/m2) and Heat prod (provinces) (uW/m3). The complete original table is retained, including its explanatory header.",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:remote_prefix": "goutorbe-global-heat-flow-2011",
+  "ethos:origin": "downloaded",
+  "contributors": [
+    {
+      "title": "B. Goutorbe",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "J. Poort",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "F. Lucazeau",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "S. Raillard",
+      "roles": [
+        "author"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Goutorbe et al. (2011), Global heat flow trends resolved from multiple geological and geophysical proxies, supplementary material",
+      "path": "https://doi.org/10.1111/j.1365-246X.2011.05228.x"
+    },
+    {
+      "title": "Use in Franzmann et al. (2025), Global geothermal electricity potentials, section 2.3, equation (1)",
+      "path": "https://doi.org/10.1016/j.renene.2025.123199"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International, granted by the author",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:attribution": "Goutorbe, B.; Poort, J.; Lucazeau, F.; Raillard, S. (2011): Global heat flow trends resolved from multiple geological and geophysical proxies. Geophysical Journal International, supplementary material. https://doi.org/10.1111/j.1365-246X.2011.05228.x. Released under CC BY 4.0 by the author, https://creativecommons.org/licenses/by/4.0/. The original supplementary table is reproduced unchanged.",
+  "ethos:provenance": "Copied unchanged on 2026-09-09 from Franzmann's restored dissertation archive. Supplementary material.txt is byte-identical to the member of the archived GJI_5228_sm_data.zip. This table is an upstream modeled product; no local rasterization, smoothing or clipping is included in this catalogue entry.",
+  "ethos:retrieved": "2026-09-09",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "resources": [
+    {
+      "name": "supplementary-material.txt",
+      "path": "Supplementary material.txt",
+      "bytes": 9647031,
+      "hash": "sha256:557027e110fbae173fb822371471a8a0e5e34b3d658f5e0aa2a4ba674174b8f7",
+      "mediatype": "text/plain"
+    }
+  ],
+  "ethos:total_bytes": 9647031,
+  "ethos:file_count": 1
+}

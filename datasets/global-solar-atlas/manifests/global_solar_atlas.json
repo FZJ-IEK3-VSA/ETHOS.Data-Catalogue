@@ -1,0 +1,230 @@
+{
+  "name": "global-solar-atlas-global_solar_atlas",
+  "ethos:shard": "global_solar_atlas",
+  "resources": [
+    {
+      "name": "global_solar_atlas-world_dif_gisdata_ltay_dailysum_globalsolaratlas_geotiff-dif.tfw",
+      "path": "global_solar_atlas/World_DIF_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/DIF.tfw",
+      "bytes": 83,
+      "hash": "sha256:96902e6e061401760b25afee02173ba7055e591987f5e70b896291cab9c9a647",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "global_solar_atlas-world_dif_gisdata_ltay_dailysum_globalsolaratlas_geotiff-dif.tif",
+      "path": "global_solar_atlas/World_DIF_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/DIF.tif",
+      "bytes": 425652561,
+      "hash": "sha256:01b28d03888a187969d994c25f41ed91bac3d4bd0f631191f1f7006b69ad7134",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "global_solar_atlas-world_dif_gisdata_ltay_dailysum_globalsolaratlas_geotiff-dif.tif.pdf",
+      "path": "global_solar_atlas/World_DIF_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/DIF.tif.pdf",
+      "bytes": 64732,
+      "hash": "sha256:b0efc7b35629f1fdfd478e4230de71fc3d0963f905340529f666d5acc2855be5",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "global_solar_atlas-world_dif_gisdata_ltay_dailysum_globalsolaratlas_geotiff-dif.tif.xml",
+      "path": "global_solar_atlas/World_DIF_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/DIF.tif.xml",
+      "bytes": 22339,
+      "hash": "sha256:29920a07e45013d9536975e4226b59e0e8848c938b9212678383daab9939aa42",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "global_solar_atlas-world_dni_gisdata_ltay_dailysum_globalsolaratlas_geotiff-dni.tfw",
+      "path": "global_solar_atlas/World_DNI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/DNI.tfw",
+      "bytes": 83,
+      "hash": "sha256:96902e6e061401760b25afee02173ba7055e591987f5e70b896291cab9c9a647",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "global_solar_atlas-world_dni_gisdata_ltay_dailysum_globalsolaratlas_geotiff-dni.tif",
+      "path": "global_solar_atlas/World_DNI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/DNI.tif",
+      "bytes": 543461455,
+      "hash": "sha256:bc203243236f10dfc53c30456587026fa511ffa0ccbcd2bed6e525ce78c7b546",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "global_solar_atlas-world_dni_gisdata_ltay_dailysum_globalsolaratlas_geotiff-dni.tif.aux.xml",
+      "path": "global_solar_atlas/World_DNI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/DNI.tif.aux.xml",
+      "bytes": 4797,
+      "hash": "sha256:b8678539396ea7821c97269f253f91cdcb68108711c1fc7a4e579040ab86fa14",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "global_solar_atlas-world_dni_gisdata_ltay_dailysum_globalsolaratlas_geotiff-dni.tif.pdf",
+      "path": "global_solar_atlas/World_DNI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/DNI.tif.pdf",
+      "bytes": 64774,
+      "hash": "sha256:8bb71eddc99dd7b460d420e168a05137005b96c39822ef2ace7f63ac8d9eb7ff",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "global_solar_atlas-world_dni_gisdata_ltay_dailysum_globalsolaratlas_geotiff-dni.tif.xml",
+      "path": "global_solar_atlas/World_DNI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/DNI.tif.xml",
+      "bytes": 22374,
+      "hash": "sha256:0f68bd19c63d24f8644a0cafce2805554d5eb89381918a3d94fdc2e4c6011ff8",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "global_solar_atlas-world_dni_gisdata_ltay_dailysum_globalsolaratlas_geotiff-gsa-dni-like.tif.aux.xml",
+      "path": "global_solar_atlas/World_DNI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/gsa-dni-like.tif.aux.xml",
+      "bytes": 140,
+      "hash": "sha256:c084d8752ab7be48ef0f8d37ba82bd66e35b3505e45573b2eb0a45c0dabe2939",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "global_solar_atlas-world_ele_gisdata_ltay_dailysum_globalsolaratlas_geotiff-ele.tfw",
+      "path": "global_solar_atlas/World_ELE_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/ELE.tfw",
+      "bytes": 83,
+      "hash": "sha256:96902e6e061401760b25afee02173ba7055e591987f5e70b896291cab9c9a647",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "global_solar_atlas-world_ele_gisdata_ltay_dailysum_globalsolaratlas_geotiff-ele.tif",
+      "path": "global_solar_atlas/World_ELE_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/ELE.tif",
+      "bytes": 1192541543,
+      "hash": "sha256:1c36d70c18f0e32521a649bdfd9df267a53a4924ac13be1689eada921656db28",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "global_solar_atlas-world_ele_gisdata_ltay_dailysum_globalsolaratlas_geotiff-ele.tif.pdf",
+      "path": "global_solar_atlas/World_ELE_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/ELE.tif.pdf",
+      "bytes": 64434,
+      "hash": "sha256:26af0b2325b6f30c2232adf46d5b799f8dcfd931aa974744e265d8516925ea01",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "global_solar_atlas-world_ele_gisdata_ltay_dailysum_globalsolaratlas_geotiff-ele.tif.xml",
+      "path": "global_solar_atlas/World_ELE_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/ELE.tif.xml",
+      "bytes": 20119,
+      "hash": "sha256:5b199bdb63d4f65b7af36d5a832c4abdf592167273b3276e5d5703478261f4f5",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "global_solar_atlas-world_ghi_gisdata_ltay_dailysum_globalsolaratlas_geotiff-ghi.tfw",
+      "path": "global_solar_atlas/World_GHI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/GHI.tfw",
+      "bytes": 83,
+      "hash": "sha256:96902e6e061401760b25afee02173ba7055e591987f5e70b896291cab9c9a647",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "global_solar_atlas-world_ghi_gisdata_ltay_dailysum_globalsolaratlas_geotiff-ghi.tif",
+      "path": "global_solar_atlas/World_GHI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/GHI.tif",
+      "bytes": 491775171,
+      "hash": "sha256:94a0511e947959feef80fc54e9e27843e9f60d2d64fc14385288f24a2cdc5a84",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "global_solar_atlas-world_ghi_gisdata_ltay_dailysum_globalsolaratlas_geotiff-ghi.tif.aux.xml",
+      "path": "global_solar_atlas/World_GHI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/GHI.tif.aux.xml",
+      "bytes": 4678,
+      "hash": "sha256:96315d1f856e4d39d5efac42c87745825fffc0fe58d712a5baef1221f4e5ea05",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "global_solar_atlas-world_ghi_gisdata_ltay_dailysum_globalsolaratlas_geotiff-ghi.tif.pdf",
+      "path": "global_solar_atlas/World_GHI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/GHI.tif.pdf",
+      "bytes": 64794,
+      "hash": "sha256:d769605b3a35eed8812072752caf82c0d0e63b0396811842a796baf333fad4b5",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "global_solar_atlas-world_ghi_gisdata_ltay_dailysum_globalsolaratlas_geotiff-ghi.tif.xml",
+      "path": "global_solar_atlas/World_GHI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/GHI.tif.xml",
+      "bytes": 22417,
+      "hash": "sha256:dff0f684e01419272b663588b5b53e3b7acc390ddc34ee10b3ea75f1c8ba1d5a",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "global_solar_atlas-world_gti_gisdata_ltay_dailysum_globalsolaratlas_geotiff-gti.tfw",
+      "path": "global_solar_atlas/World_GTI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/GTI.tfw",
+      "bytes": 83,
+      "hash": "sha256:96902e6e061401760b25afee02173ba7055e591987f5e70b896291cab9c9a647",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "global_solar_atlas-world_gti_gisdata_ltay_dailysum_globalsolaratlas_geotiff-gti.tif",
+      "path": "global_solar_atlas/World_GTI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/GTI.tif",
+      "bytes": 511212865,
+      "hash": "sha256:c9f9248246ae8ea6f275981ff20bda3f9cb82f0d84984b89769891f7119ed3f0",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "global_solar_atlas-world_gti_gisdata_ltay_dailysum_globalsolaratlas_geotiff-gti.tif.pdf",
+      "path": "global_solar_atlas/World_GTI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/GTI.tif.pdf",
+      "bytes": 64535,
+      "hash": "sha256:bc239e301c2f124aaa74955285606368f39b1a968978ae7ef43fe3e430f7f0a2",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "global_solar_atlas-world_gti_gisdata_ltay_dailysum_globalsolaratlas_geotiff-gti.tif.xml",
+      "path": "global_solar_atlas/World_GTI_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/GTI.tif.xml",
+      "bytes": 22133,
+      "hash": "sha256:6c6427411e634b8a9b3135366851e853c306a51316803936d285544ac7d1515d",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "global_solar_atlas-world_pvout_gisdata_ltay_dailysum_globalsolaratlas_geotiff-pvout.tfw",
+      "path": "global_solar_atlas/World_PVOUT_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/PVOUT.tfw",
+      "bytes": 83,
+      "hash": "sha256:96902e6e061401760b25afee02173ba7055e591987f5e70b896291cab9c9a647",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "global_solar_atlas-world_pvout_gisdata_ltay_dailysum_globalsolaratlas_geotiff-pvout.tif",
+      "path": "global_solar_atlas/World_PVOUT_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/PVOUT.tif",
+      "bytes": 498004055,
+      "hash": "sha256:db1d80e2360f3ea5a519a6c1198ae9c52fdfccb4bd0c6c7a804dabd9d674b0b0",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "global_solar_atlas-world_pvout_gisdata_ltay_dailysum_globalsolaratlas_geotiff-pvout.tif.pdf",
+      "path": "global_solar_atlas/World_PVOUT_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/PVOUT.tif.pdf",
+      "bytes": 64684,
+      "hash": "sha256:7d11553f82dd98de6263c372fd74e5cd8b29b1f02ddc6244df9872368787676c",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "global_solar_atlas-world_pvout_gisdata_ltay_dailysum_globalsolaratlas_geotiff-pvout.tif.xml",
+      "path": "global_solar_atlas/World_PVOUT_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/PVOUT.tif.xml",
+      "bytes": 22286,
+      "hash": "sha256:8174ffcb4bef923a489efd72ca6939faf627241bcb51277fe25d69271b02d7ae",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "global_solar_atlas-world_temp_gisdata_ltay_dailysum_globalsolaratlas_geotiff-temp.tfw",
+      "path": "global_solar_atlas/World_TEMP_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/TEMP.tfw",
+      "bytes": 83,
+      "hash": "sha256:96902e6e061401760b25afee02173ba7055e591987f5e70b896291cab9c9a647",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "global_solar_atlas-world_temp_gisdata_ltay_dailysum_globalsolaratlas_geotiff-temp.tif",
+      "path": "global_solar_atlas/World_TEMP_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/TEMP.tif",
+      "bytes": 327277911,
+      "hash": "sha256:450dbae2486ee1277824c791e8d5159dcd0c1510d792b5438c9b4170a6e5071b",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "global_solar_atlas-world_temp_gisdata_ltay_dailysum_globalsolaratlas_geotiff-temp.tif.pdf",
+      "path": "global_solar_atlas/World_TEMP_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/TEMP.tif.pdf",
+      "bytes": 64488,
+      "hash": "sha256:11aeb8df4bcf354ebf72e220b9f706a99a2e6c3c0ec84c74dc3267724bc5e7a9",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "global_solar_atlas-world_temp_gisdata_ltay_dailysum_globalsolaratlas_geotiff-temp.tif.xml",
+      "path": "global_solar_atlas/World_TEMP_GISdata_LTAy_DailySum_GlobalSolarAtlas_GEOTIFF/TEMP.tif.xml",
+      "bytes": 21949,
+      "hash": "sha256:cec1c46f3bf958a0d03442a2d1eb96863d3b754d7a3f805d0401da827e0b9fc5",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "global_solar_atlas-info.txt",
+      "path": "global_solar_atlas/info.txt",
+      "bytes": 516,
+      "hash": "sha256:c3bdd49bdefebf715fb5d0ef4de76aaa3a9c339a89c8a8d2b4dac2834074d2af",
+      "mediatype": "text/plain"
+    }
+  ]
+}

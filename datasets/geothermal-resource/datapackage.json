@@ -1,0 +1,85 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "geothermal-resource",
+  "title": "Global subsurface temperature and sustainable heat flow",
+  "description": "Global 1-degree grids of rock temperature at ten depths (1000 to 10000 m), mean surface temperature, and sustainable geothermal heat flow in W/m2. Produced by David Franzmann for RESKit's Enhanced Geothermal System workflow. The temperature model and source combination are described in Franzmann, Heinrichs and Stolten (2025), section 2.3, equation (1). The archived scripts supply additional preprocessing details and the fixed 9 km heat-flow correction. All variables retain the heat-production mask: 20353 of 64800 horizontal cells contain valid values. Released under CC BY 4.0; the attributions of all four inputs must travel with the data.",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:remote_prefix": "geothermal-resource",
+  "ethos:origin": "derived",
+  "contributors": [
+    {
+      "title": "David Franzmann",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich"
+    }
+  ],
+  "ethos:upstream": {
+    "status": "no-upstream",
+    "checked": "2026-09-09",
+    "note": "These grids were produced locally. Their three original input products and the conductivity coefficient workbook are now separate catalogue entries. The related Mendeley results release has not been verified to contain these two particular resource grids."
+  },
+  "sources": [
+    {
+      "title": "Franzmann, D., Heinrichs, H. and Stolten, D. (2025): Global geothermal electricity potentials: A technical, economic, and thermal renewability assessment. Renewable Energy 250, 123199. Section 2.3, equation (1)",
+      "path": "https://doi.org/10.1016/j.renene.2025.123199"
+    },
+    {
+      "title": "Goutorbe et al. (2011), surface heat flow and radiogenic heat production",
+      "path": "https://doi.org/10.1111/j.1365-246X.2011.05228.x"
+    },
+    {
+      "title": "Hartmann and Moosdorf (2012), GLiM v1.0 at 0.5 degrees",
+      "path": "https://doi.org/10.1594/PANGAEA.788537"
+    },
+    {
+      "title": "NASA POWER climatology, Earth Skin Temperature TS at 0.5 degrees",
+      "path": "https://power.larc.nasa.gov/data-access-viewer/"
+    },
+    {
+      "title": "RESKit geothermal preprocessing implementation",
+      "path": "https://github.com/FZJ-IEK3-VSA/RESKit"
+    }
+  ],
+  "ethos:input_datasets": [
+    "goutorbe-global-heat-flow-2011",
+    "global-lithological-map-glim-v1",
+    "nasa-power-geothermal-climatology",
+    "geothermal-conductivity-assumptions"
+  ],
+  "ethos:derivation": "Implemented in reskit.geothermal.preprocessing.create_geothermal_resource. The Goutorbe supplementary table provides Similarity method: mean HF in mW/m2 and Heat prod (provinces) in uW/m3 on the 1-degree grid. Convert to W/m2 and W/m3 using factors 1e-3 and 1e-6 respectively. Map GLiM's 0.5-degree rock classes to conductivity using the first worksheet of Franzmann's Mapper_Lithologic_to_heat_conductivity.xlsx; water bodies and nodata use 2.5 W/(m K). Average conductivity to 1 degree. Select NASA POWER TS at time=13, copy the neighbouring longitude column over its missing final column, then average its 0.5-degree cells to 1 degree.\nEvaluate T(z) = T_surf + q_surf*z/k - A*z^2/(2*k) at 0 to 10000 m in 1000 m steps. Save the nonzero depths as temperature and the zero-depth result as surface_temperature. Missing A masks both, including depth zero. This equation and source combination are described in the supplied published paper, section 2.3, equation (1). The water-body override, missing-column repair, nodata treatment and fixed sustainable-flow correction are additional implementation details established from the archived scripts and workbook.\nSustainable heat flow is q_surf - 9000*A in SI units, from the original calcualte_sustainable_heat.py. The paper's section 2.4.2, equation (5), uses surface heat flux times reservoir area and does not specify this 9000 m correction. It must not be attributed to equation (5). Output coordinates are ascending latitude -89.5 to 89.5 and longitude -179.5 to 179.5.",
+  "ethos:provenance": "The user-supplied journal PDF was checked directly on 2026-09-09. A copy, the original scripts and distribution archives are preserved under Franzmann_GeothermalResourceInputs_2022/provenance on shared storage. Original-input identities are recorded in that directory's parent manifest. The original output files have no global attributes. New outputs from the RESKit preprocessing function carry the paper DOI, separate script attribution for sustainable heat flow, units, processing notes and SHA-256 input hashes.",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:attribution": "Derived work produced by David Franzmann, Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2), released under CC BY 4.0, https://creativecommons.org/licenses/by/4.0/. Cite Franzmann, D., Heinrichs, H. and Stolten, D. (2025): Global geothermal electricity potentials: A technical, economic, and thermal renewability assessment. Renewable Energy 250, 123199, https://doi.org/10.1016/j.renene.2025.123199.\nContains modified data from four inputs, each of which must be cited. Surface heat flow and radiogenic heat production: Goutorbe, B.; Poort, J.; Lucazeau, F.; Raillard, S. (2011): Global heat flow trends resolved from multiple geological and geophysical proxies. Geophysical Journal International, supplementary material, https://doi.org/10.1111/j.1365-246X.2011.05228.x, released under CC BY 4.0 by the author. Rock classes: Hartmann, Jens and Moosdorf, Nils (2012): Global Lithological Map Database v1.0 (gridded to 0.5-degree spatial resolution). PANGAEA, https://doi.org/10.1594/PANGAEA.788537, CC BY 3.0. Surface temperature: data obtained from the NASA Langley Research Center POWER Project; please cite NASA POWER and follow https://power.larc.nasa.gov/docs/referencing/. Thermal conductivity coefficients: Franzmann's mapping workbook, CC BY 4.0, catalogued as geothermal-conductivity-assumptions, whose values are from Aghahosseini, Arman and Breyer, Christian (2020): From hot rock to useful energy. Applied Energy 279, 115769, https://doi.org/10.1016/j.apenergy.2020.115769, Table 1.\nAll four inputs were modified. Heat flow and heat production were unit-converted from mW/m2 and uW/m3 to SI. GLiM rock classes were mapped to conductivity and averaged from 0.5 to 1 degree, with water bodies and nodata forced to 2.5 W/(m K). NASA POWER skin temperature was taken at time=13, its missing final longitude column filled from the neighbouring column, and averaged to 1 degree. Sustainable heat flow applies a fixed 9 km correction taken from Franzmann's calcualte_sustainable_heat.py, not from equation (5) of the paper.",
+  "ethos:retrieved": "2026-09-04",
+  "ethos:contact": "d-franzmann",
+  "resources": [
+    {
+      "name": "temperatures.nc4",
+      "path": "Temperatures.nc4",
+      "bytes": 5715165,
+      "hash": "sha256:39165b458b022f2c34b62d9bdf742c7f7bf1e6162e09eabac96420cea4e937ea",
+      "mediatype": "application/x-netcdf"
+    },
+    {
+      "name": "heat_flow_sustainable_w_per_m2.nc4",
+      "path": "heat_flow_sustainable_W_per_m2.nc4",
+      "bytes": 530694,
+      "hash": "sha256:121ab0fc1a675d51f1ec618513abbb4f0ae9211ba9ce493ea326558b318a1875",
+      "mediatype": "application/x-netcdf"
+    }
+  ],
+  "ethos:total_bytes": 6245859,
+  "ethos:file_count": 2
+}

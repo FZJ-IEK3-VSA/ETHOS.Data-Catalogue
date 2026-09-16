@@ -1,0 +1,57 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "nasa-power-geothermal-climatology",
+  "title": "NASA POWER Earth Skin Temperature climatology used by Franzmann",
+  "description": "The original POWER_Global_Climatology_LST_2.nc delivery used to construct RESKit's geothermal resource. Contains TS (Earth Skin Temperature, Celsius) for time indices 1 through 13 on a 360 by 720 global 0.5-degree grid. The climatological averaging years and exact POWER release are not recorded in this historical file. Retained unchanged, including the missing final longitude column; the repair and 1-degree averaging happen downstream.",
+  "homepage": "https://power.larc.nasa.gov/data-access-viewer/",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:remote_prefix": "nasa-power-geothermal-climatology",
+  "ethos:origin": "downloaded",
+  "contributors": [
+    {
+      "title": "NASA Langley Research Center POWER Project",
+      "roles": [
+        "publisher"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "NASA POWER Data Access Viewer (archived source note identifies v2.0.0)",
+      "path": "https://power.larc.nasa.gov/data-access-viewer/"
+    },
+    {
+      "title": "NASA POWER meteorological data methodology",
+      "path": "https://power.larc.nasa.gov/docs/methodology/meteorology/"
+    },
+    {
+      "title": "Use in Franzmann et al. (2025), section 2.3, equation (1)",
+      "path": "https://doi.org/10.1016/j.renene.2025.123199"
+    }
+  ],
+  "licenses": [
+    {
+      "title": "NASA Earth science data use policy",
+      "path": "https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-policy",
+      "ethos:document": "licenses/nasa-data-use-policy.html",
+      "ethos:document_sha256": "0a837eba4cb1782a21bc4e7294aa05bd8b67ecff39ca7c030c564d37029f9229"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:attribution": "Data obtained from the NASA Langley Research Center POWER Project. Please cite NASA POWER and follow https://power.larc.nasa.gov/docs/referencing/.",
+  "ethos:provenance": "Copied byte for byte from Franzmann's restored dissertation archive on 2026-09-09. The original filesystem timestamp is 2022-05-02, which identifies neither the climatology period nor the upstream release. The file has no global provenance attributes. Current POWER release dates must not be used to infer the historical averaging period. TS time=13 is the slice selected by calculate_Temperature.py.",
+  "ethos:retrieved": "2026-09-09",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "resources": [
+    {
+      "name": "power_global_climatology_lst_2.nc",
+      "path": "POWER_Global_Climatology_LST_2.nc",
+      "bytes": 13483532,
+      "hash": "sha256:2d3f4ade60f00154a6e11ce0c4b57268bdfcbca248fd255c0792a624f31570ae",
+      "mediatype": "application/x-netcdf"
+    }
+  ],
+  "ethos:total_bytes": 13483532,
+  "ethos:file_count": 1
+}

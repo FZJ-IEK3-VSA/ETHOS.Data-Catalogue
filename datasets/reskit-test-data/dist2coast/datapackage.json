@@ -1,0 +1,69 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "title": "RESKit distance-to-coast test fixture, German Bight",
+  "description": "Distance to the nearest coastline in kilometres over the same 24 x 24 cell box as the bathymetry fixture.",
+  "ethos:remote_prefix": "reskit-test-data/dist2coast",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:origin": "derived",
+  "ethos:derivation": "Cut from NASA OBPG's 0.01 degree distance-to-coast grid, which is computed with the Generic Mapping Tools against the GSHHG intermediate-resolution coastline -- exactly what the file's own TIFF tag says.\nVerified against the upstream subset: all 576 pixels identical. The only changes are the spatial subset and the netCDF to GeoTIFF container change. No resampling, no rescaling, no change of values at all.",
+  "contributors": [
+    {
+      "title": "M. Stargardt",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich, ICE-2"
+    },
+    {
+      "title": "ICE-2 RESKit maintainers",
+      "roles": [
+        "maintainer"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Distance to Nearest Coastline, 0.01-Degree Grid -- PacIOOS record. The live description of the product, and where the licence text below is published.",
+      "path": "https://www.pacioos.hawaii.edu/metadata/dist2coast_1deg.html"
+    },
+    {
+      "title": "Same grid, PacIOOS ERDDAP griddap endpoint -- the working download route. Subsettable, serves netCDF and GeoTIFF among some forty formats.",
+      "path": "https://pae-paha.pacioos.hawaii.edu/erddap/griddap/dist2coast_1deg.html"
+    },
+    {
+      "title": "Distance to Nearest Coastline (NASA Ocean Biology Processing Group) -- the originating product. Page retired; see ethos:upstream.",
+      "path": "https://oceancolor.gsfc.nasa.gov/docs/distfromcoast/"
+    }
+  ],
+  "licenses": [
+    {
+      "title": "Distance-to-coast grid -- free use and redistribution, no warranty, not intended for legal use. Stated by PacIOOS (University of Hawaii), which redistributes the grid; NASA OBPG, which generated it, states no terms on any page still serving.",
+      "path": "https://www.pacioos.hawaii.edu/metadata/dist2coast_1deg.html",
+      "ethos:document": "licenses/pacioos-dist2coast-erddap-metadata.json",
+      "ethos:document_sha256": "026a667b3c0c8b09209f2957205973b13b46296f7e01fbe00ff732e31ee4c6f8"
+    }
+  ],
+  "ethos:upstream": {
+    "status": "live",
+    "checked": "2026-09-16",
+    "note": "Live, but not where this descriptor used to point. The NASA OBPG page it cited for both source and licence -- oceancolor.gsfc.nasa.gov/docs/distfromcoast/ -- now 301s to earthdata.nasa.gov/centers/ob-daac, a centre landing page that carries neither the product nor any terms. So the citation that was recorded here no longer substantiates either claim, which is why all three sources above were repointed.\nThe grid itself is still served, by PacIOOS, who mirrored it from NASA in 2012 and whose ERDDAP endpoint subsets and reprojects on request. That is now the route of record for both the bytes and the terms."
+  },
+  "ethos:license_status": "resolved",
+  "ethos:retrieved": "2026-09-09",
+  "name": "reskit-test-data/dist2coast",
+  "homepage": "https://github.com/FZJ-IEK3-VSA/RESKit",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "ethos:attribution": "ALL FILES IN THIS DATASET HAVE BEEN MODIFIED: every one is a spatial and/or temporal subset of the product named in its member descriptor, and several have been resampled. None is suitable for any purpose other than exercising RESKit's code paths.\nContains modified Copernicus Climate Change Service information (ERA5 and ERA5-Land, 2015); neither the European Commission nor ECMWF is responsible for any use of this data. EUMETSAT CM SAF: copyright 2017 EUMETSAT; Pfeifroth, U., Kothe, S., Mueller, R., Trentmann, J., Hollmann, R., Fuchs, P., Werscheck, M. (2017), doi:10.5676/EUM_SAF_CM/SARAH/V002. Contains MERRA-2 data provided by the NASA Global Modeling and Assimilation Office, and SRTM data provided by NASA/USGS. Data obtained from the Global Wind Atlas 3.0, developed, owned and operated by the Technical University of Denmark in partnership with the World Bank Group, utilizing data provided by Vortex, with funding from ESMAP. Solar resource data (c) 2023 Solargis; (c) The World Bank, Source: Global Solar Atlas 2.0. (c) European Union, Copernicus Land Monitoring Service 2018, European Environment Agency. Contains ESA Climate Change Initiative Land Cover data; users must acknowledge the ESA Climate Change Initiative and its Land Cover project together with the individual data providers, and cite ESA Land Cover CCI project team; Defourny, P. (2019): ESA Land Cover Climate Change Initiative (Land_Cover_cci): Global Land Cover Maps, Version 2.0.7, Centre for Environmental Data Analysis, https://catalogue.ceda.ac.uk/uuid/b382ebe6679d44b8b0e68ea4ef4b701c. GEBCO Bathymetric Compilation Group: The GEBCO Grid. Distance-to-coast data from the NASA Ocean Biology Processing Group. Administrative boundaries: (c) GeoBasis-DE / BKG, dl-de/by-2-0, and OCHA/ZIMSTAT under CC BY 3.0 IGO. ICON-LAM: contains modified data from Chen, S., Poll, S., Hendricks Franssen, H.-J., Heinrichs, H., Vereecken, H., Goergen, K. (2024): Convection-permitting ICON-LAM simulations for renewable energy potential estimates over southern Africa, Journal of Geophysical Research: Atmospheres, https://doi.org/10.1029/2023JD039569, dataset https://doi.org/10.26165/JUELICH-DATA/JYGQ65, licensed under CC BY 4.0.",
+  "resources": [
+    {
+      "name": "coast_distance_northsea.tif",
+      "path": "coast_distance_northsea.tif",
+      "bytes": 617,
+      "hash": "sha256:40a833b0fec1528d2968b5f703e447cd6e12ae84bb10ca445954152056b5a3e5",
+      "mediatype": "image/tiff"
+    }
+  ],
+  "ethos:total_bytes": 617,
+  "ethos:file_count": 1
+}

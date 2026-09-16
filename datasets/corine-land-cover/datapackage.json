@@ -1,0 +1,509 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "corine-land-cover",
+  "title": "CORINE Land Cover 2018, 100 m raster, version 20 (Europe)",
+  "description": "CORINE Land Cover for reference year 2018, as the European seamless 100 m raster (version 20, May 2019) in EPSG:3035, with the 44-class CLC nomenclature, its colour table and value-attribute table, and separate rasters for the five French overseas departments. Produced by the European Environment Agency for the Copernicus Land Monitoring Service. A higher-resolution European alternative to the global 300 m `landcover` dataset for land-use exclusion and surface-roughness work. Holds the 2018 reference year only -- see ethos:coverage_note.",
+  "homepage": "https://land.copernicus.eu/en/products/corine-land-cover/clc2018",
+  "id": "copernicus_r_3035_100_m_clc-2018_p_2017-2018_v20_r00",
+  "version": "V2018_20",
+  "ethos:remote_prefix": "corine-land-cover",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:upstream": {
+    "status": "on-request",
+    "checked": "2026-09-07",
+    "note": "Not downloadable from the CLMS in any form. The EEA record for V2018_20 carries no download link, only WMS view services, and is marked OBSOLETE. The pre-packaged-files API offers 27 CORINE pre-packages across all reference years and change layers; all 27 are v2020_20u1, and CLMS reports previous_item: {}. The remaining route is a request to JRC-Copernicus-Land@ec.europa.eu; whether they still supply v20 is untested. This mirror is therefore the copy of record."
+  },
+  "ethos:coverage_note": "This mirror holds the CLC2018 reference year of the version-20 100 m raster delivery, plus the five French overseas departments. It does not hold the 1990, 2000, 2006 or 2012 reference years, nor any of the change layers that the version-20 delivery also contains. Those were never downloaded; they are available from the EEA on request.",
+  "sources": [
+    {
+      "title": "CORINE Land Cover 2018 (raster 100 m), Europe, 6-yearly -- version 20, Jun. 2019",
+      "path": "https://sdi.eea.europa.eu/catalogue/srv/api/records/c6b90e1a-314e-40bb-a54d-a8737b071e4e"
+    }
+  ],
+  "licenses": [
+    {
+      "title": "Copernicus data and information policy -- full, free and open access (Commission Delegated Regulation (EU) No 1159/2013)",
+      "path": "https://land.copernicus.eu/en/data-policy",
+      "ethos:document": "licenses/copernicus-land-data-policy.txt",
+      "ethos:document_sha256": "ea170b85349996e26f1442a4a800e730314dbd0786c25acafad33d90ec91b108"
+    }
+  ],
+  "ethos:attribution": "(c) European Union, Copernicus Land Monitoring Service 2018, European Environment Agency (EEA). Where the data has been adapted or modified, that must be clearly stated. Nothing here implies that the user's activities are officially endorsed by the European Union.",
+  "ethos:license_status": "resolved",
+  "ethos:retrieved": "2023-05-12",
+  "ethos:origin": "downloaded",
+  "resources": [
+    {
+      "name": "clc2018_clc2018_v2018_20.tif",
+      "path": "CLC2018_CLC2018_V2018_20.tif",
+      "bytes": 212172459,
+      "hash": "sha256:30d25a6a0936b79005b04f558197aa1bcd5e6fff541783c81a6aa33fddc1b0c4",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "clc2018_clc2018_v2018_20.tif.aux.xml",
+      "path": "CLC2018_CLC2018_V2018_20.tif.aux.xml",
+      "bytes": 7978,
+      "hash": "sha256:96209d6b5bd5fc30bcda9af3a9959426ab992c66bb72ab76f40c8b11e3fbe4d8",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "clc2018_clc2018_v2018_20.tif.clr",
+      "path": "CLC2018_CLC2018_V2018_20.tif.clr",
+      "bytes": 710,
+      "hash": "sha256:cf390545bb7f3fad50f3bb930d56af96905fa02c35524ec81fe5e126f38848a6",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "clc2018_clc2018_v2018_20.tif.ovr",
+      "path": "CLC2018_CLC2018_V2018_20.tif.ovr",
+      "bytes": 56746670,
+      "hash": "sha256:c1807755c5a6209cf0497135953fe0486321e39260ae36328b467dc94597540e",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "clc2018_clc2018_v2018_20.tif.vat.cpg",
+      "path": "CLC2018_CLC2018_V2018_20.tif.vat.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "clc2018_clc2018_v2018_20.tif.vat.dbf",
+      "path": "CLC2018_CLC2018_V2018_20.tif.vat.dbf",
+      "bytes": 15333,
+      "hash": "sha256:f2c7a296fdfbf81872ba8213a9d27646a2958e80535b32cd6ef772b5d5e7a0a6",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "clc2018_clc2018_v2018_20.tif.vat.dbf.xml",
+      "path": "CLC2018_CLC2018_V2018_20.tif.vat.dbf.xml",
+      "bytes": 814,
+      "hash": "sha256:79bfd5c6898cd97c8575293f43e8ae1851fe50d0b35af10801d1830386091ac2",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "clc2018_clc2018_v2018_20.txt",
+      "path": "CLC2018_CLC2018_V2018_20.txt",
+      "bytes": 1823,
+      "hash": "sha256:ad12865919358ed9a138d9b6f685043eca492c2cd1ec93b9c1f1f25dc4dbe152",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "clc_country_coverage_v20.pdf",
+      "path": "CLC_country_coverage_v20.pdf",
+      "bytes": 221548,
+      "hash": "sha256:7aac2ecb264c5abdb9ebc1bd80fdba38f92b798cd54786f60ef73ef6776e19d0",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "clc_country_coverage_v20.xls",
+      "path": "CLC_country_coverage_v20.xls",
+      "bytes": 43008,
+      "hash": "sha256:7213513558115ca65353aa96d2079550f9e3d83560173e4638d7d116ea5ae6b6",
+      "mediatype": "application/vnd.ms-excel"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_glp.tfw",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GLP.tfw",
+      "bytes": 94,
+      "hash": "sha256:c7978b087e70be125d337f1cfb25b517a2606ca40a47152d634c61347d68e409",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_glp.tif",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GLP.tif",
+      "bytes": 83715,
+      "hash": "sha256:57a08c408272026dcd83361e7d1818191390d5e472373c2a33e1128a434b808e",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_glp.tif.aux.xml",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GLP.tif.aux.xml",
+      "bytes": 1504,
+      "hash": "sha256:184e452164fab8934571802edc89a2ff08915fdcb5bf30fb20559f6cc2c38032",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_glp.tif.clr",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GLP.tif.clr",
+      "bytes": 710,
+      "hash": "sha256:cf390545bb7f3fad50f3bb930d56af96905fa02c35524ec81fe5e126f38848a6",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_glp.tif.ovr",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GLP.tif.ovr",
+      "bytes": 25110,
+      "hash": "sha256:9f0867acae83a781702150e03b673bd4c168f3ebc3391b1819f56f95f94bc7ba",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_glp.tif.vat.cpg",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GLP.tif.vat.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_glp.tif.vat.dbf",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GLP.tif.vat.dbf",
+      "bytes": 13387,
+      "hash": "sha256:1cf3c4219e5adf7cb7a10a91b812a89feec5ddd2fa4f75d7c7738ef55d18748e",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_glp.tif.xml",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GLP.tif.xml",
+      "bytes": 8389,
+      "hash": "sha256:656402eba19cdae73e559cb5e9079b4132002996c62c4543517d4a2d2cce5784",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_guf.tfw",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GUF.tfw",
+      "bytes": 93,
+      "hash": "sha256:40cfabdb876a2a2ce539f3cf39271c5ce238a099e719edd1d0d813a68dd591c2",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_guf.tif",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GUF.tif",
+      "bytes": 279938,
+      "hash": "sha256:1ad5dda740553c411bbe1f261aa6383e495e0cd1ee9709039343799b3f6e1ce0",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_guf.tif.aux.xml",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GUF.tif.aux.xml",
+      "bytes": 1507,
+      "hash": "sha256:42a1f56db3bccc72ce5f6d040c37a9d55ab023efb3a7326bb0fb41500d04b0ea",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_guf.tif.clr",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GUF.tif.clr",
+      "bytes": 710,
+      "hash": "sha256:cf390545bb7f3fad50f3bb930d56af96905fa02c35524ec81fe5e126f38848a6",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_guf.tif.ovr",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GUF.tif.ovr",
+      "bytes": 64337,
+      "hash": "sha256:c83b732c23a79a677ebd719a8f8ed8424eafa2633e7d5c93e4b4ae7224d52949",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_guf.tif.vat.cpg",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GUF.tif.vat.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_guf.tif.vat.dbf",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GUF.tif.vat.dbf",
+      "bytes": 14445,
+      "hash": "sha256:4ff54b4a0f38e957f4f56d07af98cbe94ef4f3773c581d6a274d92fb7083ffd3",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_guf.tif.xml",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_GUF.tif.xml",
+      "bytes": 8380,
+      "hash": "sha256:763907b160cfd7bc47377b2c4b503518fb19a5c0a803793703f42a16829feab5",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_mtq.tfw",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MTQ.tfw",
+      "bytes": 94,
+      "hash": "sha256:31f56c8e250a67a99f947fd77e5c1abef3ceb578719976475a0fb2f4d5d2b479",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_mtq.tif",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MTQ.tif",
+      "bytes": 52036,
+      "hash": "sha256:d4a56e4cd2f70e31e4b6979f2bc87d3ebd088479b1e6052606164c5d6e6d1148",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_mtq.tif.aux.xml",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MTQ.tif.aux.xml",
+      "bytes": 1502,
+      "hash": "sha256:884c1afb10bea3d2e795cdbdf20bc2f0b8b7cab9913d389c125f03cd44506b26",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_mtq.tif.clr",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MTQ.tif.clr",
+      "bytes": 710,
+      "hash": "sha256:cf390545bb7f3fad50f3bb930d56af96905fa02c35524ec81fe5e126f38848a6",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_mtq.tif.ovr",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MTQ.tif.ovr",
+      "bytes": 17577,
+      "hash": "sha256:3ab0d61b498529416be953b6838d34d49216c75765fafbaa9fa608421ea84fc6",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_mtq.tif.vat.cpg",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MTQ.tif.vat.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_mtq.tif.vat.dbf",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MTQ.tif.vat.dbf",
+      "bytes": 13387,
+      "hash": "sha256:08f35d332e0227aaaa2ab2c67a31ae57b188ef526d647e3d58bb54078b972b8c",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_mtq.tif.xml",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MTQ.tif.xml",
+      "bytes": 8389,
+      "hash": "sha256:a119bdc8e513250b711eeb456ca5d9a732ef3b0a4ea713907f26be8144fcf7dd",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_myt.tfw",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MYT.tfw",
+      "bytes": 94,
+      "hash": "sha256:3ecd853990d919c724e52fd1178b2e0a7fb5e7c30736ff5c3c95e75bae29ab50",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_myt.tif",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MYT.tif",
+      "bytes": 24741,
+      "hash": "sha256:e590c143ec7ea3a24df4d7667bd7e4334b516df169c259099c3ab2a860c461c0",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_myt.tif.aux.xml",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MYT.tif.aux.xml",
+      "bytes": 1499,
+      "hash": "sha256:77eb5d64bc33b52191820dfb360033f6b2710b8a2f6d14dd5bca327da7d4e1ee",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_myt.tif.clr",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MYT.tif.clr",
+      "bytes": 710,
+      "hash": "sha256:cf390545bb7f3fad50f3bb930d56af96905fa02c35524ec81fe5e126f38848a6",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_myt.tif.ovr",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MYT.tif.ovr",
+      "bytes": 5673,
+      "hash": "sha256:73b1644be61d18ffac1e6edf3f3eeefd15e6a3311f08d08d55fe097319603d70",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_myt.tif.vat.cpg",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MYT.tif.vat.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_myt.tif.vat.dbf",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MYT.tif.vat.dbf",
+      "bytes": 8626,
+      "hash": "sha256:ad6b4c171ff4f3f13a82488fe6f70029adb3c4a9a9679c8a4b9e27ca605c3e17",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_myt.tif.xml",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_MYT.tif.xml",
+      "bytes": 8421,
+      "hash": "sha256:7c9ca65e1fbcc572cf807f1868fa31e3965399e055ad3f8fbdb9a3ecbc15664c",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_reu.tfw",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_REU.tfw",
+      "bytes": 94,
+      "hash": "sha256:ca9dd3e69798ccb9de0e74ac124ac749e5ca35fa8e6bc53ef7695138e6a2807e",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_reu.tif",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_REU.tif",
+      "bytes": 79664,
+      "hash": "sha256:ccb512c44c8a8935ef586c2ad59ffd482e4778e1b102b89d04d4b4e5d49c7738",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_reu.tif.aux.xml",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_REU.tif.aux.xml",
+      "bytes": 1503,
+      "hash": "sha256:a9d85771cc7d39a8cebe1c77455d4f45e56d5354845b3307bc460066e767d37b",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_reu.tif.clr",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_REU.tif.clr",
+      "bytes": 710,
+      "hash": "sha256:cf390545bb7f3fad50f3bb930d56af96905fa02c35524ec81fe5e126f38848a6",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_reu.tif.ovr",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_REU.tif.ovr",
+      "bytes": 27555,
+      "hash": "sha256:60875e76ca5cf85148afd99c1b8c08b20eec4688c779940c5d1ac3346eeef35f",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_reu.tif.vat.cpg",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_REU.tif.vat.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_reu.tif.vat.dbf",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_REU.tif.vat.dbf",
+      "bytes": 16032,
+      "hash": "sha256:f9a30598082cd575e844082a1aeb666035e7ad6e6b1f8d6ef4a3e735fb488b7b",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-clc2018_clc2018_v2018_20_fr_reu.tif.xml",
+      "path": "French_DOMs/CLC2018_CLC2018_V2018_20_FR_REU.tif.xml",
+      "bytes": 8387,
+      "hash": "sha256:1e1720c80707035adaa36c3a3a226b86d0d75ba36ed58d4980a8c6d4e447fb7a",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "french_doms-legend-clc2018_clc2018_v2018_20_fr_glp.tif.lyr",
+      "path": "French_DOMs/Legend/CLC2018_CLC2018_V2018_20_FR_GLP.tif.lyr",
+      "bytes": 16384,
+      "hash": "sha256:76c987178f7251ddc81458d3a0dabc01bc479842cea275bd8c44675d06d2dd0b",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-legend-clc2018_clc2018_v2018_20_fr_guf.tif.lyr",
+      "path": "French_DOMs/Legend/CLC2018_CLC2018_V2018_20_FR_GUF.tif.lyr",
+      "bytes": 16896,
+      "hash": "sha256:1854c512c9681028d596673f1c82f4a6bc8f21ae9adab7d74ae298f3f6f5bcd5",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-legend-clc2018_clc2018_v2018_20_fr_mtq.tif.lyr",
+      "path": "French_DOMs/Legend/CLC2018_CLC2018_V2018_20_FR_MTQ.tif.lyr",
+      "bytes": 16384,
+      "hash": "sha256:9e63066af3e07e0a22072bc894ce9098f633dd0c5e0ac4a6e9e592bf1254534f",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-legend-clc2018_clc2018_v2018_20_fr_myt.tif.lyr",
+      "path": "French_DOMs/Legend/CLC2018_CLC2018_V2018_20_FR_MYT.tif.lyr",
+      "bytes": 16896,
+      "hash": "sha256:92dceaa1d0c24b688583ecd4fb6b9531c0d92c68156a95584786fa28169b7971",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-legend-clc2018_clc2018_v2018_20_fr_reu.tif.lyr",
+      "path": "French_DOMs/Legend/CLC2018_CLC2018_V2018_20_FR_REU.tif.lyr",
+      "bytes": 16384,
+      "hash": "sha256:6575a2744c211f7a4168966159c1a4e3157ea523c97223ea6d5f89b0a9be2189",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "french_doms-legend-clc2018_clc2018_v2018_20_qgis.txt",
+      "path": "French_DOMs/Legend/CLC2018_CLC2018_V2018_20_QGIS.txt",
+      "bytes": 1823,
+      "hash": "sha256:c84e3bb8af6dbe6a200a07e2f71e7416de2dab478bba6bfbda352a30c77ee56d",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "legend-clc2018_clc2018_v2018_20.tif.lyr",
+      "path": "Legend/CLC2018_CLC2018_V2018_20.tif.lyr",
+      "bytes": 16384,
+      "hash": "sha256:24bcb4d894d267a926785b85219d75b4769e078bb0b0cbe3f1dd3965af868766",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "legend-clc2018_clc2018_v2018_20_qgis.txt",
+      "path": "Legend/CLC2018_CLC2018_V2018_20_QGIS.txt",
+      "bytes": 1823,
+      "hash": "sha256:c84e3bb8af6dbe6a200a07e2f71e7416de2dab478bba6bfbda352a30c77ee56d",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "metadata-clc2018_clc2018_v2018_20.xml",
+      "path": "Metadata/CLC2018_CLC2018_V2018_20.xml",
+      "bytes": 20278,
+      "hash": "sha256:0f28f97272fd7d779a3e8c59482938c2c868d0a4329eb53e52ea6f5930cf6107",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "metadata-clc2018_clc2018_v2018_20_fr_glp.xml",
+      "path": "Metadata/CLC2018_CLC2018_V2018_20_FR_GLP.xml",
+      "bytes": 17853,
+      "hash": "sha256:acaa127e992f83501857f053ffd814b9c0c1929acaeec262f3c3b47fe7669f34",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "metadata-clc2018_clc2018_v2018_20_fr_guf.xml",
+      "path": "Metadata/CLC2018_CLC2018_V2018_20_FR_GUF.xml",
+      "bytes": 17821,
+      "hash": "sha256:fbec11295f2c239d6bb1dbff71551e856b3fe9f5f5e902e71ba8850bbb35a92d",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "metadata-clc2018_clc2018_v2018_20_fr_mtq.xml",
+      "path": "Metadata/CLC2018_CLC2018_V2018_20_FR_MTQ.xml",
+      "bytes": 17820,
+      "hash": "sha256:035dec7757911d5881351c3554fa96e74fd1f8ae62899ee848cb8a7f356397a3",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "metadata-clc2018_clc2018_v2018_20_fr_myt.xml",
+      "path": "Metadata/CLC2018_CLC2018_V2018_20_FR_MYT.xml",
+      "bytes": 17818,
+      "hash": "sha256:34cc2b40f0ae3689882e571c588e16af25fe2183e2487f11ffcb18657f584fc5",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "metadata-clc2018_clc2018_v2018_20_fr_reu.xml",
+      "path": "Metadata/CLC2018_CLC2018_V2018_20_FR_REU.xml",
+      "bytes": 17818,
+      "hash": "sha256:da4f75b76b5019fc85687806e65fedfadb8d6f96538b28bfc86df78844850604",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "naming_convention_description.txt",
+      "path": "Naming_convention_description.txt",
+      "bytes": 1011,
+      "hash": "sha256:f08b67b40e6a15ce52ef6f635683849f4ed9a2824ae9ad18a448ed47f7b3345d",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "readme_clc2018_clc2018_v2018_20.txt",
+      "path": "readme_CLC2018_CLC2018_V2018_20.txt",
+      "bytes": 787,
+      "hash": "sha256:43d94089d80e3365329ad58d7bb2d5a7319155984659c4f8b066c3504f38e381",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "readme_v20_raster_100m.txt",
+      "path": "readme_V20_raster_100m.txt",
+      "bytes": 11014,
+      "hash": "sha256:5b91d7dcdad7616ea5003bf30a283102c8136be81879c16b2b4f1b0f3c1f8a37",
+      "mediatype": "text/plain"
+    }
+  ],
+  "ethos:total_bytes": 270215290,
+  "ethos:file_count": 67
+}

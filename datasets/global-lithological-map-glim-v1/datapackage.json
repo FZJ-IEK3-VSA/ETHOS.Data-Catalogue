@@ -1,0 +1,68 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "global-lithological-map-glim-v1",
+  "title": "Global Lithological Map Database (GLiM) v1.0, 0.5-degree grid",
+  "description": "Hartmann and Moosdorf's original global lithology grid and class-code table, extracted without modification from hartmann-moosdorf_2012.zip. The 360 by 720 ASCII grid contains 16 lithological classes at 0.5-degree resolution. Thermal conductivity is derived downstream using separate assumptions.",
+  "homepage": "https://doi.pangaea.de/10.1594/PANGAEA.788537",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:remote_prefix": "global-lithological-map-glim-v1",
+  "ethos:origin": "downloaded",
+  "contributors": [
+    {
+      "title": "Jens Hartmann",
+      "roles": [
+        "author"
+      ]
+    },
+    {
+      "title": "Nils Moosdorf",
+      "roles": [
+        "author"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hartmann and Moosdorf (2012), GLiM v1.0, gridded to 0.5 degrees",
+      "path": "https://doi.org/10.1594/PANGAEA.788537"
+    },
+    {
+      "title": "Hartmann and Moosdorf (2012), The new global lithological map database GLiM",
+      "path": "https://doi.org/10.1029/2012GC004370"
+    },
+    {
+      "title": "Use in Franzmann et al. (2025), section 2.3, equation (1)",
+      "path": "https://doi.org/10.1016/j.renene.2025.123199"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-3.0",
+      "path": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:attribution": "Hartmann, Jens; Moosdorf, Nils (2012): Global Lithological Map Database v1.0 (gridded to 0.5-degree spatial resolution). PANGAEA. https://doi.org/10.1594/PANGAEA.788537. CC BY 3.0.",
+  "ethos:provenance": "Original files recovered from Franzmann's dissertation archive and preserved on 2026-09-09. The ASCII grid matches the archived distribution ZIP member byte for byte. Neither conductivity mapping nor resampling is applied here.",
+  "ethos:retrieved": "2026-09-09",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "resources": [
+    {
+      "name": "classnames.txt",
+      "path": "Classnames.txt",
+      "bytes": 452,
+      "hash": "sha256:046c46bda603676a3d41e9b8167c513625bf14f58bc867f6ad76568f3625c956",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "glim_wgs84_0point5deg.txt.asc",
+      "path": "glim_wgs84_0point5deg.txt.asc",
+      "bytes": 1235039,
+      "hash": "sha256:2323b29b970f032f6630332ba2aa04d648ee1275f96935efb532bdbeadea3f3a",
+      "mediatype": "text/plain"
+    }
+  ],
+  "ethos:total_bytes": 1235491,
+  "ethos:file_count": 2
+}

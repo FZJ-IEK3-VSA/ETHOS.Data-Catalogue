@@ -1,0 +1,105 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "global-wind-atlas-v2",
+  "title": "Global Wind Atlas 2.0, mean wind speed (global and Europe)",
+  "description": "The GWA 2 release as held by ICE-2: the global mean wind-speed raster plus 100 m and 200 m global layers, and a set of European clips and EPSG:3035 resamples produced inside the institute. Superseded by global-wind-atlas (4.0); kept because studies published before 2023 were run against it.",
+  "homepage": "https://globalwindatlas.info/",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:upstream": {
+    "status": "superseded",
+    "checked": "2026-09-07",
+    "note": "No route to this release was found. globalwindatlas.info serves its rasters from a single version-less API endpoint (/api/gis/global/<layer>/<height>) that always redirects to whatever the current release is -- today that is GWA 4.0. The endpoint 302s to figshare behind a private_link token, and figshare's public file endpoint (api.figshare.com/v2/file/<id>) returns 404 for those ids, so the versioned item they belong to cannot be resolved either. energydata.info lists Global Wind Atlas only as a link to the website, with no data resources. DTU may hold an archive; that has not been asked."
+  },
+  "sources": [
+    {
+      "title": "Global Wind Atlas -- GIS file downloads",
+      "path": "https://globalwindatlas.info/en/download/gis-files"
+    },
+    {
+      "title": "Davis et al. (2023): The Global Wind Atlas -- A High-Resolution Dataset of Climatologies and Associated Web-Based Application. BAMS 104(8), E1507-E1525",
+      "path": "https://doi.org/10.1175/BAMS-D-21-0075.1"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    }
+  ],
+  "ethos:attribution": "Data obtained from the Global Wind Atlas 2.0, a free, web-based application developed, owned and operated by the Technical University of Denmark (DTU), released in partnership with the World Bank Group and funded by the Energy Sector Management Assistance Program (ESMAP). Where the data has been clipped or resampled, that is an ICE-2 modification and not part of the DTU release. For additional information: https://globalwindatlas.info",
+  "ethos:license_status": "resolved",
+  "ethos:retrieved": "unknown",
+  "ethos:contact": "p-dunkel",
+  "ethos:origin": "downloaded",
+  "resources": [
+    {
+      "name": "global_ws.tif",
+      "path": "global_ws.tif",
+      "bytes": 6098904804,
+      "hash": "sha256:ad0df2e38752d774c8db01af52675c08ced31cb0d077f2624b71096e3c189278",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa_050m_europe.tif",
+      "path": "gwa_050m_europe.tif",
+      "bytes": 62605288,
+      "hash": "sha256:fd027492589dc8f943e8bf21dd409ff42da07fcd19f9c78964abe961303e503a",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa_100m.tif",
+      "path": "gwa_100m.tif",
+      "bytes": 476665531,
+      "hash": "sha256:8a203e0fa3e6c917c9646b6aef255a35cac31e98d908ccf7a2e8691a38c014af",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa_100m_europe.tif",
+      "path": "gwa_100m_europe.tif",
+      "bytes": 62630914,
+      "hash": "sha256:abf452223aba0a1377defa10b30e241ca55d912c57a0de3809ed21e098a7293c",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa_100m_europe_epsg3035-10km.tif",
+      "path": "gwa_100m_europe_EPSG3035-10km.tif",
+      "bytes": 724242,
+      "hash": "sha256:be5e7ceeb729020d14f216234ae559317e0807a58e1bdd7ed66b32b69d9d2f3a",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa_100m_europe_epsg3035-2500m.tif",
+      "path": "gwa_100m_europe_EPSG3035-2500m.tif",
+      "bytes": 11088678,
+      "hash": "sha256:b42a4069eb7c2be794556bbb3f26477541ba74decd6379a57ff164c2b6a0263c",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa_100m_europe_epsg3035-5000m.tif",
+      "path": "gwa_100m_europe_EPSG3035-5000m.tif",
+      "bytes": 2854763,
+      "hash": "sha256:a7905278722408ff0664f2cf8ca0cae0c83ecddbcfbf8eb2948347b5c4c4d5f2",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa_200m.tif",
+      "path": "gwa_200m.tif",
+      "bytes": 477175965,
+      "hash": "sha256:0f7b2a9b5f012e71e480a0d39844a90648f2f19a8f64fefad431e1cac17d3373",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gwa_200m_europe.tif",
+      "path": "gwa_200m_europe.tif",
+      "bytes": 62684559,
+      "hash": "sha256:3a3795f6fffa2e0fe970dc7a37f06050ef92cda8f61f32c3e7d7999b08da6ca7",
+      "mediatype": "image/tiff"
+    }
+  ],
+  "ethos:total_bytes": 7255334744,
+  "ethos:file_count": 9
+}
