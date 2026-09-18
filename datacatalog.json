@@ -4,7 +4,7 @@
   "ethos:catalog_role": "published",
   "title": "ETHOS.Data Catalogue",
   "description": "Tool-independent catalogue of datasets published by Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2). Software projects reference these datasets by name rather than copying the file inventory, so a dataset used by several tools is described -- and downloaded -- exactly once.",
-  "ethos:publication_url": "https://hifis-storage-ht.desy.de:2880/Helmholtz/FZJ-ICE2/ice2-data-files",
+  "ethos:publication_url": "https://hifis-storage-ht.desy.de:2880/Helmholtz/FZJ-ICE2/ethos-data",
   "ethos:contact": "ICE-2 RESKit maintainers",
   "datasets": [
     {
