@@ -1,0 +1,9 @@
+# Store and check out every text file with LF line endings, on every platform
+# and whatever core.autocrlf says. The same checkout is used from Linux and,
+# through the network share, from Windows.
+* text=auto eol=lf
+
+# Licence documents are verbatim copies of third-party files, and their sha256
+# is recorded in the descriptors (ethos:license_note). Keep their bytes exactly
+# as retrieved -- no line-ending conversion in either direction.
+datasets/**/licenses/** -text
