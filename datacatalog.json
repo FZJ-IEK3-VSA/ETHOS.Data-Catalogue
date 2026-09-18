@@ -148,7 +148,7 @@
       "path": "datasets/reskit-test-data/datapackage.json",
       "title": "RESKit test fixtures - real weather and geospatial data, clipped",
       "ethos:access": "public",
-      "ethos:total_bytes": 7845530,
+      "ethos:total_bytes": 7845001,
       "ethos:file_count": 88
     },
     {
@@ -228,7 +228,7 @@
       "path": "datasets/reskit-test-data/placements/datapackage.json",
       "title": "RESKit turbine and module placement tables",
       "ethos:access": "public",
-      "ethos:total_bytes": 127659,
+      "ethos:total_bytes": 127130,
       "ethos:file_count": 8
     },
     {

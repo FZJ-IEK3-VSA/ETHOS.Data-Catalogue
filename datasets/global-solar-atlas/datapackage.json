@@ -34,7 +34,7 @@
       "title": "Creative Commons Attribution 4.0 International, with the mandatory and binding dispute-resolution addition stated in the Global Solar Atlas terms of use",
       "path": "https://globalsolaratlas.info/support/terms-of-use",
       "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
-      "ethos:document_sha256": "855bcbd0626a0091b2bb1bf1b29a2412bf2acc9b6c1eca4a63b884cefb3dd9ec"
+      "ethos:document_sha256": "a41afae9890ec0a02b5ad87ed0a8999b60180663d6ff660987dc0ec0b557147e"
     }
   ],
   "ethos:attribution": "Solar resource data (c) 2023 Solargis. (c) The World Bank, Source: Global Solar Atlas 2.0. Data obtained from the Global Solar Atlas, a free, web-based application developed and operated by Solargis s.r.o. on behalf of the World Bank Group, utilizing Solargis data, with funding provided by the Energy Sector Management Assistance Program (ESMAP).",
