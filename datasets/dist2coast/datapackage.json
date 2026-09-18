@@ -1,0 +1,121 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "dist2coast",
+  "title": "Distance to the Nearest Coast, 0.01-degree global grid (NASA OB.DAAC / NOAA, June 2009)",
+  "description": "Signed distance in kilometres from every 0.01-degree cell to the nearest coastline, on a 36000 x 18000 global grid: positive over ocean, negative over land, zero on the coastline itself, with a stated uncertainty of 1 km. Computed by Stumpf and Kuring in June 2009 against the GMT intermediate- resolution GSHHS shoreline, evaluated at 0.04 degrees and bilinearly interpolated to 0.01 degrees. Used for coastal-proximity exclusions in offshore siting work. The 0.04-degree unsigned grid the product was interpolated from is included beside it as dist2coast.txt.bz2.",
+  "homepage": "https://oceancolor.gsfc.nasa.gov/docs/distfromcoast/",
+  "ethos:remote_prefix": "dist2coast",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:origin": "downloaded",
+  "ethos:exclude": [
+    "GMT_intermediate_coast_distance_01d.zip",
+    "DOWNLOAD_INFO.txt"
+  ],
+  "contributors": [
+    {
+      "title": "Richard P. Stumpf",
+      "roles": [
+        "author"
+      ],
+      "organization": "NOAA National Ocean Service"
+    },
+    {
+      "title": "Norman A. Kuring",
+      "roles": [
+        "author"
+      ],
+      "organization": "NASA Ocean Biology Processing Group"
+    },
+    {
+      "title": "Eric Leuliette",
+      "roles": [
+        "contributor"
+      ],
+      "organization": "NOAA Laboratory for Satellite Altimetry"
+    },
+    {
+      "title": "NASA Ocean Biology DAAC (OB.DAAC)",
+      "roles": [
+        "publisher"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Distance to the Nearest Coast -- the NASA OB.DAAC product page. The URL essentially every published citation gives. Retired; see ethos:upstream.",
+      "path": "https://oceancolor.gsfc.nasa.gov/docs/distfromcoast/"
+    },
+    {
+      "title": "The same page, last live Internet Archive capture (2025-11-28). The authoritative provenance document now that the original is gone.",
+      "path": "https://web.archive.org/web/20251128225953/https://oceancolor.gsfc.nasa.gov/resources/docs/distfromcoast/"
+    },
+    {
+      "title": "NASA OB.DAAC data server directory still serving the files, anonymously and at their original byte sizes. Undocumented -- no page links to it.",
+      "path": "https://oceandata.sci.gsfc.nasa.gov/images/resources/distfromcoast/"
+    },
+    {
+      "title": "Distance to Nearest Coastline, 0.01-Degree Grid -- PacIOOS metadata record. The live description of the product and the source of the terms recorded below. PacIOOS mirrored the grid from NASA/GSFC on 2012-03-19 and serves it, converted to netCDF by J. Maurer, at both resolutions.",
+      "path": "https://www.pacioos.hawaii.edu/metadata/dist2coast_1deg.html"
+    },
+    {
+      "title": "The same grid, PacIOOS ERDDAP griddap endpoint -- the working download route. Subsettable, serves netCDF and GeoTIFF among some forty formats. dist2coast_1deg is the 0.01-degree grid, dist2coast_4deg the 0.04-degree.",
+      "path": "https://pae-paha.pacioos.hawaii.edu/erddap/griddap/dist2coast_1deg.html"
+    },
+    {
+      "title": "Wessel, P. and W. H. F. Smith (1996), A Global Self-consistent, Hierarchical, High-resolution Shoreline Database -- the GSHHS coastline the distances were computed against.",
+      "path": "https://doi.org/10.1029/96JB00104"
+    }
+  ],
+  "licenses": [
+    {
+      "title": "Distance-to-coast grid -- free use and redistribution, no warranty, not intended for legal use. Stated by PacIOOS (University of Hawaii), which redistributes the grid; NASA OBPG, which generated it, states no terms on any page still serving.",
+      "path": "https://www.pacioos.hawaii.edu/metadata/dist2coast_1deg.html",
+      "ethos:document": "licenses/pacioos-dist2coast-metadata-record.html",
+      "ethos:document_sha256": "f2994023a7e9cfcfb9acf76a64ce5a475bff560b1b3d5bb3a858e297a8e52c9c"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:attribution": "NASA Ocean Biology Processing Group (OBPG) and R.P. Stumpf. 2012. Distance to Nearest Coastline: 0.01-Degree Grid. Distributed by the Pacific Islands Ocean Observing System (PacIOOS). http://pacioos.org/metadata/dist2coast_1deg.html. Accessed [date].\nTwo things that citation does not say, for anyone who needs the production record rather than the redistribution one. The 2012 date is PacIOOS's netCDF conversion; the grid itself was produced in June 2009. And the producers' own metadata file names a second author and a concept credit that the suggested citation omits: \"Produced by Rick Stumpf (NOAA, National Ocean Service) and Norman Kuring at the NASA Ocean Biology Processing Group, June 2009, based on concept of Eric Leuliette of NOAA Satellite Altimetry Lab.\" Coastline source data: Wessel, P. and W. H. F. Smith (1996), A Global Self-consistent, Hierarchical, High-resolution Shoreline Database, J. Geophys. Res., 101, 8741-8743.\nNASA issued no preferred citation of its own and published practice is inconsistent -- across 20 open-access articles citing the product, seven formal reference entries used four titles and six creator attributions. PacIOOS's is the only suggested citation any distributor of this grid actually publishes, which is why it leads here.",
+  "ethos:upstream": {
+    "status": "available",
+    "checked": "2026-09-17",
+    "note": "The bytes are still served; the documentation is not. As of 2026-09-17 the whole oceancolor.gsfc.nasa.gov host issues a blanket HTTP 301 to earthdata.nasa.gov/centers/ob-daac -- verified as host-wide, since the bare root and an invented path return an identical Location header -- and that centre page does not mention this product. The files themselves remain downloadable anonymously from oceandata.sci.gsfc.nasa.gov/images/resources/distfromcoast/, a directory no surviving page links to; it was found in the link rewriting of the last live archive capture of the product page. Both files there are byte- identical to this mirror, re-verified 2026-09-17.\nThat route is undocumented and therefore not safe to assume permanent. There is no CMR collection record, no successor landing page anywhere in earthdata.nasa.gov's sitemap, and no OB.DAAC announcement of retirement or replacement. The archived product page is now the provenance document of record."
+  },
+  "ethos:coverage_note": "Holds the 0.01-degree signed GeoTIFF, the producers' metadata text, and the 0.04-degree unsigned ASCII grid it was interpolated from.\nIt does not hold dist2coast.signed.txt.bz2 (217,969,141 bytes), the signed variant of the ASCII grid that upstream serves beside the other two, nor the dist2coast.jpg browse image. Neither was downloaded when this mirror was taken. The signed grid is the only form in which the 0.04-degree values are distributed with their land/ocean sign -- confirmed 2026-09-17: its header rows match the unsigned file exactly, and it carries 306,869 negative rows in the first three million where the unsigned file has none. Worth adding if anyone needs the 0.04-degree values signed rather than deriving the sign from the raster; a verified copy is already in /shared_data/ethos_data_cache_validation/NASA_DistanceToNearestCoast_v200906/from-nasa-live.",
+  "ethos:provenance": "Downloaded from the NASA OB.DAAC product page by Christoph Winkler on 2025-07-29, per the DOWNLOAD_INFO.txt note in the source directory, which is excluded from the inventory. The .tif and .txt beside the zip are exact extractions of its two members, verified by CRC-32 and SHA-256; their timestamps (2009-06-24 and 2010-09-08) are the zip members' own dates, not retrieval dates. The zip and bz2 carry mtime 2023-07-17 16:00 UTC, which is the origin server's Last-Modified for both files and not the download date -- the fetch preserved server times.\nValidated against upstream on 2026-09-17, three ways. Both distributed files are byte-identical to Internet Archive captures of the original NASA URL (zip sha256 5a6c287d..., bz2 sha256 559e093e...), and the zip's archived payload digest is unchanged across every capture from 2013-03-01 onward, so the product has been immutable for at least thirteen years. 29,452 pixels fetched from the independent PacIOOS ERDDAP mirror across five regions match this GeoTIFF exactly, with zero differences. Physically, the area-weighted land fraction is 29.09 per cent plus 0.19 per cent coastline against Earth's 29.2, and Point Nemo reads +2689 km against a published 2688.\nThe statistics in the .aux.xml sidecar were recomputed from the pixels and agree to ten significant digits, so the sidecar is kept: it is a local GDAL artifact rather than upstream bytes, but it is correct and it spares every consumer a 1.3 GB scan. The full validation record, including the downloaded reference copies, is in /shared_data/ethos_data_cache_validation/NASA_DistanceToNearestCoast_v200906.\n\"June 2009\" is the production date, not a version -- the publisher assigned none, confirmed across page captures spanning 2009 to 2025, the producers' metadata, CMR, the PacIOOS ISO record and both ERDDAP deployments. Neither \"intermediate\" (the GSHHS resolution class) nor the local directory label v200906 is a publisher version string.",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "ethos:retrieved": "2025-07-29",
+  "resources": [
+    {
+      "name": "gmt_intermediate_coast_distance_01d.tif",
+      "path": "GMT_intermediate_coast_distance_01d.tif",
+      "bytes": 1296144390,
+      "hash": "sha256:0f8877508e328bfd069d58f8c3d12b924db5cd2a782f515d98e9b5e7307e5e73",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gmt_intermediate_coast_distance_01d.tif.aux.xml",
+      "path": "GMT_intermediate_coast_distance_01d.tif.aux.xml",
+      "bytes": 363,
+      "hash": "sha256:b9f1d53279820f93ad3f7df8621a99b4dd942be42f936a78a9563a559d41c7b8",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "gmt_intermediate_coastdistance_metadata.txt",
+      "path": "GMT_intermediate_coastdistance_metadata.txt",
+      "bytes": 3473,
+      "hash": "sha256:14ab728f9f7be1e7ebdefdab3f6c960d078e51126e686f8b322ed90d91a30ca1",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "dist2coast.txt.bz2",
+      "path": "dist2coast.txt.bz2",
+      "bytes": 213339141,
+      "hash": "sha256:559e093e344e8d28e46999f5c45d03752e118ad58f9aef4f14f51f6221d47595",
+      "mediatype": "text/plain"
+    }
+  ],
+  "ethos:total_bytes": 1509487367,
+  "ethos:file_count": 4
+}

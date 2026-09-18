@@ -16,6 +16,14 @@
       "ethos:file_count": 67
     },
     {
+      "name": "dist2coast",
+      "path": "datasets/dist2coast/datapackage.json",
+      "title": "Distance to the Nearest Coast, 0.01-degree global grid (NASA OB.DAAC / NOAA, June 2009)",
+      "ethos:access": "public",
+      "ethos:total_bytes": 1509487367,
+      "ethos:file_count": 4
+    },
+    {
       "name": "esa-cci-landcover",
       "path": "datasets/esa-cci-landcover/datapackage.json",
       "title": "ESA CCI Land Cover Classification, 300 m, 1992-2015 (v2.0.7)",
@@ -140,7 +148,7 @@
       "path": "datasets/reskit-test-data/datapackage.json",
       "title": "RESKit test fixtures - real weather and geospatial data, clipped",
       "ethos:access": "public",
-      "ethos:total_bytes": 7858751,
+      "ethos:total_bytes": 7845530,
       "ethos:file_count": 88
     },
     {
@@ -172,7 +180,7 @@
       "path": "datasets/reskit-test-data/esa-cci-landcover/datapackage.json",
       "title": "RESKit ESA CCI land cover test fixtures, Aachen and Bulawayo",
       "ethos:access": "public",
-      "ethos:total_bytes": 111583,
+      "ethos:total_bytes": 98362,
       "ethos:file_count": 2
     },
     {

@@ -21,6 +21,7 @@ ethos-data fetch <dataset-or-key>
 | Dataset | Title | Files | Size | Availability |
 |:--|:--|--:|--:|:--|
 | `corine-land-cover` | CORINE Land Cover 2018, 100 m raster, version 20 (Europe) | 67 | 270.2 MB | downloadable |
+| `dist2coast` | Distance to the Nearest Coast, 0.01-degree global grid (NASA OB.DAAC / NOAA, June 2009) | 4 | 1,509.5 MB | downloadable |
 | `esa-cci-landcover` | ESA CCI Land Cover Classification, 300 m, 1992-2015 (v2.0.7) | 28 | 10,033.8 MB | downloadable |
 | `geothermal-conductivity-assumptions` | Franzmann lithology-to-thermal-conductivity assumptions | 1 | 0.0 MB | downloadable |
 | `geothermal-resource` | Global subsurface temperature and sustainable heat flow | 2 | 6.2 MB | downloadable |
@@ -36,7 +37,7 @@ ethos-data fetch <dataset-or-key>
 | `nasa-power-geothermal-climatology` | NASA POWER Earth Skin Temperature climatology used by Franzmann | 1 | 13.5 MB | downloadable |
 | `reskit-test-data/boundaries` | RESKit administrative boundary test fixtures | 8 | 0.0 MB | downloadable |
 | `reskit-test-data/corine` | RESKit CORINE Land Cover test fixture, Aachen | 1 | 0.1 MB | downloadable |
-| `reskit-test-data` | RESKit test fixtures - real weather and geospatial data, clipped | 88 | 7.9 MB | downloadable |
+| `reskit-test-data` | RESKit test fixtures - real weather and geospatial data, clipped | 88 | 7.8 MB | downloadable |
 | `reskit-test-data/dist2coast` | RESKit distance-to-coast test fixture, German Bight | 1 | 0.0 MB | downloadable |
 | `reskit-test-data/era5` | RESKit ERA5 test fixtures, Aachen | 21 | 1.3 MB | downloadable |
 | `reskit-test-data/era5-csp` | RESKit ERA5 and ERA5-Land test fixtures, Morocco | 4 | 1.5 MB | downloadable |
