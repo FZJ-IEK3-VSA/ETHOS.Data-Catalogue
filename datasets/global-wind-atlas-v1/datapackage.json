@@ -4,6 +4,7 @@
   "title": "Global Wind Atlas 1.0, mean wind speed at 50, 100 and 200 m (global and Europe)",
   "description": "The first GWA release as held by ICE-2: global mean wind speed at 50, 100 and 200 m in WGS 84, plus European clips and a 5 km resample produced inside the institute. Superseded by global-wind-atlas (4.0); the oldest vintage on the cluster and the one behind the earliest RESKit wind results.",
   "homepage": "https://globalwindatlas.info/",
+  "ethos:remote_prefix": "global-wind-atlas-v1",
   "ethos:access": "public",
   "ethos:visibility": "public",
   "ethos:upstream": {

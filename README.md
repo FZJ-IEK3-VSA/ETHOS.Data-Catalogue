@@ -23,6 +23,8 @@ ethos-data fetch <dataset-or-key>
 | `corine-land-cover` | CORINE Land Cover 2018, 100 m raster, version 20 (Europe) | 67 | 270.2 MB | downloadable |
 | `dist2coast` | Distance to the Nearest Coast, 0.01-degree global grid (NASA OB.DAAC / NOAA, June 2009) | 4 | 1,509.5 MB | downloadable |
 | `esa-cci-landcover` | ESA CCI Land Cover Classification, 300 m, 1992-2015 (v2.0.7) | 28 | 10,033.8 MB | downloadable |
+| `gebco-2025` | GEBCO_2025 Grid -- global 15 arc-second bathymetry and topography (GEBCO / Seabed 2030) | 26 | 18,666.1 MB | downloadable |
+| `gebco-2025-combined` | GEBCO_2025 Grid -- global single-file mosaics of the quadrant tiles (ICE-2 combination) | 3 | 8,595.1 MB | downloadable |
 | `geothermal-conductivity-assumptions` | Franzmann lithology-to-thermal-conductivity assumptions | 1 | 0.0 MB | downloadable |
 | `geothermal-resource` | Global subsurface temperature and sustainable heat flow | 2 | 6.2 MB | downloadable |
 | `global-lithological-map-glim-v1` | Global Lithological Map Database (GLiM) v1.0, 0.5-degree grid | 2 | 1.2 MB | downloadable |

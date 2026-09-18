@@ -1,0 +1,288 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "gebco-2025",
+  "title": "GEBCO_2025 Grid -- global 15 arc-second bathymetry and topography (GEBCO / Seabed 2030)",
+  "description": "Global terrain model for ocean and land at 15 arc-second resolution, in metres, on a 43200 x 86400 pixel-centre-registered geographic grid (3,732,480,000 cells, WGS 84). The GEBCO_2025 release, published July 2025 by the GEBCO Compilation Group through The Nippon Foundation-GEBCO Seabed 2030 Project. Held as the eight 90 x 90 degree quadrant GeoTIFFs upstream distributes, for each of the three products GEBCO ships: `gebco_2025` (land and ice-surface elevation), `gebco_2025_sub_ice_topo` (under-ice topography for Greenland and Antarctica) and `gebco_2025_TID` (Type Identifier -- the provenance code of every cell, e.g. multibeam, single beam, satellite-gravity-predicted, interpolated). ",
+  "homepage": "https://www.gebco.net/data-products/gridded-bathymetry-data",
+  "id": "https://doi.org/10.5285/37c52e96-24ea-67ce-e063-7086abc05f29",
+  "version": "GEBCO_2025",
+  "ethos:remote_prefix": "gebco-2025",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:origin": "downloaded",
+  "ethos:exclude": [
+    "**/combined/**",
+    "**/*.aux.xml",
+    "combine_tiles_globally.ipynb",
+    "DOWNLOAD_INFO.txt",
+    "gebco_2025_TID/GEBCO_Grid_documentation.pdf",
+    "gebco_2025_TID/GEBCO_Grid_terms_of_use.pdf",
+    "gebco_2025_sub_ice_topo/GEBCO_Grid_documentation.pdf",
+    "gebco_2025_sub_ice_topo/*GEBCO_Grid_terms_of_use.pdf"
+  ],
+  "contributors": [
+    {
+      "title": "GEBCO Compilation Group",
+      "roles": [
+        "author"
+      ],
+      "path": "https://www.gebco.net/"
+    },
+    {
+      "title": "The Nippon Foundation-GEBCO Seabed 2030 Project",
+      "roles": [
+        "contributor"
+      ],
+      "path": "https://seabed2030.org/"
+    },
+    {
+      "title": "Pauline Weatherall",
+      "roles": [
+        "author"
+      ],
+      "organization": "British Oceanographic Data Centre"
+    },
+    {
+      "title": "NERC EDS British Oceanographic Data Centre NOC",
+      "roles": [
+        "publisher"
+      ],
+      "path": "https://www.bodc.ac.uk/"
+    },
+    {
+      "title": "Centre for Environmental Data Analysis (CEDA)",
+      "roles": [
+        "wrangler"
+      ],
+      "path": "https://data.ceda.ac.uk/bodc/gebco/global/gebco_2025"
+    }
+  ],
+  "sources": [
+    {
+      "title": "GEBCO Compilation Group (2025) GEBCO_2025 Grid -- the release record the published citation names, and this entry's `id`.",
+      "path": "https://doi.org/10.5285/37c52e96-24ea-67ce-e063-7086abc05f29"
+    },
+    {
+      "title": "GEBCO gridded bathymetry data -- the product page the files were fetched from, per DOWNLOAD_INFO.txt. It now serves GEBCO_2026; the 2025 links have moved to the historical page below.",
+      "path": "https://www.gebco.net/data-products/gridded-bathymetry-data"
+    },
+    {
+      "title": "GEBCO historical data sets -- where the GEBCO_2025 download links live now that 2026 is current.",
+      "path": "https://www.gebco.net/data-products/historical-data-sets"
+    },
+    {
+      "title": "The CEDA archive directory that serves this release -- three products, each as netCDF, GeoTIFF and Esri ASCII raster, plus the two PDFs. Every byte published here was checked against this directory, file by file.",
+      "path": "https://data.ceda.ac.uk/bodc/gebco/global/gebco_2025"
+    },
+    {
+      "title": "CEDA Data Catalogue record for the GEBCO_2025 Grid -- the archive's own metadata record, and the source of the OGL v3 statement discussed in ethos:license_note.",
+      "path": "https://catalogue.ceda.ac.uk/uuid/05fba4c5b8fe4daea8ff751026daf438/"
+    },
+    {
+      "title": "Tozer, B. et al (2019), Global bathymetry and topography at 15 arc sec: SRTM15+ -- the base grid the elevation products are built on.",
+      "path": "https://doi.org/10.1029/2019EA000658"
+    }
+  ],
+  "licenses": [
+    {
+      "title": "Terms of use for the GEBCO Grid and derived information products",
+      "path": "https://www.gebco.net/data-products/gridded-bathymetry/terms-of-use",
+      "ethos:document": "licenses/Terms of use for the GEBCO Grid and derived information products.txt",
+      "ethos:document_sha256": "93ef8e110c60e1b2f6882d01163f5c9695943a37f88d4ef9fafabe56eb34a8f6"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:attribution": "This data was produced by the General Bathymetric Chart of the Oceans (GEBCO). The GEBCO Grid is made available in the public domain and may be copied, distributed, adapted, and used commercially, subject to GEBCO’s terms of use. This redistribution is not endorsed by GEBCO, the IHO, or the IOC. The GEBCO Grid is provided “as is” and should not be used for navigation or safety-at-sea purposes.",
+  "ethos:upstream": {
+    "status": "available",
+    "checked": "2026-09-18"
+  },
+  "ethos:coverage_note": "Holds the GeoTIFF form of all three GEBCO_2025 products -- ice-surface elevation, sub-ice topography/bathymetry, and the Type Identifier grid -- each as the eight 90 x 90 degree quadrant tiles upstream distributes, 24 tiles in all, plus GEBCO's grid documentation and terms of use. That is the complete global coverage of the release at its native 15 arc-second resolution.\nTHIS MIRROR IS A SUBSET OF THE CEDA ARCHIVE -- 26 files here against 114 upstream, established 2026-09-18 by enumerating the archive directly. Not held: the netCDF form of all three products (~17.4 GiB, and the form most tools prefer -- GEBCO_2025.nc alone is 7,466,018,396 bytes), the Esri ASCII raster form, the .zip bundles that repackage the same tiles, and the .prj/.xml sidecars, 00readme.txt, the catalogue-and-licence README, and the .csv/.xlsx documentation the archive also carries. Nothing is missing upstream -- only the GeoTIFFs were ever downloaded. Add the netCDFs if a consumer needs the CF metadata or a single-file global grid; the GeoTIFF tiles carry the same pixels.\nAlso not held: the polar-stereographic companions. GEBCO's documentation has a section \"Data in polar projection co-ordinates\" stating that data sets accompany the GEBCO_2025 release for the polar regions -- IBCAO v5.1 in EPSG:3996 north of about 64 N, and IBCSO on a 500 m grid in EPSG:9354 south of 50 S. They are regional compilations that also feed into the global grid, and they live outside this release's directory (IBCAO under /bodc/gebco/ibcao/ on CEDA, IBCSO on PANGAEA and ibcso.org), which is why an enumeration of gebco_2025/ does not find them. The global grid here covers those latitudes in EPSG:4326; the polar products are only worth adding if a study needs the native projection or IBCSO's finer 500 m spacing.",
+  "ethos:retrieved": "2025-08-22",
+  "resources": [
+    {
+      "name": "gebco_2025-gebco_grid_documentation.pdf",
+      "path": "gebco_2025/GEBCO_Grid_documentation.pdf",
+      "bytes": 246806,
+      "hash": "sha256:a0c2b13e8481902ae881c4456fd05097762ffb22523b9af5a8f74cbd897ec096",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "gebco_2025-gebco_grid_terms_of_use.pdf",
+      "path": "gebco_2025/GEBCO_Grid_terms_of_use.pdf",
+      "bytes": 145503,
+      "hash": "sha256:3d0236bbb239fd1b29a432422e2879754f3ce21d75071ac1bf63929401bbb6bd",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "gebco_2025-gebco_2025_n0.0_s-90.0_w-180.0_e-90.0.tif",
+      "path": "gebco_2025/gebco_2025_n0.0_s-90.0_w-180.0_e-90.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:fde81a0e8eab3a1a63239a9fc6cb57032b178abac0aed45c5ce50756f7c9870c",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025-gebco_2025_n0.0_s-90.0_w-90.0_e0.0.tif",
+      "path": "gebco_2025/gebco_2025_n0.0_s-90.0_w-90.0_e0.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:54804663e4ad76a6a80a3373ec9a97dd38f999ea96e478630b4af2d4fea15b18",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025-gebco_2025_n0.0_s-90.0_w0.0_e90.0.tif",
+      "path": "gebco_2025/gebco_2025_n0.0_s-90.0_w0.0_e90.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:459ff824ac15453cad98e70f165c0d571aef58f7efbe0ce6041f788cd46d8211",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025-gebco_2025_n0.0_s-90.0_w90.0_e180.0.tif",
+      "path": "gebco_2025/gebco_2025_n0.0_s-90.0_w90.0_e180.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:87764edfde5e26875b617ff529673745b5a63716458448f1c4c6b808496e29cc",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025-gebco_2025_n90.0_s0.0_w-180.0_e-90.0.tif",
+      "path": "gebco_2025/gebco_2025_n90.0_s0.0_w-180.0_e-90.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:170455dd7afe2a37f2df8e218be66d67715ebae9d915734ab801af5b1f057ddc",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025-gebco_2025_n90.0_s0.0_w-90.0_e0.0.tif",
+      "path": "gebco_2025/gebco_2025_n90.0_s0.0_w-90.0_e0.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:234ede82d0633f834d24cd8a913cc40001786a60d41fe0bc00e22702448eea2f",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025-gebco_2025_n90.0_s0.0_w0.0_e90.0.tif",
+      "path": "gebco_2025/gebco_2025_n90.0_s0.0_w0.0_e90.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:2d51e05aa98241cfb4b02a0e9e35ba4a1421d3c1ada849315a1241598b1f994c",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025-gebco_2025_n90.0_s0.0_w90.0_e180.0.tif",
+      "path": "gebco_2025/gebco_2025_n90.0_s0.0_w90.0_e180.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:55f074fdad1e847f3e33a97f3b9d04ab46b90ce91e1b0d03cf3488589665503a",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_tid-gebco_2025_tid_n0.0_s-90.0_w-180.0_e-90.0.tif",
+      "path": "gebco_2025_TID/gebco_2025_tid_n0.0_s-90.0_w-180.0_e-90.0.tif",
+      "bytes": 466697898,
+      "hash": "sha256:9557c8fcfc56bafe93d021aac1678199d8f9a0b93a6848c607790dfdd30daaca",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_tid-gebco_2025_tid_n0.0_s-90.0_w-90.0_e0.0.tif",
+      "path": "gebco_2025_TID/gebco_2025_tid_n0.0_s-90.0_w-90.0_e0.0.tif",
+      "bytes": 466697898,
+      "hash": "sha256:d23dc2542aa1e17745af6fd42e268f4aa9e7d933c18288a19cdf1ba9724ccb05",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_tid-gebco_2025_tid_n0.0_s-90.0_w0.0_e90.0.tif",
+      "path": "gebco_2025_TID/gebco_2025_tid_n0.0_s-90.0_w0.0_e90.0.tif",
+      "bytes": 466697898,
+      "hash": "sha256:ff862b16ef2cdc5be8c209798e9d9db45fc4467046256623f59d3e70cd294bbb",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_tid-gebco_2025_tid_n0.0_s-90.0_w90.0_e180.0.tif",
+      "path": "gebco_2025_TID/gebco_2025_tid_n0.0_s-90.0_w90.0_e180.0.tif",
+      "bytes": 466697898,
+      "hash": "sha256:f84aeb3826ab2eec0d6e32bbea06e177d3f7fdf7cabf1b7a1a8b3ead75eed4aa",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_tid-gebco_2025_tid_n90.0_s0.0_w-180.0_e-90.0.tif",
+      "path": "gebco_2025_TID/gebco_2025_tid_n90.0_s0.0_w-180.0_e-90.0.tif",
+      "bytes": 466697898,
+      "hash": "sha256:eb266d1ad88bd031e08a93318ccaafc74648f2420250648890cda585d6ae2cb6",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_tid-gebco_2025_tid_n90.0_s0.0_w-90.0_e0.0.tif",
+      "path": "gebco_2025_TID/gebco_2025_tid_n90.0_s0.0_w-90.0_e0.0.tif",
+      "bytes": 466697898,
+      "hash": "sha256:a03a45c3ffda56a88fe805cf7fa4ec6868bf750fa163dde4de7c15a336c95392",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_tid-gebco_2025_tid_n90.0_s0.0_w0.0_e90.0.tif",
+      "path": "gebco_2025_TID/gebco_2025_tid_n90.0_s0.0_w0.0_e90.0.tif",
+      "bytes": 466697898,
+      "hash": "sha256:5aebf26897362604ed889d944fb84eb96fa7b9e58760004be6cf5f4d36f53abe",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_tid-gebco_2025_tid_n90.0_s0.0_w90.0_e180.0.tif",
+      "path": "gebco_2025_TID/gebco_2025_tid_n90.0_s0.0_w90.0_e180.0.tif",
+      "bytes": 466697898,
+      "hash": "sha256:4f5ef610b588b1fd7c0f669cb97d0fadd41beb4432bfd1ac483fea0982568a6d",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_sub_ice_topo-gebco_2025_sub_ice_n0.0_s-90.0_w-180.0_e-90.0.tif",
+      "path": "gebco_2025_sub_ice_topo/gebco_2025_sub_ice_n0.0_s-90.0_w-180.0_e-90.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:0dbf1cb9aec33bf8b061fac86001443c4bfc4860cbb109cec94b39a5362852df",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_sub_ice_topo-gebco_2025_sub_ice_n0.0_s-90.0_w-90.0_e0.0.tif",
+      "path": "gebco_2025_sub_ice_topo/gebco_2025_sub_ice_n0.0_s-90.0_w-90.0_e0.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:60800a11321b7cede424a9a8a1e3d941a7542b976b5a95c118cb342e9a3aed11",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_sub_ice_topo-gebco_2025_sub_ice_n0.0_s-90.0_w0.0_e90.0.tif",
+      "path": "gebco_2025_sub_ice_topo/gebco_2025_sub_ice_n0.0_s-90.0_w0.0_e90.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:3a6b38f2c8c2f79d6b4e47595947573d866ae804ca3a38abe224803fcff94a3a",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_sub_ice_topo-gebco_2025_sub_ice_n0.0_s-90.0_w90.0_e180.0.tif",
+      "path": "gebco_2025_sub_ice_topo/gebco_2025_sub_ice_n0.0_s-90.0_w90.0_e180.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:0ea63077c487281ae8720a476d0cadf20525f3f73aea2f725cf671b80f3cd2e2",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_sub_ice_topo-gebco_2025_sub_ice_n90.0_s0.0_w-180.0_e-90.0.tif",
+      "path": "gebco_2025_sub_ice_topo/gebco_2025_sub_ice_n90.0_s0.0_w-180.0_e-90.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:5cdb69107933daeae38f33e75306afa370fb02804ef53127ac41b2087ae6551a",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_sub_ice_topo-gebco_2025_sub_ice_n90.0_s0.0_w-90.0_e0.0.tif",
+      "path": "gebco_2025_sub_ice_topo/gebco_2025_sub_ice_n90.0_s0.0_w-90.0_e0.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:c401f3ae5957a211d17811398beb71907234d18e7f8b95e7fcd0068b6f8f77bc",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_sub_ice_topo-gebco_2025_sub_ice_n90.0_s0.0_w0.0_e90.0.tif",
+      "path": "gebco_2025_sub_ice_topo/gebco_2025_sub_ice_n90.0_s0.0_w0.0_e90.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:c8fd3ba15d62f69f883cb7457dc0fd5d17142331f016a648611748c4fe631881",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_sub_ice_topo-gebco_2025_sub_ice_n90.0_s0.0_w90.0_e180.0.tif",
+      "path": "gebco_2025_sub_ice_topo/gebco_2025_sub_ice_n90.0_s0.0_w90.0_e180.0.tif",
+      "bytes": 933255948,
+      "hash": "sha256:fe3500e5478097e75753863b9c75c23d17e3d9611fdadc8c65abb2ce822c278b",
+      "mediatype": "image/tiff"
+    }
+  ],
+  "ethos:total_bytes": 18666070661,
+  "ethos:file_count": 26
+}

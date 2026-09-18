@@ -32,6 +32,22 @@
       "ethos:file_count": 28
     },
     {
+      "name": "gebco-2025",
+      "path": "datasets/gebco-2025/datapackage.json",
+      "title": "GEBCO_2025 Grid -- global 15 arc-second bathymetry and topography (GEBCO / Seabed 2030)",
+      "ethos:access": "public",
+      "ethos:total_bytes": 18666070661,
+      "ethos:file_count": 26
+    },
+    {
+      "name": "gebco-2025-combined",
+      "path": "datasets/gebco-2025-combined/datapackage.json",
+      "title": "GEBCO_2025 Grid -- global single-file mosaics of the quadrant tiles (ICE-2 combination)",
+      "ethos:access": "public",
+      "ethos:total_bytes": 8595104256,
+      "ethos:file_count": 3
+    },
+    {
       "name": "geothermal-conductivity-assumptions",
       "path": "datasets/geothermal-conductivity-assumptions/datapackage.json",
       "title": "Franzmann lithology-to-thermal-conductivity assumptions",

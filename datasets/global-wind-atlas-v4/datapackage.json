@@ -4,6 +4,7 @@
   "title": "Global Wind Atlas 4.0, mean wind speed (250 m, global)",
   "description": "Long-term mean wind speed at 10, 50, 100, 150 and 200 m above ground level from the Global Wind Atlas (GWA), as global cloud-optimised GeoTIFFs on a 250 m grid. RESKit's wind workflows use the 100 m layer to bias-correct the ERA5 long-run average wind speed, and the surrounding heights for the \"lra\" height-scaling method. This is the current vintage; the superseded ones are catalogued separately as global-wind-atlas-v1, -v2 and -v3.",
   "homepage": "https://globalwindatlas.info/",
+  "ethos:remote_prefix": "global-wind-atlas-v4",
   "ethos:include": [
     "wind_speed_cog_10m.tif",
     "wind_speed_cog_50m.tif",
@@ -12,7 +13,6 @@
     "wind_speed_cog_200m.tif",
     "wind_speed_cog_100m.tif.aux.xml"
   ],
-  "ethos:remote_prefix": "global-wind-atlas",
   "ethos:access": "public",
   "ethos:visibility": "public",
   "ethos:upstream": {

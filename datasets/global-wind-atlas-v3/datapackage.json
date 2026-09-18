@@ -4,6 +4,7 @@
   "title": "Global Wind Atlas 3.0, wind speed, Weibull parameters and RIX (250 m, global)",
   "description": "The GWA 3 release: long-term mean wind speed at 10, 50, 100, 150 and 200 m, combined Weibull scale (A) and shape (K) parameters at 50, 100, 150 and 200 m, and the ruggedness index (RIX), as global GeoTIFFs on a 250 m grid. Superseded by global-wind-atlas (4.0) for wind speed, but the only vintage on the cluster that carries the Weibull and RIX layers -- GWA 4 was downloaded for wind speed only.",
   "homepage": "https://globalwindatlas.info/",
+  "ethos:remote_prefix": "global-wind-atlas-v3",
   "ethos:exclude": [
     "=3.4.2",
     "3.4.2",

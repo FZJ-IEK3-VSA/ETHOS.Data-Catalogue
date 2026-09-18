@@ -1,0 +1,123 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "gebco-2025-combined",
+  "title": "GEBCO_2025 Grid -- global single-file mosaics of the quadrant tiles (ICE-2 combination)",
+  "description": "The three products of the GEBCO_2025 release, each as ONE global GeoTIFF instead of the eight 90 x 90 degree quadrant tiles GEBCO distributes: `gebco_2025` (land and ice-surface elevation in metres), `gebco_2025_sub_ice_topo` (under-ice topography for Greenland and Antarctica, metres) and `gebco_2025_TID` (Type Identifier -- the provenance code of every cell). Each mosaic is the full grid in one file: 86400 x 43200 cells, 3,732,480,000 in all, at 15 arc seconds, WGS 84 (EPSG:4326), covering -180 to 180 and -90 to 90.\nOnly the tiling was changed. The cells are GEBCO's bit for bit, on the same grid, with the same data types and nodata values; the files were DEFLATE-compressed on the way out, which makes all three together 8.0 GiB against the 17.4 GiB of uncompressed tiles they were built from. The point is to let a consumer that samples arbitrary global points read one raster instead of searching eight tiles per lookup -- which is what reskit.util.local_values.water_depth_from_location does when handed a directory.\nGEBCO is not affiliated with Forschungszentrum Julich and has not endorsed this combination. See ethos:attribution, and note that the mosaics no longer carry GEBCO's own metadata (ethos:derivation).",
+  "version": "GEBCO_2025",
+  "ethos:include": [
+    "gebco_2025/combined/gebco_2025_n90.0_s-90.0_w-180.0_e180.0.tif",
+    "gebco_2025_sub_ice_topo/combined/gebco_2025_sub_ice_n90.0_s-90.0_w-180.0_e180.0.tif",
+    "gebco_2025_TID/combined/gebco_2025_tid_n90.0_s-90.0_w-180.0_e180.0.tif"
+  ],
+  "ethos:remote_prefix": "gebco-2025-combined",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:origin": "derived",
+  "ethos:input_datasets": [
+    "gebco-2025"
+  ],
+  "contributors": [
+    {
+      "title": "GEBCO Compilation Group",
+      "roles": [
+        "author"
+      ],
+      "path": "https://www.gebco.net/"
+    },
+    {
+      "title": "The Nippon Foundation-GEBCO Seabed 2030 Project",
+      "roles": [
+        "contributor"
+      ],
+      "path": "https://seabed2030.org/"
+    },
+    {
+      "title": "Christoph Winkler",
+      "roles": [
+        "wrangler"
+      ],
+      "organization": "Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2)"
+    },
+    {
+      "title": "ICE-2 RESKit maintainers",
+      "roles": [
+        "maintainer"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "GEBCO Compilation Group (2025) GEBCO_2025 Grid -- the release whose tiles were mosaicked, and the work to cite.",
+      "path": "https://doi.org/10.5285/37c52e96-24ea-67ce-e063-7086abc05f29"
+    },
+    {
+      "title": "GEBCO gridded bathymetry data -- the product page the tiles were fetched from on 2025-08-22. It now serves GEBCO_2026; the 2025 links have moved to the historical page below.",
+      "path": "https://www.gebco.net/data-products/gridded-bathymetry-data"
+    },
+    {
+      "title": "GEBCO historical data sets -- where the GEBCO_2025 links live now.",
+      "path": "https://www.gebco.net/data-products/historical-data-sets"
+    },
+    {
+      "title": "The CEDA archive directory serving this release, against which every published tile in gebco-2025 -- the input to these mosaics -- was checked.",
+      "path": "https://data.ceda.ac.uk/bodc/gebco/global/gebco_2025"
+    },
+    {
+      "title": "geokit -- combineSimilarRasters and saveRasterAsTif, the functions that built these files.",
+      "path": "https://github.com/FZJ-IEK3-VSA/geokit"
+    }
+  ],
+  "ethos:derivation": "Built by combine_tiles_globally.ipynb, which sits in source_dir and is published by neither entry -- it is code, not data. Per product: glob the eight quadrant tiles, confirm they share a cell size, then `geokit._algorithms.combineSimilarRasters.combineSimilarRasters(pattern, allowNumericMismatch=True)`, assert the result contains neither the nodata value nor NaN, and write it with `geokit.raster.saveRasterAsTif(..., creationOptions={\"BIGTIFF\": \"YES\"})` into a `combined/` subfolder. The output name is the tile naming scheme with the wildcard replaced by the global bounds, n90.0_s-90.0_w-180.0_e180.0. The notebook does one product per run; the other two source patterns are commented-out lines at the top.\nUNCHANGED, and confirmed on the files themselves: the grid -- origin (-180, 90), cell size 0.004166666666666667 degrees on both axes, EPSG:4326, AREA_OR_POINT=Area -- and each product's data type and nodata value (Int16 / -32767 for the two elevation products, Byte / 127 for TID). No resampling, reprojection or rescaling: every cell of a mosaic is a cell of a tile, at the offset that tile's bounds imply.\nCHANGED: the eight tiles became one raster; DEFLATE compression was applied, where the upstream tiles are uncompressed; BIGTIFF was forced, as it must be past 4 GiB. The block layout is still one full scanline per block (86400 x 1, as the tiles are 21600 x 1), so these are striped GeoTIFFs -- not tiled, no overviews, not COGs -- and reading a small window still costs whole rows. For point sampling, which is what they are for, that does not matter.\nLOST, and the one thing to know before using a mosaic in place of a tile: GEBCO's metadata did not survive the combination. The upstream tiles carry the band unit `m`, CF standard names and SeaDataNet parameter URNs, and the whole NC_GLOBAL block -- GEBCO's title, summary, institution, the DOI, the licence statement and the \"should not be used for navigation\" comment. The mosaics carry AREA_OR_POINT and nothing else, and the band unit string is empty. A consumer reading one of these files cannot recover units, provenance or the navigation disclaimer from the file itself, which is why this descriptor states all three and why ethos:attribution repeats the disclaimer.",
+  "ethos:provenance": "Checked 2026-09-18 against the tiles published as gebco-2025, reading with GDAL's PAM disabled so that nothing was written into the shared folder.\nCell values: 120 sample windows -- all 24 tiles, five windows each: the tile's first pixels, its last row, its last column, its bottom-right corner and a 512 x 16 interior block -- are byte-identical between mosaic and tile. Tile placement and seams: 30 full-width mosaic rows (ten per product, among them the grid's first and last rows and rows 21598 to 21601, which straddle the horizontal seam) equal the four tiles of their band concatenated, exactly. So the tiles sit at the offsets their bounds imply, and no seam row or column is duplicated, dropped or shifted.\nGeometry and typing were read off the files directly and match the tiles; the figures are in ethos:derivation. Sizes, for anyone checking a download: 4,174,159,707 B (gebco_2025), 4,325,921,823 B (sub_ice_topo) and 95,022,726 B (TID), 8,595,104,256 B together.\nFull-raster statistics, computed over every cell the same day: gebco_2025 min -10930 m, max 8627 m, mean -1899.059296, sd 2653.613585; sub_ice_topo min -10930 m, max 8627 m, mean -2128.351741, sd 2353.843154; TID min 0, max 72, mean 28.452207, sd 22.308190. Both elevation extremes are exactly the range GEBCO documents for the release (geospatial_vertical_min / _max in the tiles' NC_GLOBAL block: -10930 and 8627), so the mosaics reach both ends of it, and the gebco_2025 figures reproduce the PAM statistics sidecar beside that file (STATISTICS_MEAN -1899.0592963422, STDDEV 2653.6135846067, VALID_PERCENT 100) to every decimal compared. The TID mosaic has no nodata cell at all: its 0-255 histogram accounts for all 3,732,480,000 cells, 127 never occurs, and the codes present are GEBCO's own -- 0 (land) 23.4 %, 10-17 (measured, or derived from measurements) 19.9 %, 40-47 (interpolated or predicted) 45.8 %, 70-72 (from pre-generated grids) 10.8 %.\nAuthorship is an inference, not a record: DOWNLOAD_INFO.txt names Christoph Winkler as the person who fetched the tiles on 2025-08-22, the three mosaics were written the same evening (22:13, 22:21 and 22:26 CEST), and all three carry the same owner SID as combine_tiles_globally.ipynb. That SID does not resolve to a name from outside the file server, so the contributor entry rests on timing and file ownership.\nOne detail that misleads if read quickly: the notebook's last saved state is a re-run of the gebco_2025 combination on 2026-05-16, whose assert cells passed (no nodata, no NaN in the mosaic) but whose save cell was never executed -- its execution_count is null. The files on disk are from the original 2025-08-22 run. That re-run is therefore evidence that the recipe reproduces, not the thing that produced these bytes.",
+  "ethos:upstream": {
+    "status": "no-upstream",
+    "checked": "2026-09-18",
+    "note": "GEBCO does not distribute a global single-file GeoTIFF; its GeoTIFF form is the eight quadrant tiles, catalogued as gebco-2025. These mosaics exist only here and can be rebuilt from that entry with the recipe in ethos:derivation. If a single global file is what is wanted and netCDF is acceptable, prefer GEBCO's own GEBCO_2025.nc -- that one is upstream, is held in neither entry, and keeps the CF metadata these files lost."
+  },
+  "ethos:coverage_note": "Complete global coverage of all three GEBCO_2025 products at their native 15 arc-second resolution, one file per product, nothing sampled away.\nOnly the three mosaics are here. The quadrant tiles they were built from, and GEBCO's grid documentation and terms-of-use PDFs, belong to gebco-2025 and are deliberately not duplicated -- that entry excludes these mosaics for the same reason. GEBCO's terms are archived under licenses/ here as well, because they bind anyone who takes these files. Held by neither entry: the netCDF and Esri ASCII forms of the release, and the polar-projection companions (IBCAO, IBCSO); see gebco-2025's coverage note.",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International, for the ICE-2 compilation",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    },
+    {
+      "title": "Terms of use for the GEBCO Grid and derived information products, which govern the cell values and travel with any redistribution",
+      "path": "https://www.gebco.net/data-products/gridded-bathymetry/terms-of-use",
+      "ethos:document": "licenses/Terms of use for the GEBCO Grid and derived information products.txt",
+      "ethos:document_sha256": "93ef8e110c60e1b2f6882d01163f5c9695943a37f88d4ef9fafabe56eb34a8f6"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:attribution": "Global mosaics assembled at Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2), from the GEBCO_2025 Grid (GEBCO Compilation Group, 2025, https://doi.org/10.5285/37c52e96-24ea-67ce-e063-7086abc05f29). The cell values are GEBCO's and are unchanged; the eight quadrant tiles of each product were joined into one global file, and nothing else was done to them. GEBCO, the IHO and the IOC are not affiliated with Forschungszentrum Julich and have not endorsed or approved this compilation. The compilation is released under CC BY 4.0, https://creativecommons.org/licenses/by/4.0/. As with the GEBCO Grid itself, these files must not be used for navigation or for any purpose involving safety at sea.",
+  "ethos:retrieved": "2025-08-22",
+  "ethos:verified": "2026-09-18",
+  "ethos:contact": "c-winkler",
+  "resources": [
+    {
+      "name": "gebco_2025-combined-gebco_2025_n90.0_s-90.0_w-180.0_e180.0.tif",
+      "path": "gebco_2025/combined/gebco_2025_n90.0_s-90.0_w-180.0_e180.0.tif",
+      "bytes": 4174159707,
+      "hash": "sha256:b8257721df2858be74837c1f270c740c7b65e62745282a5593a79dbdad5aacd9",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_sub_ice_topo-combined-gebco_2025_sub_ice_n90.0_s-90.0_w-180.0_e180.0.tif",
+      "path": "gebco_2025_sub_ice_topo/combined/gebco_2025_sub_ice_n90.0_s-90.0_w-180.0_e180.0.tif",
+      "bytes": 4325921823,
+      "hash": "sha256:7f61956587fd661dc6ea1237faaef42e841ac886bcbe096167d814f49a917723",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_tid-combined-gebco_2025_tid_n90.0_s-90.0_w-180.0_e180.0.tif",
+      "path": "gebco_2025_TID/combined/gebco_2025_tid_n90.0_s-90.0_w-180.0_e180.0.tif",
+      "bytes": 95022726,
+      "hash": "sha256:cfc98c9601d4ecf1350541a4c271469b070e4ceda39dfde6861a3cd04cdacd3d",
+      "mediatype": "image/tiff"
+    }
+  ],
+  "ethos:total_bytes": 8595104256,
+  "ethos:file_count": 3
+}
