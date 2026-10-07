@@ -2,17 +2,23 @@
   "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
   "name": "nasa-power-geothermal-climatology",
   "title": "NASA POWER Earth Skin Temperature climatology used by Franzmann",
-  "description": "The original POWER_Global_Climatology_LST_2.nc delivery used to construct RESKit's geothermal resource. Contains TS (Earth Skin Temperature, Celsius) for time indices 1 through 13 on a 360 by 720 global 0.5-degree grid. The climatological averaging years and exact POWER release are not recorded in this historical file. Retained unchanged, including the missing final longitude column; the repair and 1-degree averaging happen downstream.",
+  "description": "NASA POWER climatology of Earth Skin Temperature (TS, Celsius), provided as the NetCDF file POWER_Global_Climatology_LST_2.nc. Contains 13 time indices on a 360 by 720 global 0.5-degree grid; the final longitude column (179.75 degrees east) holds only fill values. The climatological averaging years and the POWER release are not recorded in the file.",
   "homepage": "https://power.larc.nasa.gov/data-access-viewer/",
+  "id": "https://catalog.data.gov/dataset/prediction-of-worldwide-energy-resources-power",
   "ethos:access": "public",
   "ethos:visibility": "public",
   "ethos:remote_prefix": "nasa-power-geothermal-climatology",
   "ethos:origin": "downloaded",
+  "ethos:upstream": {
+    "status": "superseded",
+    "checked": "2026-09-29",
+    "note": "POWER no longer serves this file. Its climatology service now returns TS only from POWER Data v10.0.0 (API v2.10.0), on the MERRA-2 native 0.5 x 0.625 degree grid with a stated 2001-2020 period; this file is on a 0.5 x 0.5 degree cell-centred grid with no version or period recorded. Compared on all 206,066 native nodes (this file resampled bilinearly): median absolute difference 0.18 C, RMSE 0.39-0.56 C depending on the slice, this file colder by 0.07-0.19 C on average (0.31 C north of 60N). RMSE is 0.24 C in smooth terrain and 1.4 C in the steepest. No averaging window of POWER's 1981-2025 monthly series reproduces the values (32 cells tested; best RMSE 0.43 C). The comparison is the same product family, not the same numbers, so this mirror is the copy of record. The grid coordinates are labelled correctly: shifting them by a quarter or half cell worsens the fit everywhere."
+  },
   "contributors": [
     {
       "title": "NASA Langley Research Center POWER Project",
       "roles": [
-        "publisher"
+        "author"
       ]
     }
   ],
@@ -42,7 +48,6 @@
   "ethos:attribution": "Data obtained from the NASA Langley Research Center POWER Project. Please cite NASA POWER and follow https://power.larc.nasa.gov/docs/referencing/.",
   "ethos:provenance": "Copied byte for byte from Franzmann's restored dissertation archive on 2026-09-09. The original filesystem timestamp is 2022-05-02, which identifies neither the climatology period nor the upstream release. The file has no global provenance attributes. Current POWER release dates must not be used to infer the historical averaging period. TS time=13 is the slice selected by calculate_Temperature.py.",
   "ethos:retrieved": "2026-09-09",
-  "ethos:contact": "ICE-2 RESKit maintainers",
   "resources": [
     {
       "name": "power_global_climatology_lst_2.nc",

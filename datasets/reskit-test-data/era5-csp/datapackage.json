@@ -9,16 +9,16 @@
   "ethos:derivation": "`cdo sellonlatbox,-24.5,2.0,19.94,42.98` over the ERA5 download described in the sibling `era5` member.\nsingle-cell/era5_testdata_for_csp_tests.nc mixes in ERA5-Land -- its ws10 long_name reads \"Processed from ERA5:u10,v10,u100,v100,blh,fsr and ERA5-Land:u10v10\". It sits in a subdirectory because RESKit's NCSource globs a directory non-recursively, and a 2 x 2 file beside the 5 x 7 ones would be swept into the same scan.",
   "contributors": [
     {
-      "title": "K. Okosun",
+      "title": "Kenneth Okosun",
       "roles": [
-        "author"
+        "modifier"
       ],
       "organization": "Forschungszentrum Julich, ICE-2"
     },
     {
-      "title": "ICE-2 RESKit maintainers",
+      "title": "Hendrik Wenzel",
       "roles": [
-        "maintainer"
+        "modifier"
       ]
     }
   ],

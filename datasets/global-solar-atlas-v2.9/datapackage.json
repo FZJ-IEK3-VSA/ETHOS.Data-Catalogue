@@ -1,0 +1,114 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "global-solar-atlas-v2.9",
+  "title": "Global Solar Atlas 2.9, long-term average solar irradiation (250 m, to 2022)",
+  "description": "Long-term averages of global horizontal irradiation (GHI) and direct normal irradiation (DNI) on a 9 arcsec (about 250 m) grid, and terrain elevation (ELE) on a 30 arcsec grid, as global GeoTIFFs. Global Solar Atlas 2.9 (September 2023), data to 2022, produced by Solargis for the World Bank / ESMAP. RESKit's PV workflows use GHI and DNI to bias-correct ERA5 irradiance. The current vintage is catalogued separately as global-solar-atlas-v2.13, the older ones as global-solar-atlas-v2.0 and global-solar-atlas-v1.0.",
+  "homepage": "https://globalsolaratlas.info/",
+  "version": "2.9",
+  "ethos:exclude": [
+    "**/*.zip"
+  ],
+  "ethos:remote_prefix": "global-solar-atlas-v2.9",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:upstream": {
+    "status": "superseded",
+    "checked": "2026-09-29",
+    "note": "Checked 2026-09-29. The download address, api.globalsolaratlas.info/download/World/ (a 302 to S3), still serves GHI, DNI and ELE under the same file names, but no longer this release: it now serves Global Solar Atlas 2.13 (GHI and DNI published 2026-04, data to 2025, last modified 2026-05-06; ELE edition 2024-05). The zip directories were compared without downloading the archives: every member of all three -- the .tif, .xml and .pdf -- differs in size and CRC-32 from the archives held here (GHI.tif is 2,791,187,712 bytes upstream against 2,693,381,050 here). The addresses carry no version, and the host answers 404 to HEAD while serving GET. The GSA site does not list them; the energydata.info (ESMAP / World Bank) catalogue does."
+  },
+  "sources": [
+    {
+      "title": "Global Solar Atlas -- world download (GIS data)",
+      "path": "https://globalsolaratlas.info/download/world"
+    },
+    {
+      "title": "Global Solar Atlas release notes (GSA 2.9, September 2023)",
+      "path": "https://globalsolaratlas.info/support/release-notes"
+    },
+    {
+      "title": "Global Solar Atlas 2.0 Technical Report (ESMAP / World Bank, 2019)",
+      "path": "https://documents.worldbank.org/curated/en/529431592893043403"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International, with the mandatory and binding dispute-resolution addition stated in the Global Solar Atlas terms of use",
+      "path": "https://globalsolaratlas.info/support/terms-of-use",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "a41afae9890ec0a02b5ad87ed0a8999b60180663d6ff660987dc0ec0b557147e"
+    }
+  ],
+  "ethos:attribution": "Solar resource data (c) 2023 Solargis. Terrain elevation derived from SRTM, viewfinderpanoramas.org, GEBCO by Solargis, 2018. (c) The World Bank, Source: Global Solar Atlas 2.0. Data obtained from the Global Solar Atlas, a free, web-based application developed and operated by Solargis s.r.o. on behalf of the World Bank Group, utilizing Solargis data, with funding provided by the Energy Sector Management Assistance Program (ESMAP).",
+  "ethos:license_status": "resolved",
+  "ethos:coverage_note": "Holds three world layers of Global Solar Atlas 2.9 (September 2023): GHI and DNI as long-term averages of daily totals at 9 arcsec (about 250 m), and ELE at 30 arcsec, each with its PDF poster map and ISO 19139 .xml metadata. Extent 180W-180E and 60S-65N: nothing north of 65N (Svalbard, most of Greenland, northern Fennoscandia and Siberia) or south of 60S (Antarctica). Data period to 2022, with a start year that depends on the region: 1994, 1999, 2005 (Scandinavia above 60N, added in 2.9), 2007 or 2018 (Patagonia south of 45S, added in 2.7).\nNot held: DIF, GTI, PVOUT, OPTA and TEMP. This copy has no 2.9 version of them. The catalogue has them only as the older layers in global-solar-atlas-v2.0 (data to 2018) and global-solar-atlas-v1.0, and as the current ones in global-solar-atlas-v2.13. Nor the country and regional layers, nor the download archives (*.zip, identical to the extracted files).\nNot the newest data: upstream now serves GSA 2.13 (May 2026), catalogued as global-solar-atlas-v2.13, which adds 2023, 2024 and 2025 and, from 2.11, a blended ERA5 and ERA5-Land air temperature.",
+  "ethos:retrieved": "2023-09-11",
+  "ethos:origin": "downloaded",
+  "resources": [
+    {
+      "name": "world_dni_gisdata_ltay_avgdailytotals_globalsolaratlas-v2_geotiff-dni.tif",
+      "path": "World_DNI_GISdata_LTAy_AvgDailyTotals_GlobalSolarAtlas-v2_GEOTIFF/DNI.tif",
+      "bytes": 3741506622,
+      "hash": "sha256:41e1b5614a477af06eaae73c4cb2b60802e944b45196d1df3cc1a56eda88aff4",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "world_dni_gisdata_ltay_avgdailytotals_globalsolaratlas-v2_geotiff-dni.tif.pdf",
+      "path": "World_DNI_GISdata_LTAy_AvgDailyTotals_GlobalSolarAtlas-v2_GEOTIFF/DNI.tif.pdf",
+      "bytes": 55802,
+      "hash": "sha256:9b429c5fa45553fdab1c2fa4747b4eb8a3d8a42021f12ca1d43f69e30529c49a",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "world_dni_gisdata_ltay_avgdailytotals_globalsolaratlas-v2_geotiff-dni.tif.xml",
+      "path": "World_DNI_GISdata_LTAy_AvgDailyTotals_GlobalSolarAtlas-v2_GEOTIFF/DNI.tif.xml",
+      "bytes": 23975,
+      "hash": "sha256:58e573e1310461e3ff89fade2cfc9c33ac1093538a200320328bc7d98403520b",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "world_ele_gisdata_globalsolaratlas-v2_geotiff-ele.tif",
+      "path": "World_ELE_GISdata_GlobalSolarAtlas-v2_GEOTIFF/ELE.tif",
+      "bytes": 1093418567,
+      "hash": "sha256:bf45f598893b1dd07296ca61cb66d493181bccd976a2aa39d7d35afde6cc1b53",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "world_ele_gisdata_globalsolaratlas-v2_geotiff-ele.tif.pdf",
+      "path": "World_ELE_GISdata_GlobalSolarAtlas-v2_GEOTIFF/ELE.tif.pdf",
+      "bytes": 55705,
+      "hash": "sha256:d67a584371ea8e16e6c992b46ef9d0910a58adda48e35e87ec26275fd8efd1bc",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "world_ele_gisdata_globalsolaratlas-v2_geotiff-ele.tif.xml",
+      "path": "World_ELE_GISdata_GlobalSolarAtlas-v2_GEOTIFF/ELE.tif.xml",
+      "bytes": 22121,
+      "hash": "sha256:69eca9d2d2efd3b390f21ee2a1b1209991262992025dcdc2ab8ff83bb0d5c94f",
+      "mediatype": "text/xml"
+    },
+    {
+      "name": "world_ghi_gisdata_ltay_avgdailytotals_globalsolaratlas-v2_geotiff-ghi.tif",
+      "path": "World_GHI_GISdata_LTAy_AvgDailyTotals_GlobalSolarAtlas-v2_GEOTIFF/GHI.tif",
+      "bytes": 2693381050,
+      "hash": "sha256:985d9706b9dcfe9125aec5ac4251838501630799fef3daa176877649c2d8dbdd",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "world_ghi_gisdata_ltay_avgdailytotals_globalsolaratlas-v2_geotiff-ghi.tif.pdf",
+      "path": "World_GHI_GISdata_LTAy_AvgDailyTotals_GlobalSolarAtlas-v2_GEOTIFF/GHI.tif.pdf",
+      "bytes": 55813,
+      "hash": "sha256:07fc73064a4ef02ccfb4d355ae6de1c0c907208c875a08d048a2bfa63421aa00",
+      "mediatype": "application/pdf"
+    },
+    {
+      "name": "world_ghi_gisdata_ltay_avgdailytotals_globalsolaratlas-v2_geotiff-ghi.tif.xml",
+      "path": "World_GHI_GISdata_LTAy_AvgDailyTotals_GlobalSolarAtlas-v2_GEOTIFF/GHI.tif.xml",
+      "bytes": 24006,
+      "hash": "sha256:cf387bbda64f0a93cbb1b3969d0318352b9a4dbd29384c6aa6b47865972446e6",
+      "mediatype": "text/xml"
+    }
+  ],
+  "ethos:total_bytes": 7528543661,
+  "ethos:file_count": 9
+}

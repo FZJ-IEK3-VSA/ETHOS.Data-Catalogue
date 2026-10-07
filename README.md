@@ -23,12 +23,17 @@ ethos-data fetch <dataset-or-key>
 | `corine-land-cover` | CORINE Land Cover 2018, 100 m raster, version 20 (Europe) | 67 | 270.2 MB | downloadable |
 | `dist2coast` | Distance to the Nearest Coast, 0.01-degree global grid (NASA OB.DAAC / NOAA, June 2009) | 4 | 1,509.5 MB | downloadable |
 | `esa-cci-landcover` | ESA CCI Land Cover Classification, 300 m, 1992-2015 (v2.0.7) | 28 | 10,033.8 MB | downloadable |
+| `gadm-3.6` | GADM database of Global Administrative Areas, version 3.6 (all levels, shapefiles; licensed) | 30 | 4,014.7 MB | **listed only** |
 | `gebco-2025` | GEBCO_2025 Grid -- global 15 arc-second bathymetry and topography (GEBCO / Seabed 2030) | 26 | 18,666.1 MB | downloadable |
 | `gebco-2025-combined` | GEBCO_2025 Grid -- global single-file mosaics of the quadrant tiles (ICE-2 combination) | 3 | 8,595.1 MB | downloadable |
 | `geothermal-conductivity-assumptions` | Franzmann lithology-to-thermal-conductivity assumptions | 1 | 0.0 MB | downloadable |
+| `geothermal-egs-placements` | Global Enhanced Geothermal System (EGS) plant placements with simulated power and LCOE (Franzmann et al. 2025) | 1 | 78.4 MB | downloadable |
 | `geothermal-resource` | Global subsurface temperature and sustainable heat flow | 2 | 6.2 MB | downloadable |
 | `global-lithological-map-glim-v1` | Global Lithological Map Database (GLiM) v1.0, 0.5-degree grid | 2 | 1.2 MB | downloadable |
-| `global-solar-atlas` | Global Solar Atlas, long-term average solar resource and air temperature | 117 | 28,023.4 MB | downloadable |
+| `global-solar-atlas-v1.0` | Global Solar Atlas 1.0, long-term average solar resource and air temperature (1 km) | 29 | 3,990.5 MB | downloadable |
+| `global-solar-atlas-v2.0` | Global Solar Atlas 2.0, long-term average solar resource and air temperature (250 m, to 2018) | 58 | 16,503.0 MB | downloadable |
+| `global-solar-atlas-v2.13` | Global Solar Atlas 2.13, long-term average solar resource and air temperature (250 m, to 2025) | 60 | 18,685.9 MB | downloadable |
+| `global-solar-atlas-v2.9` | Global Solar Atlas 2.9, long-term average solar irradiation (250 m, to 2022) | 9 | 7,528.5 MB | downloadable |
 | `global-wind-atlas-era5-expanded` | GWA 4.0 100 m wind speed, expanded to full global coverage with the ERA5 long-run average | 1 | 67,808.3 MB | downloadable |
 | `global-wind-atlas-v1` | Global Wind Atlas 1.0, mean wind speed at 50, 100 and 200 m (global and Europe) | 11 | 6,396.2 MB | downloadable |
 | `global-wind-atlas-v2` | Global Wind Atlas 2.0, mean wind speed (global and Europe) | 9 | 7,255.3 MB | downloadable |
@@ -36,7 +41,10 @@ ethos-data fetch <dataset-or-key>
 | `global-wind-atlas-v4` | Global Wind Atlas 4.0, mean wind speed (250 m, global) | 6 | 71,364.9 MB | downloadable |
 | `goutorbe-global-heat-flow-2011` | Goutorbe et al. (2011) global heat flow and geophysical proxies | 1 | 9.6 MB | downloadable |
 | `icon-lam-southern-africa` | ICON-LAM convection-permitting simulation, southern Africa 2017-2019, 0.033 deg, 15 min, zoom-7 tiles for RESKit | 3861 | 3,116,089.2 MB | downloadable |
+| `marine-regions-world-eez-v12` | Marine Regions World EEZ v12 -- Maritime Boundaries and Exclusive Economic Zones (200 NM), Flanders Marine Institute (VLIZ), 2023-10-25 | 12 | 190.3 MB | downloadable |
 | `nasa-power-geothermal-climatology` | NASA POWER Earth Skin Temperature climatology used by Franzmann | 1 | 13.5 MB | downloadable |
+| `reskit-example-northern-germany-north-sea` | RESKit example inputs, northern Germany and the German North Sea - excerpts | 5 | 0.2 MB | downloadable |
+| `reskit-example-northern-germany-north-sea/german-eez-marine-regions-v12` | German Exclusive Economic Zone from Marine Regions World EEZ v12 | 5 | 0.2 MB | downloadable |
 | `reskit-test-data/boundaries` | RESKit administrative boundary test fixtures | 8 | 0.0 MB | downloadable |
 | `reskit-test-data/corine` | RESKit CORINE Land Cover test fixture, Aachen | 1 | 0.1 MB | downloadable |
 | `reskit-test-data` | RESKit test fixtures - real weather and geospatial data, clipped | 88 | 7.8 MB | downloadable |

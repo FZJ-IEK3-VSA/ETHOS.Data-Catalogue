@@ -1,0 +1,12 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "reskit-example-northern-germany-north-sea",
+  "title": "RESKit example inputs, northern Germany and the German North Sea - excerpts",
+  "description": "Excerpts that the RESKit software-publication example for northern Germany and the German North Sea (examples/7_software_publication_example/northern_germany_north_sea.py) reads, for inputs the catalogue does not otherwise hold in the cut the example needs. Each member describes one upstream with its own licence and access class. The example simulates onshore and offshore wind, open-field PV and EGS geothermal for Schleswig-Holstein, Hamburg, Bremen, Niedersachsen, Mecklenburg-Vorpommern and the North Sea part of the German Exclusive Economic Zone, and maps the LCOE of each placement. Its other inputs are read unchanged from their own entries: trep-db, dist2coast, gebco-2025-combined, global-wind-atlas-v4, global-solar-atlas-v2.9, geothermal-egs-placements and gadm-3.6.",
+  "homepage": "https://github.com/FZJ-IEK3-VSA/RESKit",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "ethos:attribution": "ALL FILES IN THIS DATASET ARE EXCERPTS: each is a subset of the product named in its member descriptor, prepared by Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2).\nFlanders Marine Institute (2023). Maritime Boundaries Geodatabase: Maritime Boundaries and Exclusive Economic Zones (200NM), version 12. Available online at https://www.marineregions.org/. https://doi.org/10.14284/632. Refer to marineregions.org for the most up-to-date products.",
+  "ethos:namespace": true,
+  "ethos:total_bytes": 222239,
+  "ethos:file_count": 5
+}

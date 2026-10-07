@@ -1,0 +1,79 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "geothermal-egs-placements",
+  "title": "Global Enhanced Geothermal System (EGS) plant placements with simulated power and LCOE (Franzmann et al. 2025)",
+  "description": "File 4 of the Mendeley Data release that accompanies Franzmann, Heinrichs and Stolten (2025), Renewable Energy 250, 123199, mirrored unchanged: 4,075,483 location-specific Enhanced Geothermal System (EGS) doublet plant placements, worldwide, published as \"Raw data of the global location specific plants\". Each row gives one plant: its point location (lon/lat, EPSG:4326), its GADM 3.6 level-1 region code (gid1), and the net power output and LCOE computed by three reservoir models: Gringarten, Volume Method and Sustainable Approach. Columns: lon, lat, gid1, Pout_Gringarten_MW, LCOE_Gringarten_Eurct_per_kWh, Pout_VolumeMethod_MW, LCOE_VolumeMethod_Eurct_per_kWh, Pout_Sustainable_MW, LCOE_Sustainable_Eurct_per_kWh. ",
+  "homepage": "https://data.mendeley.com/datasets/sbs8k66bwf/2",
+  "id": "https://doi.org/10.17632/sbs8k66bwf.2",
+  "version": "2",
+  "sources": [
+    {
+      "title": "Franzmann, Heinrichs and Stolten (2025), Global Technical Energy Potentials of Enhanced Geothermal Systems, Mendeley Data, V2",
+      "path": "https://doi.org/10.17632/sbs8k66bwf.2"
+    },
+    {
+      "title": "Original 04_allPlacements.csv.gz delivery (Mendeley file 657dccad-dec5-487d-b8aa-86a8d4cb323d)",
+      "path": "https://data.mendeley.com/public-files/datasets/sbs8k66bwf/files/657dccad-dec5-487d-b8aa-86a8d4cb323d/file_downloaded"
+    },
+    {
+      "title": "Franzmann, D., Heinrichs, H. and Stolten, D. (2025): Global geothermal electricity potentials: A technical, economic, and thermal renewability assessment. Renewable Energy 250, 123199",
+      "path": "https://doi.org/10.1016/j.renene.2025.123199"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "David Franzmann",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich, ICE-2"
+    },
+    {
+      "title": "Heidi Heinrichs",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich, ICE-2"
+    },
+    {
+      "title": "Detlef Stolten",
+      "roles": [
+        "author"
+      ],
+      "organization": "Forschungszentrum Julich, ICE-2"
+    }
+  ],
+  "ethos:include": [
+    "04_allPlacements.csv.gz"
+  ],
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:remote_prefix": "geothermal-egs-placements/mendeley-v2",
+  "ethos:origin": "downloaded",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International, as assigned by the Mendeley Data record",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:attribution": "Franzmann, David; Heinrichs, Heidi; Stolten, Detlef (2025): Global Technical Energy Potentials of Enhanced Geothermal Systems. Mendeley Data, V2, https://doi.org/10.17632/sbs8k66bwf.2. Licensed under CC BY 4.0, https://creativecommons.org/licenses/by/4.0/. File 04_allPlacements.csv.gz is reproduced unchanged. Please also cite Franzmann, D., Heinrichs, H. and Stolten, D. (2025): Global geothermal electricity potentials: A technical, economic, and thermal renewability assessment. Renewable Energy 250, 123199, https://doi.org/10.1016/j.renene.2025.123199.",
+  "ethos:coverage_note": "Holds file 4 of the five-file Mendeley V2 release. Not held: the additional-figures and literature-comparison documents (files 01 and 02), the per-country cost-potential curves (03) and the per-country plant data (05); fetch those from the record.",
+  "ethos:provenance": "Downloaded from the Mendeley Data record on 2026-09-28: 78,408,936 bytes, SHA-256 9e16483e83cc3afc0490e1d064df4c4c9bf53de803366b20e399672aaf9e1142, matching the sha256_hash the record publishes for the file (the record's file listing is kept as provenance/mendeley_files_v2.json). Uncompressed, the CSV is 661,738,012 bytes (SHA-256 2d13fe5601e0abfee9bdc06700043926fb2607f57ab40a22c900636e88129187) with 4,075,483 data rows.",
+  "ethos:retrieved": "2026-09-28",
+  "ethos:contact": "d-franzmann",
+  "resources": [
+    {
+      "name": "04_allplacements.csv.gz",
+      "path": "04_allPlacements.csv.gz",
+      "bytes": 78408936,
+      "hash": "sha256:9e16483e83cc3afc0490e1d064df4c4c9bf53de803366b20e399672aaf9e1142",
+      "mediatype": "text/csv"
+    }
+  ],
+  "ethos:total_bytes": 78408936,
+  "ethos:file_count": 1
+}

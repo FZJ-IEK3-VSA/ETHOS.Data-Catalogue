@@ -22,12 +22,6 @@
         "author"
       ],
       "organization": "Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2)"
-    },
-    {
-      "title": "ICE-2 RESKit maintainers",
-      "roles": [
-        "maintainer"
-      ]
     }
   ],
   "ethos:derivation": "ESTABLISHED: the raster is the GWA 4.0 100 m mean wind speed (GWA_4.0/wind_speed_cog_100m.tif) on its native 250 m grid, extended to complete global coverage using the ERA5 2008-2017 long-run average 100 m wind speed (/shared_data/2026_reskit_long_run_avg/output/global/ERA5_100m_wind_speed.processed_2008_2017_mean_global.tiff, itself produced by that folder's three-step pipeline from RESKit-processed ERA5 and pole-expanded by reskit.util.create_LRA). GWA values are kept where GWA has coverage; ERA5 supplies everything else. Both inputs are named in the filename and both are listed under sources.\nNOT ESTABLISHED, and required before this can be called reproducible: how the two were combined at the coverage boundary -- the resampling from ERA5's coarse grid to 250 m, whether there is feathering or a hard edge, and how the seam was treated. No script that produces this file exists in /shared_data/2026_reskit_long_run_avg or in the RESKit tree. reskit.util.create_LRA.expand_to_global_coverage is NOT it: it only fills polar rows and explicitly refuses anything but latitudinal expansion. Ask c-winkler.",

@@ -6,27 +6,21 @@
   "ethos:access": "public",
   "ethos:visibility": "public",
   "ethos:origin": "derived",
-  "ethos:derivation": "Clipped from the Global Solar Atlas. gsa-ghi-like.tif and gsa-dni-like.tif are 180 x 180 at 30 arcsec over Aachen; csp-gsa-dni-like.tif is 400 x 600 at the product's native 250 m over Morocco, and csp-gsa-temp-like.tif 120 x 180 at 30 arcsec over the same window.\ngsa-dni-like.tif is byte-identical to a stray file under the `global-solar-atlas` dataset's source_dir, which excludes its copy and points here.",
+  "ethos:derivation": "Clipped from the Global Solar Atlas. gsa-ghi-like.tif and gsa-dni-like.tif are 180 x 180 at 30 arcsec over Aachen; csp-gsa-dni-like.tif is 400 x 600 at the product's native 250 m over Morocco, and csp-gsa-temp-like.tif 120 x 180 at 30 arcsec over the same window.\ngsa-dni-like.tif is byte-identical to a stray file under the `global-solar-atlas-v1.0` dataset's source_dir, which excludes its copy and points here.",
   "contributors": [
     {
       "title": "Severin Ryberg",
       "roles": [
-        "author"
+        "modifier"
       ],
       "organization": "Forschungszentrum Julich, ICE-2"
     },
     {
-      "title": "K. Okosun",
+      "title": "Kenneth Okosun",
       "roles": [
-        "author"
+        "modifier"
       ],
       "organization": "Forschungszentrum Julich, ICE-2"
-    },
-    {
-      "title": "ICE-2 RESKit maintainers",
-      "roles": [
-        "maintainer"
-      ]
     }
   ],
   "sources": [

@@ -22,16 +22,9 @@
       "organization": "Universite catholique de Louvain"
     },
     {
-      "title": "Centre for Environmental Data Analysis (CEDA)",
-      "roles": [
-        "publisher"
-      ],
-      "path": "https://catalogue.ceda.ac.uk/uuid/b382ebe6679d44b8b0e68ea4ef4b701c"
-    },
-    {
       "title": "ICE-2 RESKit maintainers",
       "roles": [
-        "maintainer"
+        "modifier"
       ]
     }
   ],

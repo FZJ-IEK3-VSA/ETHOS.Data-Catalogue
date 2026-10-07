@@ -3,7 +3,7 @@
   "name": "global-lithological-map-glim-v1",
   "title": "Global Lithological Map Database (GLiM) v1.0, 0.5-degree grid",
   "description": "Hartmann and Moosdorf's original global lithology grid and class-code table, extracted without modification from hartmann-moosdorf_2012.zip. The 360 by 720 ASCII grid contains 16 lithological classes at 0.5-degree resolution. Thermal conductivity is derived downstream using separate assumptions.",
-  "homepage": "https://doi.pangaea.de/10.1594/PANGAEA.788537",
+  "id": "https://doi.pangaea.de/10.1594/PANGAEA.788537",
   "ethos:access": "public",
   "ethos:visibility": "public",
   "ethos:remote_prefix": "global-lithological-map-glim-v1",
@@ -24,16 +24,12 @@
   ],
   "sources": [
     {
-      "title": "Hartmann and Moosdorf (2012), GLiM v1.0, gridded to 0.5 degrees",
+      "title": "Global Lithological Map Database v1.0 (gridded to 0.5° spatial resolution) [dataset]. PANGAEA",
       "path": "https://doi.org/10.1594/PANGAEA.788537"
     },
     {
-      "title": "Hartmann and Moosdorf (2012), The new global lithological map database GLiM",
+      "title": "Supplement to: Hartmann, J; Moosdorf, N (2012): The new global lithological map database GLiM: A representation of rock properties at the Earth surface. Geochemistry, Geophysics, Geosystems, 13, Q12004",
       "path": "https://doi.org/10.1029/2012GC004370"
-    },
-    {
-      "title": "Use in Franzmann et al. (2025), section 2.3, equation (1)",
-      "path": "https://doi.org/10.1016/j.renene.2025.123199"
     }
   ],
   "licenses": [
@@ -44,9 +40,7 @@
   ],
   "ethos:license_status": "resolved",
   "ethos:attribution": "Hartmann, Jens; Moosdorf, Nils (2012): Global Lithological Map Database v1.0 (gridded to 0.5-degree spatial resolution). PANGAEA. https://doi.org/10.1594/PANGAEA.788537. CC BY 3.0.",
-  "ethos:provenance": "Original files recovered from Franzmann's dissertation archive and preserved on 2026-09-09. The ASCII grid matches the archived distribution ZIP member byte for byte. Neither conductivity mapping nor resampling is applied here.",
   "ethos:retrieved": "2026-09-09",
-  "ethos:contact": "ICE-2 RESKit maintainers",
   "resources": [
     {
       "name": "classnames.txt",

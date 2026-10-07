@@ -37,10 +37,6 @@
     {
       "title": "Goutorbe et al. (2011), Global heat flow trends resolved from multiple geological and geophysical proxies, supplementary material",
       "path": "https://doi.org/10.1111/j.1365-246X.2011.05228.x"
-    },
-    {
-      "title": "Use in Franzmann et al. (2025), Global geothermal electricity potentials, section 2.3, equation (1)",
-      "path": "https://doi.org/10.1016/j.renene.2025.123199"
     }
   ],
   "licenses": [
@@ -53,8 +49,7 @@
     }
   ],
   "ethos:license_status": "resolved",
-  "ethos:attribution": "Goutorbe, B.; Poort, J.; Lucazeau, F.; Raillard, S. (2011): Global heat flow trends resolved from multiple geological and geophysical proxies. Geophysical Journal International, supplementary material. https://doi.org/10.1111/j.1365-246X.2011.05228.x. Released under CC BY 4.0 by the author, https://creativecommons.org/licenses/by/4.0/. The original supplementary table is reproduced unchanged.",
-  "ethos:provenance": "Copied unchanged on 2026-09-09 from Franzmann's restored dissertation archive. Supplementary material.txt is byte-identical to the member of the archived GJI_5228_sm_data.zip. This table is an upstream modeled product; no local rasterization, smoothing or clipping is included in this catalogue entry.",
+  "ethos:attribution": "Goutorbe, B.; Poort, J.; Lucazeau, F.; Raillard, S. (2011): Global heat flow trends resolved from multiple geological and geophysical proxies. Geophysical Journal International, supplementary material. https://doi.org/10.1111/j.1365-246X.2011.05228.x. Released under CC BY 4.0 by the author, https://creativecommons.org/licenses/by/4.0/. The original supplementary table is unchanged.",
   "ethos:retrieved": "2026-09-09",
   "ethos:contact": "ICE-2 RESKit maintainers",
   "resources": [

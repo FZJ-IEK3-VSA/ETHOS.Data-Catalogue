@@ -22,65 +22,198 @@
   ],
   "contributors": [
     {
-      "title": "GEBCO Compilation Group",
+      "title": "GEBCO Bathymetric Compilation Group 2025",
       "roles": [
         "author"
-      ],
-      "path": "https://www.gebco.net/"
-    },
-    {
-      "title": "The Nippon Foundation-GEBCO Seabed 2030 Project",
-      "roles": [
-        "contributor"
-      ],
-      "path": "https://seabed2030.org/"
+      ]
     },
     {
       "title": "Pauline Weatherall",
       "roles": [
         "author"
       ],
-      "organization": "British Oceanographic Data Centre"
+      "organization": "British Oceanographic Data Centre, Liverpool"
     },
     {
-      "title": "NERC EDS British Oceanographic Data Centre NOC",
+      "title": "Fahima Bellabad",
       "roles": [
-        "publisher"
+        "author"
       ],
-      "path": "https://www.bodc.ac.uk/"
+      "organization": "University of New Hampshire, Center for Coastal and Ocean Mapping"
     },
     {
-      "title": "Centre for Environmental Data Analysis (CEDA)",
+      "title": "Michael Bogonko",
       "roles": [
-        "wrangler"
+        "author"
       ],
-      "path": "https://data.ceda.ac.uk/bodc/gebco/global/gebco_2025"
+      "organization": "University of New Hampshire, Center for Coastal and Ocean Mapping"
+    },
+    {
+      "title": "Ximena Boza",
+      "roles": [
+        "author"
+      ],
+      "organization": "University of New Hampshire, Center for Coastal and Ocean Mapping"
+    },
+    {
+      "title": "Sheila Cáceres Ferreras",
+      "roles": [
+        "author"
+      ],
+      "organization": "Lamont-Doherty Earth Observatory"
+    },
+    {
+      "title": "Natalie Cornish",
+      "roles": [
+        "author"
+      ],
+      "organization": "Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research"
+    },
+    {
+      "title": "Juliette Dael",
+      "roles": [
+        "author"
+      ],
+      "organization": "Earth Sciences New Zealand, Wellington"
+    },
+    {
+      "title": "Boris Dorschel",
+      "roles": [
+        "author"
+      ],
+      "organization": "Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research"
+    },
+    {
+      "title": "Hayley Drennon",
+      "roles": [
+        "author"
+      ],
+      "organization": "Lamont-Doherty Earth Observatory"
+    },
+    {
+      "title": "Vicki Ferrini",
+      "roles": [
+        "author"
+      ],
+      "organization": "Lamont-Doherty Earth Observatory"
+    },
+    {
+      "title": "Martin Jakobsson",
+      "roles": [
+        "author"
+      ],
+      "organization": "Stockholm University, Department of Geological Sciences"
+    },
+    {
+      "title": "Paul Johnson",
+      "roles": [
+        "author"
+      ],
+      "organization": "University of New Hampshire, Center for Coastal and Ocean Mapping"
+    },
+    {
+      "title": "Marcus Karlsson",
+      "roles": [
+        "author"
+      ],
+      "organization": "Stockholm University, Department of Geological Sciences"
+    },
+    {
+      "title": "Juliet Kinney",
+      "roles": [
+        "author"
+      ],
+      "organization": "University of New Hampshire, Center for Coastal and Ocean Mapping"
+    },
+    {
+      "title": "Callum Mackay",
+      "roles": [
+        "author"
+      ],
+      "organization": "Earth Sciences New Zealand, Wellington"
+    },
+    {
+      "title": "Kevin Mackay",
+      "roles": [
+        "author"
+      ],
+      "organization": "Earth Sciences New Zealand, Wellington"
+    },
+    {
+      "title": "Tinah V Martin",
+      "roles": [
+        "author"
+      ],
+      "organization": "Lamont-Doherty Earth Observatory"
+    },
+    {
+      "title": "Larry A Mayer",
+      "roles": [
+        "author"
+      ],
+      "organization": "University of New Hampshire, Center for Coastal and Ocean Mapping"
+    },
+    {
+      "title": "Jamie McMichael-Phillips",
+      "roles": [
+        "author"
+      ],
+      "organization": "Nippon Foundation-GEBCO Seabed 2030 Project"
+    },
+    {
+      "title": "Rezwan Mohammad",
+      "roles": [
+        "author"
+      ],
+      "organization": "Stockholm University, Department of Geological Sciences"
+    },
+    {
+      "title": "Frank O Nitsche",
+      "roles": [
+        "author"
+      ],
+      "organization": "Lamont-Doherty Earth Observatory"
+    },
+    {
+      "title": "David T Sandwell",
+      "roles": [
+        "author"
+      ],
+      "organization": "Scripps Institution of Oceanography"
+    },
+    {
+      "title": "Patrick Schwarzbach",
+      "roles": [
+        "author"
+      ],
+      "organization": "Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research"
+    },
+    {
+      "title": "Helen Snaith",
+      "roles": [
+        "author"
+      ],
+      "organization": "British Oceanographic Data Centre, Southampton"
+    },
+    {
+      "title": "Sacha Viquerat",
+      "roles": [
+        "author"
+      ],
+      "organization": "Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research"
+    },
+    {
+      "title": "Nathalie Zilberman",
+      "roles": [
+        "author"
+      ],
+      "organization": "Scripps Institution of Oceanography"
     }
   ],
   "sources": [
     {
       "title": "GEBCO Compilation Group (2025) GEBCO_2025 Grid -- the release record the published citation names, and this entry's `id`.",
       "path": "https://doi.org/10.5285/37c52e96-24ea-67ce-e063-7086abc05f29"
-    },
-    {
-      "title": "GEBCO gridded bathymetry data -- the product page the files were fetched from, per DOWNLOAD_INFO.txt. It now serves GEBCO_2026; the 2025 links have moved to the historical page below.",
-      "path": "https://www.gebco.net/data-products/gridded-bathymetry-data"
-    },
-    {
-      "title": "GEBCO historical data sets -- where the GEBCO_2025 download links live now that 2026 is current.",
-      "path": "https://www.gebco.net/data-products/historical-data-sets"
-    },
-    {
-      "title": "The CEDA archive directory that serves this release -- three products, each as netCDF, GeoTIFF and Esri ASCII raster, plus the two PDFs. Every byte published here was checked against this directory, file by file.",
-      "path": "https://data.ceda.ac.uk/bodc/gebco/global/gebco_2025"
-    },
-    {
-      "title": "CEDA Data Catalogue record for the GEBCO_2025 Grid -- the archive's own metadata record, and the source of the OGL v3 statement discussed in ethos:license_note.",
-      "path": "https://catalogue.ceda.ac.uk/uuid/05fba4c5b8fe4daea8ff751026daf438/"
-    },
-    {
-      "title": "Tozer, B. et al (2019), Global bathymetry and topography at 15 arc sec: SRTM15+ -- the base grid the elevation products are built on.",
-      "path": "https://doi.org/10.1029/2019EA000658"
     }
   ],
   "licenses": [
@@ -97,7 +230,7 @@
     "status": "available",
     "checked": "2026-09-18"
   },
-  "ethos:coverage_note": "Holds the GeoTIFF form of all three GEBCO_2025 products -- ice-surface elevation, sub-ice topography/bathymetry, and the Type Identifier grid -- each as the eight 90 x 90 degree quadrant tiles upstream distributes, 24 tiles in all, plus GEBCO's grid documentation and terms of use. That is the complete global coverage of the release at its native 15 arc-second resolution.\nTHIS MIRROR IS A SUBSET OF THE CEDA ARCHIVE -- 26 files here against 114 upstream, established 2026-09-18 by enumerating the archive directly. Not held: the netCDF form of all three products (~17.4 GiB, and the form most tools prefer -- GEBCO_2025.nc alone is 7,466,018,396 bytes), the Esri ASCII raster form, the .zip bundles that repackage the same tiles, and the .prj/.xml sidecars, 00readme.txt, the catalogue-and-licence README, and the .csv/.xlsx documentation the archive also carries. Nothing is missing upstream -- only the GeoTIFFs were ever downloaded. Add the netCDFs if a consumer needs the CF metadata or a single-file global grid; the GeoTIFF tiles carry the same pixels.\nAlso not held: the polar-stereographic companions. GEBCO's documentation has a section \"Data in polar projection co-ordinates\" stating that data sets accompany the GEBCO_2025 release for the polar regions -- IBCAO v5.1 in EPSG:3996 north of about 64 N, and IBCSO on a 500 m grid in EPSG:9354 south of 50 S. They are regional compilations that also feed into the global grid, and they live outside this release's directory (IBCAO under /bodc/gebco/ibcao/ on CEDA, IBCSO on PANGAEA and ibcso.org), which is why an enumeration of gebco_2025/ does not find them. The global grid here covers those latitudes in EPSG:4326; the polar products are only worth adding if a study needs the native projection or IBCSO's finer 500 m spacing.",
+  "ethos:coverage_note": "Holds the GeoTIFF form of all three GEBCO_2025 products -- ice-surface elevation, sub-ice topography/bathymetry, and the Type Identifier grid -- each as the eight 90 x 90 degree quadrant tiles upstream distributes, 24 tiles in all, plus GEBCO's grid documentation and terms of use. That is the complete global coverage of the release at its native 15 arc-second resolution.\nTHIS MIRROR IS A SUBSET OF THE CEDA ARCHIVE -- 26 files here against 114 upstream, established 2026-09-18 by enumerating the archive directly. Not held: the netCDF form of all three products (~17.4 GiB, and the form most tools prefer -- GEBCO_2025.nc alone is 7,466,018,396 bytes), the Esri ASCII raster form, the .zip bundles that repackage the same tiles, and the .prj/.xml sidecars, 00readme.txt, the catalogue-and-licence README, and the .csv/.xlsx documentation the archive also carries. \nAlso not held: the polar-stereographic companions. GEBCO's documentation has a section \"Data in polar projection co-ordinates\" stating that data sets accompany the GEBCO_2025 release for the polar regions -- IBCAO v5.1 in EPSG:3996 north of about 64 N, and IBCSO on a 500 m grid in EPSG:9354 south of 50 S.\nThe global single-file mosaics built from these tiles are catalogued as gebco-2025-combined.",
   "ethos:retrieved": "2025-08-22",
   "resources": [
     {

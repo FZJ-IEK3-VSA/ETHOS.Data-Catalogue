@@ -11,14 +11,14 @@
     {
       "title": "M. Stargardt",
       "roles": [
-        "author"
+        "modifier"
       ],
       "organization": "Forschungszentrum Julich, ICE-2"
     },
     {
-      "title": "ICE-2 RESKit maintainers",
+      "title": "Drin Marmullaku",
       "roles": [
-        "maintainer"
+        "modifier"
       ]
     }
   ],

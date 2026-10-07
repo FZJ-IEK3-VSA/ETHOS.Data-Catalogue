@@ -11,8 +11,7 @@
     {
       "title": "ICE-2 RESKit maintainers",
       "roles": [
-        "author",
-        "maintainer"
+        "modifier"
       ],
       "organization": "Forschungszentrum Julich, ICE-2"
     }

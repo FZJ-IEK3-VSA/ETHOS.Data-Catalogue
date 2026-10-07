@@ -42,9 +42,6 @@
   ],
   "ethos:license_status": "resolved",
   "ethos:attribution": "Franzmann, David (2022): lithology-to-thermal-conductivity assumptions (Mapper_Lithologic_to_heat_conductivity.xlsx). Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2). Released under CC BY 4.0, https://creativecommons.org/licenses/by/4.0/. Workbook reproduced unedited. The conductivity coefficients are from Aghahosseini, Arman and Breyer, Christian (2020): From hot rock to useful energy: A global estimate of enhanced geothermal systems potential. Applied Energy 279, 115769, https://doi.org/10.1016/j.apenergy.2020.115769, Table 1 -- cite that paper for the coefficients themselves. The rock classes they are keyed to are from Hartmann, Jens and Moosdorf, Nils (2012): The new global lithological map database GLiM. https://doi.org/10.1029/2012GC004370, Table A2.",
-  "ethos:provenance": "Copied unchanged from Franzmann's restored dissertation archive on 2026-09-09. The first worksheet's mapping reproduces the archived 0.5-degree conductivity raster exactly. The second worksheet matches Aghahosseini and Breyer (2020), Table 1, value for value; SOURCE-EXCERPTS.md quotes the relevant passages of all three sources. The paper describes the mapping approach but does not specify the water-body override or raster nodata handling.",
-  "ethos:retrieved": "2026-09-09",
-  "ethos:contact": "d-franzmann",
   "resources": [
     {
       "name": "mapper_lithologic_to_heat_conductivity.xlsx",

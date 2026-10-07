@@ -1,0 +1,148 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "marine-regions-world-eez-v12",
+  "title": "Marine Regions World EEZ v12 -- Maritime Boundaries and Exclusive Economic Zones (200 NM), Flanders Marine Institute (VLIZ), 2023-10-25",
+  "description": "Global polygons of Exclusive Economic Zones (200 nautical miles) from the VLIZ Maritime Boundaries Geodatabase, version 12, released 2023-10-25, with the EEZ boundary lines, as the full-resolution Shapefile delivery, unchanged. ",
+  "homepage": "https://www.marineregions.org/eez.php",
+  "id": "https://doi.org/10.14284/632",
+  "version": "v12_20231025",
+  "sources": [
+    {
+      "title": "Flanders Marine Institute (2023). Maritime Boundaries Geodatabase: Maritime Boundaries and Exclusive Economic Zones (200NM), version 12",
+      "path": "https://doi.org/10.14284/632"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Flanders Marine Institute (VLIZ)",
+      "roles": [
+        "author"
+      ],
+      "path": "https://www.marineregions.org/"
+    }
+  ],
+  "ethos:include": [
+    "eez_v12.*",
+    "eez_boundaries_v12.*"
+  ],
+  "ethos:remote_prefix": "marine-regions-world-eez/v12_20231025",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:origin": "downloaded",
+  "ethos:coverage_note": "Holds the full-resolution Shapefile delivery of World EEZ v12: the EEZ polygons (eez_v12) and the EEZ boundary lines (eez_boundaries_v12), each with the .qmd QGIS layer-metadata file shipped in the zip. The licence file shipped with them, LICENSE_EEZ_v12.txt, is kept unchanged with this entry's licence documents rather than among the data files.",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:attribution": "Flanders Marine Institute (2023). Maritime Boundaries Geodatabase: Maritime Boundaries and Exclusive Economic Zones (200NM), version 12. Available online at https://www.marineregions.org/. https://doi.org/10.14284/632. Licensed under CC BY 4.0, https://creativecommons.org/licenses/by/4.0/. The files are mirrored unchanged; refer to marineregions.org for the most up-to-date products. Marine Regions is not meant for legal, economic (exploration of natural resources) or navigational purposes. VLIZ expresses no opinion on the legal status of any country, territory or area, or on its delimitation or borders. The data has no legal value.",
+  "ethos:retrieved": "2026-09-29",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "resources": [
+    {
+      "name": "eez_boundaries_v12.cpg",
+      "path": "eez_boundaries_v12.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "eez_boundaries_v12.dbf",
+      "path": "eez_boundaries_v12.dbf",
+      "bytes": 11717870,
+      "hash": "sha256:9baa881378417925a7bcbea6a67eefe649ecf229e086ca1ec897e4c3b3dbf05e",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "eez_boundaries_v12.prj",
+      "path": "eez_boundaries_v12.prj",
+      "bytes": 145,
+      "hash": "sha256:a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "eez_boundaries_v12.qmd",
+      "path": "eez_boundaries_v12.qmd",
+      "bytes": 686,
+      "hash": "sha256:5ec585559f5a6085b5f73d32d76bf226953b126bf9acb35348b43f29dec2fb35",
+      "mediatype": "application/xml"
+    },
+    {
+      "name": "eez_boundaries_v12.shp",
+      "path": "eez_boundaries_v12.shp",
+      "bytes": 14230068,
+      "hash": "sha256:c6dc28f6abe47d6cec3aabb336695f8d1bb3289e5391393741b70ff76a1b47a9",
+      "mediatype": "application/octet-stream",
+      "ethos:sidecars": [
+        "eez_boundaries_v12.shx",
+        "eez_boundaries_v12.dbf",
+        "eez_boundaries_v12.prj",
+        "eez_boundaries_v12.cpg",
+        "eez_boundaries_v12.qmd"
+      ]
+    },
+    {
+      "name": "eez_boundaries_v12.shx",
+      "path": "eez_boundaries_v12.shx",
+      "bytes": 18892,
+      "hash": "sha256:ef1770185788228b5ab2520fe6701816d681272e7c56e2a466b19506dad3a571",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "eez_v12.cpg",
+      "path": "eez_v12.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "eez_v12.dbf",
+      "path": "eez_v12.dbf",
+      "bytes": 391476,
+      "hash": "sha256:edf342a0bb4eab4c4d9c56ec4a736373984ec80b958e7631418c589adfd77e7e",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "eez_v12.prj",
+      "path": "eez_v12.prj",
+      "bytes": 145,
+      "hash": "sha256:a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "eez_v12.qmd",
+      "path": "eez_v12.qmd",
+      "bytes": 686,
+      "hash": "sha256:5ec585559f5a6085b5f73d32d76bf226953b126bf9acb35348b43f29dec2fb35",
+      "mediatype": "application/xml"
+    },
+    {
+      "name": "eez_v12.shp",
+      "path": "eez_v12.shp",
+      "bytes": 163901012,
+      "hash": "sha256:ed87e40d8f64e8ad856688e9be793b5d02a7aee773123153fc6b8f6abfb662b6",
+      "mediatype": "application/octet-stream",
+      "ethos:sidecars": [
+        "eez_v12.shx",
+        "eez_v12.dbf",
+        "eez_v12.prj",
+        "eez_v12.cpg",
+        "eez_v12.qmd"
+      ]
+    },
+    {
+      "name": "eez_v12.shx",
+      "path": "eez_v12.shx",
+      "bytes": 2380,
+      "hash": "sha256:a0e2e2689261ef7bd30abd2b456ddf0110994551e493d17836d76e76cad3115d",
+      "mediatype": "application/octet-stream"
+    }
+  ],
+  "ethos:total_bytes": 190263370,
+  "ethos:file_count": 12
+}

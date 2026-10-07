@@ -2,7 +2,7 @@
   "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
   "name": "gebco-2025-combined",
   "title": "GEBCO_2025 Grid -- global single-file mosaics of the quadrant tiles (ICE-2 combination)",
-  "description": "The three products of the GEBCO_2025 release, each as ONE global GeoTIFF instead of the eight 90 x 90 degree quadrant tiles GEBCO distributes: `gebco_2025` (land and ice-surface elevation in metres), `gebco_2025_sub_ice_topo` (under-ice topography for Greenland and Antarctica, metres) and `gebco_2025_TID` (Type Identifier -- the provenance code of every cell). Each mosaic is the full grid in one file: 86400 x 43200 cells, 3,732,480,000 in all, at 15 arc seconds, WGS 84 (EPSG:4326), covering -180 to 180 and -90 to 90.\nOnly the tiling was changed. The cells are GEBCO's bit for bit, on the same grid, with the same data types and nodata values; the files were DEFLATE-compressed on the way out, which makes all three together 8.0 GiB against the 17.4 GiB of uncompressed tiles they were built from. The point is to let a consumer that samples arbitrary global points read one raster instead of searching eight tiles per lookup -- which is what reskit.util.local_values.water_depth_from_location does when handed a directory.\nGEBCO is not affiliated with Forschungszentrum Julich and has not endorsed this combination. See ethos:attribution, and note that the mosaics no longer carry GEBCO's own metadata (ethos:derivation).",
+  "description": "The three products of the GEBCO_2025 release, each as ONE global GeoTIFF instead of the eight 90 x 90 degree quadrant tiles GEBCO distributes: `gebco_2025` (land and ice-surface elevation in metres), `gebco_2025_sub_ice_topo` (under-ice topography for Greenland and Antarctica, metres) and `gebco_2025_TID` (Type Identifier -- the provenance code of every cell). Each mosaic is the full grid in one file: 86400 x 43200 cells, 3,732,480,000 in all, at 15 arc seconds, WGS 84 (EPSG:4326), covering -180 to 180 and -90 to 90.\nOnly the tiling was changed. The cells are GEBCO's bit for bit, on the same grid, with the same data types and nodata values; the files were DEFLATE-compressed on the way out, which makes all three together 8.0 GiB against the 17.4 GiB of uncompressed tiles they were built from. The point is to let a consumer that samples arbitrary global points read one raster instead of searching eight tiles per lookup.\nGEBCO is not affiliated with Forschungszentrum Julich and has not endorsed this combination.",
   "version": "GEBCO_2025",
   "ethos:include": [
     "gebco_2025/combined/gebco_2025_n90.0_s-90.0_w-180.0_e180.0.tif",
@@ -27,22 +27,16 @@
     {
       "title": "The Nippon Foundation-GEBCO Seabed 2030 Project",
       "roles": [
-        "contributor"
+        "author"
       ],
       "path": "https://seabed2030.org/"
     },
     {
       "title": "Christoph Winkler",
       "roles": [
-        "wrangler"
+        "modifier"
       ],
       "organization": "Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2)"
-    },
-    {
-      "title": "ICE-2 RESKit maintainers",
-      "roles": [
-        "maintainer"
-      ]
     }
   ],
   "sources": [
@@ -104,17 +98,17 @@
       "mediatype": "image/tiff"
     },
     {
-      "name": "gebco_2025_sub_ice_topo-combined-gebco_2025_sub_ice_n90.0_s-90.0_w-180.0_e180.0.tif",
-      "path": "gebco_2025_sub_ice_topo/combined/gebco_2025_sub_ice_n90.0_s-90.0_w-180.0_e180.0.tif",
-      "bytes": 4325921823,
-      "hash": "sha256:7f61956587fd661dc6ea1237faaef42e841ac886bcbe096167d814f49a917723",
-      "mediatype": "image/tiff"
-    },
-    {
       "name": "gebco_2025_tid-combined-gebco_2025_tid_n90.0_s-90.0_w-180.0_e180.0.tif",
       "path": "gebco_2025_TID/combined/gebco_2025_tid_n90.0_s-90.0_w-180.0_e180.0.tif",
       "bytes": 95022726,
       "hash": "sha256:cfc98c9601d4ecf1350541a4c271469b070e4ceda39dfde6861a3cd04cdacd3d",
+      "mediatype": "image/tiff"
+    },
+    {
+      "name": "gebco_2025_sub_ice_topo-combined-gebco_2025_sub_ice_n90.0_s-90.0_w-180.0_e180.0.tif",
+      "path": "gebco_2025_sub_ice_topo/combined/gebco_2025_sub_ice_n90.0_s-90.0_w-180.0_e180.0.tif",
+      "bytes": 4325921823,
+      "hash": "sha256:7f61956587fd661dc6ea1237faaef42e841ac886bcbe096167d814f49a917723",
       "mediatype": "image/tiff"
     }
   ],

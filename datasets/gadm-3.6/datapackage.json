@@ -1,0 +1,304 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "gadm-3.6",
+  "title": "GADM database of Global Administrative Areas, version 3.6 (all levels, shapefiles; licensed)",
+  "description": "GADM version 3.6 (2018), the database of the world's administrative areas, as the official six-layer shapefile delivery gadm36_levels_shp.zip, extracted and unchanged: gadm36_0 (countries) to gadm36_5 (the finest sub-divisions), each as .shp, .shx, .dbf, .prj and .cpg, in EPSG:4326. Level-1 features carry GID_0 (ISO 3166 alpha-3 country code), NAME_0, GID_1 and NAME_1 among their attributes. The RESKit example for northern Germany and the German North Sea reads gadm36_1 to select Schleswig-Holstein, Hamburg, Bremen, Niedersachsen and Mecklenburg-Vorpommern by GID_0 and NAME_1, and to subtract land from the German EEZ.",
+  "homepage": "https://gadm.org/",
+  "version": "3.6",
+  "sources": [
+    {
+      "title": "GADM version 3.6 download page (gadm36_levels_shp.zip, \"six separate layers as shapefiles\")",
+      "path": "https://gadm.org/download_world36.html"
+    },
+    {
+      "title": "GADM licence",
+      "path": "https://gadm.org/license.html"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "GADM (Global Administrative Areas)",
+      "roles": [
+        "author"
+      ],
+      "path": "https://gadm.org/"
+    }
+  ],
+  "ethos:include": [
+    "gadm36_[0-5].cpg",
+    "gadm36_[0-5].dbf",
+    "gadm36_[0-5].prj",
+    "gadm36_[0-5].shp",
+    "gadm36_[0-5].shx"
+  ],
+  "ethos:access": "restricted",
+  "ethos:visibility": "public",
+  "ethos:origin": "downloaded",
+  "ethos:restriction": "GADM data are freely available for academic and other non-commercial use; redistribution or commercial use is not allowed without prior permission from GADM (https://gadm.org/license.html). The files are therefore never uploaded or downloaded. They are read in place on the ICE-2 cluster, where the installation is accessible to ICE-2 members; contact the RESKit maintainers for access. Anyone else can obtain the same delivery from https://gadm.org/download_world36.html under GADM's terms.",
+  "ethos:upstream": {
+    "status": "available",
+    "checked": "2026-09-28",
+    "note": "gadm.org still serves version 3.6, including gadm36_levels_shp.zip, from its version 3.6 download page. The current GADM release is 4.1."
+  },
+  "ethos:coverage_note": "Holds the six shapefile layers of gadm36_levels_shp.zip. Not held: the zip itself (its members are identical to the extracted files), the GeoPackage deliveries of the same version, and the single-layer gadm36_shp.zip. The licence file shipped in the zip, license.txt, is kept unchanged with this entry's licence documents rather than among the data files.",
+  "licenses": [
+    {
+      "title": "GADM licence: free for academic and other non-commercial use; redistribution or commercial use not allowed without prior permission",
+      "path": "https://gadm.org/license.html",
+      "ethos:document": "licenses/gadm36-license.txt",
+      "ethos:document_sha256": "ad4d297c2973108584472242f75c405d4ffed45ff4e99b27c1473eca3ad41438"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "ethos:attribution": "GADM (2018): GADM database of Global Administrative Areas, version 3.6. https://gadm.org/. Free for academic and other non-commercial use; redistribution or commercial use requires prior permission from GADM.",
+  "resources": [
+    {
+      "name": "gadm36_0.cpg",
+      "path": "gadm36_0.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "gadm36_0.dbf",
+      "path": "gadm36_0.dbf",
+      "bytes": 41314,
+      "hash": "sha256:7d33ee9b52190257ae63dfa533677d5979aa4cd4428f2e4a9f51f40f06b02235",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "gadm36_0.prj",
+      "path": "gadm36_0.prj",
+      "bytes": 143,
+      "hash": "sha256:98aaf3d1c0ecadf1a424a4536de261c3daf4e373697cb86c40c43b989daf52eb",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "gadm36_0.shp",
+      "path": "gadm36_0.shp",
+      "bytes": 525718700,
+      "hash": "sha256:ab3aa4d3b7cbbfd1ce41803c5666029e0c09ecd6aadb1867a64b4efff042c009",
+      "mediatype": "application/octet-stream",
+      "ethos:sidecars": [
+        "gadm36_0.shx",
+        "gadm36_0.dbf",
+        "gadm36_0.prj",
+        "gadm36_0.cpg"
+      ]
+    },
+    {
+      "name": "gadm36_0.shx",
+      "path": "gadm36_0.shx",
+      "bytes": 2148,
+      "hash": "sha256:a91833f6dfcdcba1992d38e9c95ee9c8532712b019ed3fb8966ad7fddad50d92",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "gadm36_1.cpg",
+      "path": "gadm36_1.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "gadm36_1.dbf",
+      "path": "gadm36_1.dbf",
+      "bytes": 3094124,
+      "hash": "sha256:3767f342c31aa9cb540a6cf2947e8035101930548b98fc5d70e4bb20ecfe665a",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "gadm36_1.prj",
+      "path": "gadm36_1.prj",
+      "bytes": 143,
+      "hash": "sha256:98aaf3d1c0ecadf1a424a4536de261c3daf4e373697cb86c40c43b989daf52eb",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "gadm36_1.shp",
+      "path": "gadm36_1.shp",
+      "bytes": 604975444,
+      "hash": "sha256:9ac02fccd49eedb9bcb0a23c93016c335d09dc7282c258b85fae072573a54644",
+      "mediatype": "application/octet-stream",
+      "ethos:sidecars": [
+        "gadm36_1.shx",
+        "gadm36_1.dbf",
+        "gadm36_1.prj",
+        "gadm36_1.cpg"
+      ]
+    },
+    {
+      "name": "gadm36_1.shx",
+      "path": "gadm36_1.shx",
+      "bytes": 28980,
+      "hash": "sha256:c7eccf323470d24daf79f34ef85e4055114cf240e75eb28eb9b5b289404d884d",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "gadm36_2.cpg",
+      "path": "gadm36_2.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "gadm36_2.dbf",
+      "path": "gadm36_2.dbf",
+      "bytes": 49823258,
+      "hash": "sha256:cee6e73c6ff75144fda4ff4cb890fa94cbbeafa3036cfe4b3442c933b423122e",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "gadm36_2.prj",
+      "path": "gadm36_2.prj",
+      "bytes": 143,
+      "hash": "sha256:98aaf3d1c0ecadf1a424a4536de261c3daf4e373697cb86c40c43b989daf52eb",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "gadm36_2.shp",
+      "path": "gadm36_2.shp",
+      "bytes": 871012860,
+      "hash": "sha256:ba7702093874740a4f81a36538141bfd762576ce39fb22d621ac7d75105e6d60",
+      "mediatype": "application/octet-stream",
+      "ethos:sidecars": [
+        "gadm36_2.shx",
+        "gadm36_2.dbf",
+        "gadm36_2.prj",
+        "gadm36_2.cpg"
+      ]
+    },
+    {
+      "name": "gadm36_2.shx",
+      "path": "gadm36_2.shx",
+      "bytes": 367796,
+      "hash": "sha256:f4686b096b8b575967ef5b9b42bbc4da4be2c3919ed4a44552c107ec6c8afc84",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "gadm36_3.cpg",
+      "path": "gadm36_3.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "gadm36_3.dbf",
+      "path": "gadm36_3.dbf",
+      "bytes": 189886522,
+      "hash": "sha256:b2a7a1e187ff31000cc8b83b766202e448fcd72c5185bc354f4435d51d1e1a7c",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "gadm36_3.prj",
+      "path": "gadm36_3.prj",
+      "bytes": 143,
+      "hash": "sha256:98aaf3d1c0ecadf1a424a4536de261c3daf4e373697cb86c40c43b989daf52eb",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "gadm36_3.shp",
+      "path": "gadm36_3.shp",
+      "bytes": 958206876,
+      "hash": "sha256:dc64663c2b0f880b4f294a38de358a9154146e4051e581ac68abfb461f55941d",
+      "mediatype": "application/octet-stream",
+      "ethos:sidecars": [
+        "gadm36_3.shx",
+        "gadm36_3.dbf",
+        "gadm36_3.prj",
+        "gadm36_3.cpg"
+      ]
+    },
+    {
+      "name": "gadm36_3.shx",
+      "path": "gadm36_3.shx",
+      "bytes": 1179516,
+      "hash": "sha256:53c3bc0c280b15b1cf27b231ea69b57400dbc1cbb9b98c1e477d4140e764972e",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "gadm36_4.cpg",
+      "path": "gadm36_4.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "gadm36_4.dbf",
+      "path": "gadm36_4.dbf",
+      "bytes": 157242849,
+      "hash": "sha256:22609d82810b11e63e681098e02d332890fecbd9b4d9caeef5bf66169acb92d2",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "gadm36_4.prj",
+      "path": "gadm36_4.prj",
+      "bytes": 143,
+      "hash": "sha256:98aaf3d1c0ecadf1a424a4536de261c3daf4e373697cb86c40c43b989daf52eb",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "gadm36_4.shp",
+      "path": "gadm36_4.shp",
+      "bytes": 529552520,
+      "hash": "sha256:98465677a3a7cbf61be34e81e18e07ab09916ff9618f242f2e9cc5244bb463b3",
+      "mediatype": "application/octet-stream",
+      "ethos:sidecars": [
+        "gadm36_4.shx",
+        "gadm36_4.dbf",
+        "gadm36_4.prj",
+        "gadm36_4.cpg"
+      ]
+    },
+    {
+      "name": "gadm36_4.shx",
+      "path": "gadm36_4.shx",
+      "bytes": 1104524,
+      "hash": "sha256:6feb034e6b1a4c03bd11e31f6d1e046859ad4dfb8234ac40155853a079d22733",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "gadm36_5.cpg",
+      "path": "gadm36_5.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "gadm36_5.dbf",
+      "path": "gadm36_5.dbf",
+      "bytes": 61764341,
+      "hash": "sha256:d768a78c999da2ac2955cd1a5135fbb076dd8131bd29cee915532e7f567a2d54",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "gadm36_5.prj",
+      "path": "gadm36_5.prj",
+      "bytes": 143,
+      "hash": "sha256:98aaf3d1c0ecadf1a424a4536de261c3daf4e373697cb86c40c43b989daf52eb",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "gadm36_5.shp",
+      "path": "gadm36_5.shp",
+      "bytes": 60321368,
+      "hash": "sha256:8d228b7b6c16c01efbcd1a01c720ba5ce5a2ff80504f20ea94fd75665cb7941a",
+      "mediatype": "application/octet-stream",
+      "ethos:sidecars": [
+        "gadm36_5.shx",
+        "gadm36_5.dbf",
+        "gadm36_5.prj",
+        "gadm36_5.cpg"
+      ]
+    },
+    {
+      "name": "gadm36_5.shx",
+      "path": "gadm36_5.shx",
+      "bytes": 411516,
+      "hash": "sha256:d770a71c2224206fc7b40ac326597aa04f1a4aaa12d1e6baa818188d90b3565d",
+      "mediatype": "application/octet-stream"
+    }
+  ],
+  "ethos:total_bytes": 4014735544,
+  "ethos:file_count": 30
+}

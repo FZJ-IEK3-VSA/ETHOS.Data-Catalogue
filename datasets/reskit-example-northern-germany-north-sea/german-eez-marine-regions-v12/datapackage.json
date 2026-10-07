@@ -1,0 +1,87 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "title": "German Exclusive Economic Zone from Marine Regions World EEZ v12",
+  "description": "The German Exclusive Economic Zone (MRGID 5669, \"German Exclusive Economic Zone\", ISO_SOV1 DEU, 56,831 km2) as one feature cut from Marine Regions World EEZ v12, in EPSG:4326 with all 31 v12 attributes. The feature has two parts: a 56,555 km2 polygon that covers the North Sea and the Baltic Sea parts of the German EEZ in one piece, and a 275 km2 part in the Szczecin Lagoon. The RESKit example for northern Germany and the German North Sea selects it with ISO_SOV1 == \"DEU\", subtracts land, and keeps the parts west of 10 E as its offshore simulation area.",
+  "ethos:remote_prefix": "reskit-example-northern-germany-north-sea/german-eez-marine-regions-v12",
+  "ethos:access": "public",
+  "ethos:visibility": "public",
+  "ethos:origin": "derived",
+  "contributors": [
+    {
+      "title": "ICE-2 RESKit maintainers",
+      "roles": [
+        "modifier"
+      ],
+      "organization": "Forschungszentrum Julich, ICE-2"
+    }
+  ],
+  "ethos:input_datasets": [
+    "marine-regions-world-eez-v12"
+  ],
+  "sources": [
+    {
+      "title": "Flanders Marine Institute (2023). Maritime Boundaries Geodatabase: Maritime Boundaries and Exclusive Economic Zones (200NM), version 12, catalogued in full as marine-regions-world-eez-v12",
+      "path": "https://doi.org/10.14284/632"
+    }
+  ],
+  "ethos:derivation": "On 2026-09-28 the script provenance/make_german_eez_excerpt.py (kept with this entry in the source catalogue) read eez_v12.shp from marine-regions-world-eez-v12, kept the single feature with ISO_SOV1 == \"DEU\" (MRGID 5669), and wrote it as eez_v12_DEU.shp with geopandas/pyogrio, UTF-8. Nothing else changed: the CRS is the same (the .prj is byte-identical to eez_v12.prj), the geometry is the same (all 13,684 vertices in 2 parts, compared exactly after writing), and every attribute value is the same (compared field by field after writing). The only modification is the feature selection. The input files are byte-identical to the members of World_EEZ_v12_20231025.zip as downloaded from marineregions.org on 2026-09-29 (see marine-regions-world-eez-v12).",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0 International, inherited from Marine Regions World EEZ v12",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "ethos:document": "licenses/CC-BY-4.0-legalcode.txt",
+      "ethos:document_sha256": "588e77e25f96189e74ff60b1fe3997053309b58ed5bd13a7296832af5b82c126"
+    }
+  ],
+  "ethos:license_status": "resolved",
+  "name": "reskit-example-northern-germany-north-sea/german-eez-marine-regions-v12",
+  "homepage": "https://github.com/FZJ-IEK3-VSA/RESKit",
+  "ethos:contact": "ICE-2 RESKit maintainers",
+  "ethos:attribution": "ALL FILES IN THIS DATASET ARE EXCERPTS: each is a subset of the product named in its member descriptor, prepared by Forschungszentrum Julich, Institute of Climate and Energy Systems (ICE-2).\nFlanders Marine Institute (2023). Maritime Boundaries Geodatabase: Maritime Boundaries and Exclusive Economic Zones (200NM), version 12. Available online at https://www.marineregions.org/. https://doi.org/10.14284/632. Refer to marineregions.org for the most up-to-date products.",
+  "resources": [
+    {
+      "name": "eez_v12_deu.cpg",
+      "path": "eez_v12_DEU.cpg",
+      "bytes": 5,
+      "hash": "sha256:3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "eez_v12_deu.dbf",
+      "path": "eez_v12_DEU.dbf",
+      "bytes": 2525,
+      "hash": "sha256:7654abd23c55a5909e4b192dbfa77cd981106d0720ebc6308c9b7b674eaf0b97",
+      "mediatype": "application/octet-stream"
+    },
+    {
+      "name": "eez_v12_deu.prj",
+      "path": "eez_v12_DEU.prj",
+      "bytes": 145,
+      "hash": "sha256:a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "mediatype": "text/plain"
+    },
+    {
+      "name": "eez_v12_deu.shp",
+      "path": "eez_v12_DEU.shp",
+      "bytes": 219456,
+      "hash": "sha256:41b005e2145080e6ce780be6def99cf7ab4ff2adac3f9081d043b4b5dbdcafec",
+      "mediatype": "application/octet-stream",
+      "ethos:sidecars": [
+        "eez_v12_DEU.shx",
+        "eez_v12_DEU.dbf",
+        "eez_v12_DEU.prj",
+        "eez_v12_DEU.cpg"
+      ]
+    },
+    {
+      "name": "eez_v12_deu.shx",
+      "path": "eez_v12_DEU.shx",
+      "bytes": 108,
+      "hash": "sha256:77a33379d72613e447c3aff7bca04cfc3fec1ff70dc2ea4adb730c59ab753631",
+      "mediatype": "application/octet-stream"
+    }
+  ],
+  "ethos:total_bytes": 222239,
+  "ethos:file_count": 5
+}

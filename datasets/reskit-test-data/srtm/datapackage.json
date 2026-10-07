@@ -11,15 +11,9 @@
     {
       "title": "Severin Ryberg",
       "roles": [
-        "author"
+        "modifier"
       ],
       "organization": "Forschungszentrum Julich, ICE-2"
-    },
-    {
-      "title": "ICE-2 RESKit maintainers",
-      "roles": [
-        "maintainer"
-      ]
     }
   ],
   "sources": [
